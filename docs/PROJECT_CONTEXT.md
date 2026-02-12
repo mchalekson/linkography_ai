@@ -123,30 +123,56 @@ data/
 **Session JSON format** (SCIALOG schema):
 ```json
 {
+  "all_speakers": ["Marcel Schreier", "Andrew Feig", ...],
+  "total_speaking_length": 5667,
   "all_data": [
     {
-      "start_time": "00:00",
-      "end_time": "00:30",
-      "transcript": "Let's start with...",
+      "speaker": "Marcel Schreier",
+      "timestamp": "00:02-00:03",
+      "transcript": "Hi everyone.",
+      "start_time": "00:02",
+      "end_time": "00:03",
       "annotations": {
-        "Coordination and Decision Practices": ["Decision-making"],
-        "Evaluation Practices": ["Critique"]
-      }
-    },
-    ...
+        "Relational Climate": {
+          "explanation": "...",
+          "score": 1,
+          "score_justification": "...",
+          "when": "beginning"
+        },
+        "Coordination and Decision Practices": {
+          "explanation": "...",
+          "score": 2,
+          "when": "middle"
+        }
+      },
+      "role": "Scialog Fellow",
+      "when": "beginning"
+    }
   ]
 }
 ```
+**Note**: `annotations` is a nested dict where each key is a CDP category containing `explanation`, `score`, `score_justification`, and `when` fields.
 
-**Outcome JSON format**:
+**Outcome JSON format** (actual structure):
 ```json
 {
   "2021_11_04_NES_S5": {
-    "all_speakers": ["Alice", "Bob"],
-    "outcome": "success"   // ⚠️ MISSING in current files (field not present)
+    "all_speakers": ["Marcel Schreier", "Xiao Su", ...],
+    "facilitators": ["Alissa Park", "Christopher Jones"],
+    "teams": {
+      "NES5": {
+        "members": ["Haotian Wang", "Andrea Hicks"],
+        "funded_status": 1
+      },
+      "NES22": {
+        "members": ["Xiao Su", "Jimmy Jiang"],
+        "funded_status": 0
+      }
+    }
   }
 }
 ```
+**Note**: No explicit `outcome` field exists. The pipeline currently tries to extract `outcome` but will find NULL. Consider using `funded_status` (1 = funded, 0 = not funded) as a proxy for session success.
 
 ### Output Locations
 
