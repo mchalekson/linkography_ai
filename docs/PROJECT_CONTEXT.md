@@ -6,12 +6,12 @@
 
 ## TL;DR
 
-This repository analyzes **Coordination and Decision Practices (CDP)** in SCIALOG team discussions using Shannon entropy and temporal dynamics. The goal is to understand whether the **diversity of coordination behaviors** (measured as entropy over CDP code distributions) varies across discussion phases, relates to session outcomes, and exhibits temporal patterns like convergence or structural wrap.
+This repository analyzes **Coordination and Decision Practices (CDP)** score diversity in SCIALOG team discussions using Shannon entropy and temporal dynamics. The goal is to understand whether the **intensity of coordination behaviors** (measured as entropy over CDP score 1 vs score 2 distributions) varies across discussion phases, relates to session outcomes, and exhibits temporal patterns.
 
-**Current state**: ✅ **P0 Complete** - Full pipeline executed on all 157 sessions across 8 conferences. Core findings: Entropy **increases** from beginning (0.884) to end (0.909), suggesting **divergence** rather than convergence. 78.3% of sessions successfully matched with funding outcome data.
+**Current state**: ✅ **P0 Complete** - Full pipeline executed on all 157 sessions across 8 conferences. Core findings: Entropy remains **stable** (0.733 → 0.745, no significant change), suggesting teams maintain a consistent mix of basic and advanced coordination throughout. 78.3% of sessions successfully matched with funding outcome data.
 
 **What it produces**:
-- **Batch entropy table**: `outputs/tables/cdp_entropy_by_session_ALL_20260212_165526.csv` ✅ **GENERATED** (157 sessions)
+- **Batch entropy table**: `outputs/tables/cdp_entropy_by_session_ALL_20260212_171302.csv` ✅ **GENERATED** (157 sessions)
 - **Entropy trajectory analysis**: `outputs/analysis/entropy_trajectory_summary.txt` ✅ **GENERATED**
 - **Entropy with outcomes**: `outputs/tables/entropy_with_outcomes.csv` ✅ **GENERATED** (123 matched sessions)
 - **Trajectory visualization**: `figures/final/entropy_trajectory.png` ✅ **GENERATED**
@@ -20,12 +20,12 @@ This repository analyzes **Coordination and Decision Practices (CDP)** in SCIALO
 
 **Data coverage**: 8 SCIALOG conferences (2020NES, 2021ABI, 2021CMC, 2021MND, 2021MZT, 2021NES, 2021SLU, 2022MND) with annotated session transcripts in `data/`.
 
-**Key Finding (P0)**: Entropy **increases** from beginning to end (divergence), contradicting initial convergence hypothesis. This suggests coordination becomes **more diverse** as sessions progress, not more focused.
+**Key Finding (P0)**: Entropy shows **no significant trajectory** (stable ~0.7), contradicting convergence hypothesis. Teams use a balanced mix of basic (score 1) and advanced (score 2) coordination throughout sessions.
 
 **Next 3–5 analyses** (P1/P2):
-1. ✅ **DONE** - Validated entropy trajectories across all 157 sessions (found divergence, not convergence)
+1. ✅ **DONE** - Validated entropy trajectories across all 157 sessions (found stability, not convergence)
 2. ✅ **DONE** - Merged entropy with funding outcomes (123/157 matched, 78.3% success rate)
-3. **NEXT (P1)** - Statistical testing: Do funded sessions show different entropy patterns than unfunded?
+3. **NEXT (P1)** - Statistical testing: Do funded sessions show different CDP score patterns than unfunded?
 4. **NEXT (P1)** - Batch convergence detection across all sessions (Priority 3)
 5. Compare normalized vs raw entropy for interpretability (Priority 4)
 6. Explore time-binned entropy dynamics to detect mid-session shifts (Priority 5)
@@ -36,11 +36,11 @@ This repository analyzes **Coordination and Decision Practices (CDP)** in SCIALO
 
 ### Inferred Goals (update if wrong)
 
-1. **Goal: Quantify CDP diversity across discussion phases** ✅ **COMPLETE**
+1. **Goal: Quantify CDP score diversity across discussion phases** ✅ **COMPLETE**
    - **Deliverable**: Per-session table with `entropy_beginning`, `entropy_middle`, `entropy_end`.
    - **Success metric**: Entropy values computed for all sessions; distributions visualized by phase.
-   - **Status**: ✅ **DONE** - 157 sessions analyzed, results in `cdp_entropy_by_session_ALL_20260212_165526.csv`
-   - **Key Finding**: Mean entropy increases from 0.884 (beginning) → 0.909 (end), opposite of convergence hypothesis.
+   - **Status**: ✅ **DONE** - 157 sessions analyzed, results in `cdp_entropy_by_session_ALL_20260212_171302.csv`
+   - **Key Finding**: Mean entropy stable (0.733 → 0.745), teams maintain consistent mix of score 1 vs score 2 coordination.
 
 2. **Goal: Relate entropy trajectories to session outcomes** ✅ **DATA READY, TESTING PENDING**
    - **Deliverable**: Statistical comparison (t-test, regression) of entropy patterns for successful vs unsuccessful sessions.
@@ -75,7 +75,7 @@ This repository analyzes **Coordination and Decision Practices (CDP)** in SCIALO
 | Artifact | Path | Description |
 |----------|------|-------------|
 | **Notebook (exploratory)** | `notebooks/linkography-ai.ipynb` | Original slide analyses (Dec 2025); not executed. |
-| **Batch entropy table** | `outputs/tables/cdp_entropy_by_session_ALL_20260212_165526.csv` | ✅ **GENERATED** - 157 sessions, all 8 conferences |
+| **Batch entropy table** | `outputs/tables/cdp_entropy_by_session_ALL_20260212_171302.csv` | ✅ **GENERATED** - 157 sessions, all 8 conferences |
 | **Entropy trajectory analysis** | `outputs/analysis/entropy_trajectory_summary.txt` | ✅ **GENERATED** - Statistical tests showing divergence |
 | **Entropy with outcomes** | `outputs/tables/entropy_with_outcomes.csv` | ✅ **GENERATED** - 123 matched sessions with funding data |
 | **Trajectory visualization** | `figures/final/entropy_trajectory.png` | ✅ **GENERATED** - Bar chart + individual trajectories |
@@ -164,7 +164,7 @@ This repository analyzes **Coordination and Decision Practices (CDP)** in SCIALO
 
 **Observed Range in Data**: 0.80 - 0.91 (high diversity across all sessions)
 
-**The P0 Finding**: Entropy **increases** from 0.884 (beginning) → 0.909 (end)
+**The P0 Finding**: Entropy remains **stable** from 0.733 (beginning) → 0.745 (end)
 - **Meaning**: Teams use **more varied** coordination behaviors as sessions progress
 - **Contradicts**: Initial hypothesis that teams would converge (focus) on fewer behaviors
 - **Possible explanations**: 
@@ -218,7 +218,7 @@ conference,session_id,...,entropy_end,n_cdp_end,n_unique_cdp_end,funded_rate,any
 import pandas as pd
 
 # Load latest batch entropy results
-df = pd.read_csv('outputs/tables/cdp_entropy_by_session_ALL_20260212_165526.csv')
+df = pd.read_csv('outputs/tables/cdp_entropy_by_session_ALL_20260212_171302.csv')
 
 # Quick stats
 print(f"Total sessions: {len(df)}")
@@ -292,10 +292,10 @@ ls -lh outputs/analysis/entropy_trajectory_summary.txt
 ls -lh figures/final/entropy_trajectory.png
 
 # Count sessions per conference
-.venv/bin/python -c "import pandas as pd; df = pd.read_csv('outputs/tables/cdp_entropy_by_session_ALL_20260212_165526.csv'); print(df['conference'].value_counts())"
+.venv/bin/python -c "import pandas as pd; df = pd.read_csv('outputs/tables/cdp_entropy_by_session_ALL_20260212_171302.csv'); print(df['conference'].value_counts())"
 
 # Quick stats
-.venv/bin/python -c "import pandas as pd; df = pd.read_csv('outputs/tables/cdp_entropy_by_session_ALL_20260212_165526.csv'); print(df[['entropy_beginning', 'entropy_middle', 'entropy_end']].describe())"
+.venv/bin/python -c "import pandas as pd; df = pd.read_csv('outputs/tables/cdp_entropy_by_session_ALL_20260212_171302.csv'); print(df[['entropy_beginning', 'entropy_middle', 'entropy_end']].describe())"
 ```
 
 ---
@@ -545,7 +545,7 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 
 **Current status**: ✅ **COMPLETE** - Full run executed on 2026-02-12 16:55:26.
 
-**Latest Output**: `outputs/tables/cdp_entropy_by_session_ALL_20260212_165526.csv` (157 sessions)
+**Latest Output**: `outputs/tables/cdp_entropy_by_session_ALL_20260212_171302.csv` (157 sessions)
 
 ---
 
@@ -648,15 +648,15 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 
 **Research Question**: Does CDP entropy decrease from beginning → middle → end (indicating convergence)?
 
-**Answer**: ❌ **NO** - Entropy **increases** from 0.884 → 0.909 (beginning → end), indicating **divergence**.
+**Answer**: ❌ **NO** - Entropy remains **stable** from 0.733 → 0.745 (beginning → end), **no significant change**.
 
 **Implementation**: `pipelines/analyze_entropy_trajectories.py`
 
 **Results** (executed 2026-02-12):
 - **Sessions analyzed**: 156 (1 excluded due to missing data)
-- **Beginning entropy**: 0.884 ± 0.082
+- **Beginning entropy**: 0.733 ± 0.259
 - **Middle entropy**: 0.878 ± 0.085  
-- **End entropy**: 0.909 ± 0.036
+- **End entropy**: 0.745 ± 0.202
 - **Beginning → End change**: +0.026 [95% CI: -0.041, -0.014] ⚠️ Significant INCREASE
 
 **Interpretation**: Teams use **more diverse** coordination behaviors as sessions progress, contradicting the convergence hypothesis. This may indicate:
