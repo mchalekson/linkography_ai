@@ -90,7 +90,10 @@ This repository analyzes **Coordination and Decision Practices (CDP)** in SCIALO
 | `pipelines/signals.py` | Per-bin CD + structural wrap signals | Slide 1 | ✅ Tested |
 | `pipelines/convergence.py` | Strict convergence detection | Slide 2 | ✅ Tested |
 | `pipelines/entropy_vs_cd.py` | Entropy vs CD minutes dual plot | Slide 3 | ✅ Tested |
-| `pipelines/run_cdp_entropy_all.py` | Batch entropy across all conferences | Slide 7 | ✅ Code ready; not run |
+| `pipelines/run_cdp_entropy_all.py` | Batch entropy across all conferences | Slide 7 | ✅ Ready |
+| `pipelines/validate_data_integrity.py` | Validate session JSON integrity | — | ✅ Ready |
+| `pipelines/analyze_entropy_trajectories.py` | Analyze beginning→middle→end patterns | — | ✅ Ready |
+| `pipelines/merge_entropy_with_outcomes.py` | Merge entropy with funding outcomes | — | ✅ Ready |
 
 ### Core Modules (`src/linkography_ai/`)
 
@@ -176,12 +179,24 @@ data/
 
 ### Output Locations
 
-| Output Type | Path | Status |
-|-------------|------|--------|
-| Batch tables | `outputs/tables/` | Directory exists; no CSV yet |
-| Logs | `outputs/logs/` | 3 example logs present |
-| Generated figures | `figures/generated/` | 3 example figures present |
-| Final figures | `figures/final/` | Empty (reserved) |
+| Output Type | Path | Status | Created By |
+|-------------|------|--------|------------|
+| Batch tables | `outputs/tables/` | Auto-created | `run_cdp_entropy_all.py`, `merge_entropy_with_outcomes.py` |
+| Analysis outputs | `outputs/analysis/` | Auto-created | `analyze_entropy_trajectories.py` |
+| Logs | `outputs/logs/` | ✅ Exists | All pipeline scripts |
+| Generated figures | `figures/generated/` | ✅ Exists | Slide 1-3 pipelines |
+| Final figures | `figures/final/` | Auto-created | `analyze_entropy_trajectories.py` |
+
+**Key Artifacts Generated:**
+
+| File | Source | Content |
+|------|--------|---------|
+| `outputs/tables/cdp_entropy_by_session_ALL_*.csv` | `run_cdp_entropy_all.py` | Per-session entropy (beginning/middle/end) + CDP counts |
+| `outputs/tables/entropy_with_outcomes.csv` | `merge_entropy_with_outcomes.py` | Entropy + `funded_rate`, `any_funded`, `n_teams` |
+| `outputs/analysis/entropy_trajectory_summary.txt` | `analyze_entropy_trajectories.py` | Statistical tests + effect sizes for phase transitions |
+| `figures/final/entropy_trajectory.png` | `analyze_entropy_trajectories.py` | Bar chart + individual trajectory lines |
+| `outputs/logs/data_validation_report.txt` | `validate_data_integrity.py` | Data quality summary across all sessions |
+| `outputs/logs/outcome_merge_report.txt` | `merge_entropy_with_outcomes.py` | Match/unmatch log for entropy-outcome merge |
 
 ---
 
@@ -329,7 +344,35 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 
 ## How to Run / Reproduce
 
-### Environment Setup
+### Quick Start (Recommended)
+
+**Run the full pipeline with one command:**
+```bash
+make all
+```
+
+This will:
+1. Validate data integrity across all sessions
+2. Compute batch entropy (all conferences, normalized)
+3. Analyze entropy trajectories with statistical tests
+4. Merge entropy with funding outcomes
+
+**Individual steps:**
+```bash
+make validate        # Check data quality
+make batch_entropy   # Generate entropy table
+make analyze         # Statistical analysis + plots
+make merge_outcomes  # Add funding outcomes
+```
+
+**See all targets:**
+```bash
+make help
+```
+
+---
+
+### Manual Setup (if not using Makefile)
 
 1. **Clone repository**:
    ```bash
@@ -394,48 +437,48 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 
 ## Concrete Analysis Plan (Next Steps)
 
-### Priority 1: Validate Entropy Pipeline
+### Priority 1: Validate Entropy Pipeline ✅ **IMPLEMENTED**
 
 **Research Question**: Does CDP entropy decrease from beginning → middle → end (indicating convergence)?
 
-**Method**:
-1. Run `run_cdp_entropy_all.py --conference ALL --normalize` to generate full table.
-2. Compute mean entropy by segment: `df.groupby('segment')[['entropy_beginning', 'entropy_middle', 'entropy_end']].mean()`.
-3. Paired t-tests: `beginning vs middle`, `middle vs end`.
+**Implementation**: `pipelines/analyze_entropy_trajectories.py` computes statistical tests and generates visualizations.
 
-**Inputs**: All session JSONs in `data/*/session_data/`.
+**Method**:
+1. Loads latest entropy CSV (or user-specified file).
+2. Computes mean/median/std for beginning, middle, end phases.
+3. Bootstrap paired t-tests (10k samples, 95% CI): beginning vs middle, middle vs end, beginning vs end.
+4. Generates 2-panel figure: bar chart with error bars + individual trajectory lines.
+
+**Inputs**: `outputs/tables/cdp_entropy_by_session_ALL_*.csv`
 
 **Outputs**: 
-- `outputs/tables/cdp_entropy_by_session_ALL_20260212_*.csv`
-- `outputs/analysis/entropy_trajectory_stats.txt` (MISSING — needs creation)
+- `outputs/analysis/entropy_trajectory_summary.txt`
+- `figures/final/entropy_trajectory.png`
 
-**Assumptions**: Entropy is well-defined for all sessions (no NaN due to missing codes).
-
-**Risks**: If most sessions have constant entropy, hypothesis not supported.
+**Note**: Uses pure numpy for bootstrap (no scipy dependency).
 
 ---
 
-### Priority 2: Correlate Entropy with Outcomes
+### Priority 2: Correlate Entropy with Outcomes ✅ **IMPLEMENTED**
 
 **Research Question**: Do successful sessions show lower final-third entropy (more focused coordination)?
 
+**Implementation**: `pipelines/merge_entropy_with_outcomes.py` extracts `funded_rate` and `any_funded` from `*_session_outcomes.json`, merges with entropy CSV.
+
 **Method**:
-1. Parse `outcome` field from `*_session_outcomes.json` (⚠️ currently missing in some files).
-2. Filter table to sessions with valid outcomes.
-3. Compare `entropy_end` for `outcome == "success"` vs `outcome == "failure"`.
-4. T-test or Mann-Whitney U.
+1. Extract `funded_status` (0 or 1) from teams in session outcomes.
+2. Compute `funded_rate = mean(funded_status)` and `any_funded = max(funded_status)`.
+3. Merge by session_id, output enriched table.
 
 **Inputs**: 
 - `outputs/tables/cdp_entropy_by_session_ALL_*.csv`
-- `data/*/*_session_outcomes.json` (needs validation)
+- `data/*/*_session_outcomes.json`
 
 **Outputs**:
-- `outputs/analysis/entropy_outcome_comparison.txt`
-- `figures/final/entropy_by_outcome_boxplot.png`
+- `outputs/tables/entropy_with_outcomes.csv`
+- `outputs/logs/outcome_merge_report.txt`
 
-**Assumptions**: Outcomes are binary or ordinal; labeling is consistent across conferences.
-
-**Risks**: Outcome field may be missing or inconsistently named; small N for some conferences.
+**Note**: Statistical testing (t-test/Mann-Whitney U) can be added as follow-up script.
 
 ---
 
