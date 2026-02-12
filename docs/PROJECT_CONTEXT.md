@@ -16,7 +16,7 @@ Key points about the motivation:
 --------------------------------------------------
 In the codebase, coordination entropy is computed from per-utterance CDP labels as follows:
 
-- Extraction: each utterance in a session yields a list of CDP labels (see [src/linkography_ai/io_sessions.py](src/linkography_ai/io_sessions.py)). Multiple labels on the same utterance are treated as multiple counts.
+- Extraction: each utterance in a session yields a list of CDP labels (see [src/linkography_ai/io_sessions.py](../src/linkography_ai/io_sessions.py)). Multiple labels on the same utterance are treated as multiple counts.
 - Aggregation: utterance-level labels are aggregated into a bin (either an index-based tertile or a fixed-duration time bin; see next section).
 - Distribution: within each bin, counts per CDP category are converted to proportions $p_i$.
 - **Entropy (Shannon):** Shannon entropy is computed as:
@@ -25,7 +25,7 @@ In the codebase, coordination entropy is computed from per-utterance CDP labels 
 
   where $p_i$ is the proportion of CDP category $i$ within the bin.
 
-  An optional normalization divides $H$ by $\log_2(K)$, where $K$ is the number of observed (nonzero) categories, producing values bounded (approximately) in $[0,1]$ when $K > 1$. The implementation is in [src/linkography_ai/entropy.py](src/linkography_ai/entropy.py).
+  An optional normalization divides $H$ by $\log_2(K)$, where $K$ is the number of observed (nonzero) categories, producing values bounded (approximately) in $[0,1]$ when $K > 1$. The implementation is in [src/linkography_ai/entropy.py](../src/linkography_ai/entropy.py).
 
 Interpretive scope for this operationalization:
 - High entropy indicates a broad mix of CDP categories in the bin (more behavioral variety / unpredictability in label identity).
@@ -37,12 +37,12 @@ Interpretive scope for this operationalization:
 The repository contains two operational patterns for temporal aggregation, each implemented for different analysis needs:
 
 - Index-based thirds (coarse structural wrap):
-  - Implemented in [src/linkography_ai/segmentation.py](src/linkography_ai/segmentation.py) and used by the batch pipeline [pipelines/run_cdp_entropy_all.py](pipelines/run_cdp_entropy_all.py).
+  - Implemented in [src/linkography_ai/segmentation.py](../src/linkography_ai/segmentation.py) and used by the batch pipeline [pipelines/run_cdp_entropy_all.py](../pipelines/run_cdp_entropy_all.py).
   - Behavior: given $n$ utterances in a session, utterance indices are partitioned into three contiguous bins by integer division: first $\lfloor n/3 \rfloor$ indices → `beginning`, next $\lfloor n/3 \rfloor$ indices → `middle`, remainder → `end`.
   - Rationale: simple, annotation-agnostic segmentation that avoids relying on timing metadata.
 
 - Time-based bins and last-third windows (fine-grained, timeline-aware):
-  - Implemented in [src/linkography_ai/slides.py](src/linkography_ai/slides.py).
+  - Implemented in [src/linkography_ai/slides.py](../src/linkography_ai/slides.py).
   - Behavior: session JSONs that contain `start_time` / `end_time` fields are parsed; times are converted to seconds and “unwrapped” if timers reset. Utterances are binned into fixed-duration windows (`bin_sec`, default 60s). There are options to restrict analysis to the last third of meeting duration (a meeting-relative time window) and to smooth per-bin series.
   - This module also implements a separate pipeline that pairs a coordination-minute signal (minutes of CDP-coded utterances per bin) with token-level entropy of free-text (optionally excluding structural wrap utterances) for plotting and local analyses.
 
@@ -95,11 +95,11 @@ The following items are presented as open methodological questions or concrete n
 
 8. Implementation pointers (where to look in code)
 ------------------------------------------------
-- CDP extraction and session IO: [src/linkography_ai/io_sessions.py](src/linkography_ai/io_sessions.py)
-- Index-based segmentation (thirds): [src/linkography_ai/segmentation.py](src/linkography_ai/segmentation.py)
-- Shannon entropy routine: [src/linkography_ai/entropy.py](src/linkography_ai/entropy.py)
-- Batch pipeline (index-based, dataset-level): [pipelines/run_cdp_entropy_all.py](pipelines/run_cdp_entropy_all.py)
-- Timeline-aware analyses, structural wrap heuristics, and plotting helpers: [src/linkography_ai/slides.py](src/linkography_ai/slides.py)
+- CDP extraction and session IO: [src/linkography_ai/io_sessions.py](../src/linkography_ai/io_sessions.py)
+- Index-based segmentation (thirds): [src/linkography_ai/segmentation.py](../src/linkography_ai/segmentation.py)
+- Shannon entropy routine: [src/linkography_ai/entropy.py](../src/linkography_ai/entropy.py)
+- Batch pipeline (index-based, dataset-level): [pipelines/run_cdp_entropy_all.py](../pipelines/run_cdp_entropy_all.py)
+- Timeline-aware analyses, structural wrap heuristics, and plotting helpers: [src/linkography_ai/slides.py](../src/linkography_ai/slides.py)
 
 9. Short guidance for collaborators
 ----------------------------------
