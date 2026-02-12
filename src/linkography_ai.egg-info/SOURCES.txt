@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/linkography_ai/__init__.py
+src/linkography_ai/discovery.py
+src/linkography_ai/entropy.py
+src/linkography_ai/io_sessions.py
+src/linkography_ai/segmentation.py
+src/linkography_ai/slides.py
+src/linkography_ai.egg-info/PKG-INFO
+src/linkography_ai.egg-info/SOURCES.txt
+src/linkography_ai.egg-info/dependency_links.txt
+src/linkography_ai.egg-info/top_level.txt
