@@ -9,7 +9,7 @@ This README documents reproducibility steps, repository layout, the signal defin
 Repository layout
 -----------------
 - **`src/linkography_ai`**: core code implementing IO, segmentation, and signal computations. See [src/linkography_ai](src/linkography_ai).
-- **`pipelines/run_cdp_entropy_all.py`**: batch runner that iterates datasets, computes per-session CDP counts and entropies, and writes tables and logs to `outputs/`. See [pipelines/run_cdp_entropy_all.py](pipelines/run_cdp_entropy_all.py).
+- **`pipelines/make_slide7_run_cdp_entropy_all.py`**: batch runner that iterates datasets, computes per-session CDP counts and entropies, and writes tables and logs to `outputs/`. See [pipelines/make_slide7_run_cdp_entropy_all.py](pipelines/make_slide7_run_cdp_entropy_all.py).
 - **`data/`**: per-conference folders (e.g., `data/2020NES`) containing `session_data/` JSON files and session outcome files. Session JSONs are expected under `data/<CONFERENCE>/session_data/*.json`.
 
 Reproducibility and installation
@@ -31,7 +31,7 @@ pip install pandas
 
 Running the batch pipeline
 --------------------------
-The pipeline discovered in `pipelines/run_cdp_entropy_all.py` provides these CLI flags:
+The pipeline discovered in `pipelines/make_slide7_run_cdp_entropy_all.py` provides these CLI flags:
 
 - `--conference` : conference id (e.g., `2021MZT`) or `ALL` (default)
 - `--normalize`  : compute normalized Shannon entropy (divide by log2(K))
@@ -40,7 +40,7 @@ The pipeline discovered in `pipelines/run_cdp_entropy_all.py` provides these CLI
 Example
 
 ```bash
-python pipelines/run_cdp_entropy_all.py --conference 2021MZT --normalize --max_sessions 0
+python pipelines/make_slide7_run_cdp_entropy_all.py --conference 2021MZT --normalize --max_sessions 0
 ```
 
 Outputs
@@ -91,4 +91,4 @@ Where to look in the codebase
 - IO and CDP extraction: [src/linkography_ai/io_sessions.py](src/linkography_ai/io_sessions.py)
 - Segmentation (thirds): [src/linkography_ai/segmentation.py](src/linkography_ai/segmentation.py)
 - Entropy implementation: [src/linkography_ai/entropy.py](src/linkography_ai/entropy.py)
-- Batch runner: [pipelines/run_cdp_entropy_all.py](pipelines/run_cdp_entropy_all.py)
+- Batch runner: [pipelines/make_slide7_run_cdp_entropy_all.py](pipelines/make_slide7_run_cdp_entropy_all.py)

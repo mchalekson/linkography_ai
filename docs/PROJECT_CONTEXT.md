@@ -37,7 +37,7 @@ Interpretive scope for this operationalization:
 The repository contains two operational patterns for temporal aggregation, each implemented for different analysis needs:
 
 - Index-based thirds (coarse structural wrap):
-  - Implemented in [src/linkography_ai/segmentation.py](../src/linkography_ai/segmentation.py) and used by the batch pipeline [pipelines/run_cdp_entropy_all.py](../pipelines/run_cdp_entropy_all.py).
+  - Implemented in [src/linkography_ai/segmentation.py](../src/linkography_ai/segmentation.py) and used by the batch pipeline [pipelines/make_slide7_run_cdp_entropy_all.py](../pipelines/make_slide7_run_cdp_entropy_all.py).
   - Behavior: given $n$ utterances in a session, utterance indices are partitioned into three contiguous bins by integer division: first $\lfloor n/3 \rfloor$ indices → `beginning`, next $\lfloor n/3 \rfloor$ indices → `middle`, remainder → `end`.
   - Rationale: simple, annotation-agnostic segmentation that avoids relying on timing metadata.
 
@@ -98,7 +98,7 @@ The following items are presented as open methodological questions or concrete n
 - CDP extraction and session IO: [src/linkography_ai/io_sessions.py](../src/linkography_ai/io_sessions.py)
 - Index-based segmentation (thirds): [src/linkography_ai/segmentation.py](../src/linkography_ai/segmentation.py)
 - Shannon entropy routine: [src/linkography_ai/entropy.py](../src/linkography_ai/entropy.py)
-- Batch pipeline (index-based, dataset-level): [pipelines/run_cdp_entropy_all.py](../pipelines/run_cdp_entropy_all.py)
+- Batch pipeline (index-based, dataset-level): [pipelines/make_slide7_run_cdp_entropy_all.py](../pipelines/make_slide7_run_cdp_entropy_all.py)
 - Timeline-aware analyses, structural wrap heuristics, and plotting helpers: [src/linkography_ai/slides.py](../src/linkography_ai/slides.py)
 
 9. Short guidance for collaborators
