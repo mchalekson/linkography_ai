@@ -46,24 +46,17 @@ def load_session_outcomes(conference: str) -> Dict[str, Any]:
 
 
 def _extract_cdp_from_utterance_dict(u: Dict[str, Any]) -> List[str]:
-    # Direct list fields
+    # Direct list fields (for backwards compatibility)
     for k in ["cdp", "CDP", "coordination_decision_practices"]:
         v = u.get(k)
         if isinstance(v, list):
             return [str(x).strip() for x in v if x is not None and str(x).strip()]
 
-    # Nested dict patterns
+    # Nested dict patterns - the KEYS are the CDP categories
     ad = u.get("annotation_dict") or u.get("annotations") or {}
     if isinstance(ad, dict):
-        v = (
-            ad.get("Coordination and Decision Practices")
-            or ad.get("CDP")
-            or ad.get("cdp")
-        )
-        if isinstance(v, list):
-            return [str(x).strip() for x in v if x is not None and str(x).strip()]
-        if isinstance(v, str) and v.strip():
-            return [v.strip()]
+        # Return all annotation category names as CDP codes
+        return [str(key).strip() for key in ad.keys() if key and str(key).strip() and str(key).lower() != 'none']
 
     return []
 
@@ -71,7 +64,10 @@ def _extract_cdp_from_utterance_dict(u: Dict[str, Any]) -> List[str]:
 def load_session_utterances(session_path: Path) -> List[Utterance]:
     obj = json.loads(session_path.read_text())
 
-    if isinstance(obj, dict) and isinstance(obj.get("utterances"), list):
+    # Try different JSON structures
+    if isinstance(obj, dict) and isinstance(obj.get("all_data"), list):
+        utter_list = obj["all_data"]
+    elif isinstance(obj, dict) and isinstance(obj.get("utterances"), list):
         utter_list = obj["utterances"]
     elif isinstance(obj, list):
         utter_list = obj

@@ -1,5 +1,7 @@
 .PHONY: help validate batch_entropy analyze merge_outcomes all clean
 
+PYTHON := .venv/bin/python
+
 # Default target
 help:
 	@echo "================================================"
@@ -21,22 +23,22 @@ help:
 # Validate data integrity
 validate:
 	@echo "==> Validating data integrity..."
-	python pipelines/validate_data_integrity.py
+	$(PYTHON) pipelines/validate_data_integrity.py
 
 # Run batch entropy computation
 batch_entropy:
 	@echo "==> Running batch entropy computation..."
-	python pipelines/run_cdp_entropy_all.py --conference ALL --normalize
+	$(PYTHON) pipelines/run_cdp_entropy_all.py --conference ALL --normalize
 
 # Analyze entropy trajectories
 analyze:
 	@echo "==> Analyzing entropy trajectories..."
-	python pipelines/analyze_entropy_trajectories.py
+	$(PYTHON) pipelines/analyze_entropy_trajectories.py
 
 # Merge with outcomes
 merge_outcomes:
 	@echo "==> Merging entropy with outcomes..."
-	python pipelines/merge_entropy_with_outcomes.py
+	$(PYTHON) pipelines/merge_entropy_with_outcomes.py
 
 # Run full pipeline
 all: validate batch_entropy analyze merge_outcomes

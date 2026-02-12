@@ -1,0 +1,2061 @@
+================================================================================
+DATA VALIDATION REPORT
+================================================================================
+
+Total sessions: 157
+Valid sessions: 157
+Sessions with errors: 0
+Sessions with warnings: 0
+
+--------------------------------------------------------------------------------
+DETAILED RESULTS
+--------------------------------------------------------------------------------
+
+Session: data/2020NES/session_data/2020_11_05_NES_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 82
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 82
+    has_cdp_annotations: 10
+    pct_with_annotations: 100.0
+    pct_with_cdp: 12.2
+
+Session: data/2020NES/session_data/2020_11_05_NES_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 67
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 67
+    has_cdp_annotations: 5
+    pct_with_annotations: 100.0
+    pct_with_cdp: 7.5
+
+Session: data/2020NES/session_data/2020_11_05_NES_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 45
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 45
+    has_cdp_annotations: 11
+    pct_with_annotations: 100.0
+    pct_with_cdp: 24.4
+
+Session: data/2020NES/session_data/2020_11_05_NES_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 41
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 41
+    has_cdp_annotations: 10
+    pct_with_annotations: 100.0
+    pct_with_cdp: 24.4
+
+Session: data/2020NES/session_data/2020_11_05_NES_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 28
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 28
+    has_cdp_annotations: 7
+    pct_with_annotations: 100.0
+    pct_with_cdp: 25.0
+
+Session: data/2020NES/session_data/2020_11_05_NES_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 23
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 23
+    has_cdp_annotations: 4
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.4
+
+Session: data/2020NES/session_data/2020_11_06_NES_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 56
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 56
+    has_cdp_annotations: 4
+    pct_with_annotations: 100.0
+    pct_with_cdp: 7.1
+
+Session: data/2020NES/session_data/2020_11_06_NES_S10.json
+  Valid: True
+  Stats:
+    n_utterances: 71
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 71
+    has_cdp_annotations: 5
+    pct_with_annotations: 100.0
+    pct_with_cdp: 7.0
+
+Session: data/2020NES/session_data/2020_11_06_NES_S11.json
+  Valid: True
+  Stats:
+    n_utterances: 86
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 86
+    has_cdp_annotations: 8
+    pct_with_annotations: 100.0
+    pct_with_cdp: 9.3
+
+Session: data/2020NES/session_data/2020_11_06_NES_S12.json
+  Valid: True
+  Stats:
+    n_utterances: 89
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 89
+    has_cdp_annotations: 10
+    pct_with_annotations: 100.0
+    pct_with_cdp: 11.2
+
+Session: data/2020NES/session_data/2020_11_06_NES_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 77
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 77
+    has_cdp_annotations: 21
+    pct_with_annotations: 100.0
+    pct_with_cdp: 27.3
+
+Session: data/2020NES/session_data/2020_11_06_NES_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 38
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 38
+    has_cdp_annotations: 2
+    pct_with_annotations: 100.0
+    pct_with_cdp: 5.3
+
+Session: data/2020NES/session_data/2020_11_06_NES_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 88
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 88
+    has_cdp_annotations: 9
+    pct_with_annotations: 100.0
+    pct_with_cdp: 10.2
+
+Session: data/2020NES/session_data/2020_11_06_NES_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 80
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 80
+    has_cdp_annotations: 17
+    pct_with_annotations: 100.0
+    pct_with_cdp: 21.2
+
+Session: data/2020NES/session_data/2020_11_06_NES_S8.json
+  Valid: True
+  Stats:
+    n_utterances: 120
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 120
+    has_cdp_annotations: 30
+    pct_with_annotations: 100.0
+    pct_with_cdp: 25.0
+
+Session: data/2020NES/session_data/2020_11_06_NES_S9.json
+  Valid: True
+  Stats:
+    n_utterances: 160
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 160
+    has_cdp_annotations: 25
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.6
+
+Session: data/2021ABI/session_data/2021_05_20_ABI_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 121
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 121
+    has_cdp_annotations: 30
+    pct_with_annotations: 100.0
+    pct_with_cdp: 24.8
+
+Session: data/2021ABI/session_data/2021_05_20_ABI_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 287
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 287
+    has_cdp_annotations: 49
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.1
+
+Session: data/2021ABI/session_data/2021_05_20_ABI_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 151
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 151
+    has_cdp_annotations: 29
+    pct_with_annotations: 100.0
+    pct_with_cdp: 19.2
+
+Session: data/2021ABI/session_data/2021_05_20_ABI_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 228
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 228
+    has_cdp_annotations: 46
+    pct_with_annotations: 100.0
+    pct_with_cdp: 20.2
+
+Session: data/2021ABI/session_data/2021_05_20_ABI_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 235
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 235
+    has_cdp_annotations: 42
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.9
+
+Session: data/2021ABI/session_data/2021_05_20_ABI_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 230
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 230
+    has_cdp_annotations: 26
+    pct_with_annotations: 100.0
+    pct_with_cdp: 11.3
+
+Session: data/2021ABI/session_data/2021_05_20_ABI_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 188
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 188
+    has_cdp_annotations: 31
+    pct_with_annotations: 100.0
+    pct_with_cdp: 16.5
+
+Session: data/2021ABI/session_data/2021_05_20_ABI_S8.json
+  Valid: True
+  Stats:
+    n_utterances: 327
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 327
+    has_cdp_annotations: 52
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.9
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 275
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 275
+    has_cdp_annotations: 54
+    pct_with_annotations: 100.0
+    pct_with_cdp: 19.6
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S10.json
+  Valid: True
+  Stats:
+    n_utterances: 215
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 215
+    has_cdp_annotations: 51
+    pct_with_annotations: 100.0
+    pct_with_cdp: 23.7
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S11.json
+  Valid: True
+  Stats:
+    n_utterances: 190
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 190
+    has_cdp_annotations: 34
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.9
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S12.json
+  Valid: True
+  Stats:
+    n_utterances: 267
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 267
+    has_cdp_annotations: 59
+    pct_with_annotations: 100.0
+    pct_with_cdp: 22.1
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S13.json
+  Valid: True
+  Stats:
+    n_utterances: 219
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 219
+    has_cdp_annotations: 33
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.1
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S14.json
+  Valid: True
+  Stats:
+    n_utterances: 189
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 189
+    has_cdp_annotations: 35
+    pct_with_annotations: 100.0
+    pct_with_cdp: 18.5
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S15.json
+  Valid: True
+  Stats:
+    n_utterances: 255
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 255
+    has_cdp_annotations: 31
+    pct_with_annotations: 100.0
+    pct_with_cdp: 12.2
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S16.json
+  Valid: True
+  Stats:
+    n_utterances: 235
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 235
+    has_cdp_annotations: 51
+    pct_with_annotations: 100.0
+    pct_with_cdp: 21.7
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 174
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 174
+    has_cdp_annotations: 36
+    pct_with_annotations: 100.0
+    pct_with_cdp: 20.7
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 232
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 232
+    has_cdp_annotations: 36
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.5
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 259
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 259
+    has_cdp_annotations: 28
+    pct_with_annotations: 100.0
+    pct_with_cdp: 10.8
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 298
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 298
+    has_cdp_annotations: 61
+    pct_with_annotations: 100.0
+    pct_with_cdp: 20.5
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 288
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 288
+    has_cdp_annotations: 40
+    pct_with_annotations: 100.0
+    pct_with_cdp: 13.9
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 139
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 139
+    has_cdp_annotations: 31
+    pct_with_annotations: 100.0
+    pct_with_cdp: 22.3
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S8.json
+  Valid: True
+  Stats:
+    n_utterances: 237
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 237
+    has_cdp_annotations: 24
+    pct_with_annotations: 100.0
+    pct_with_cdp: 10.1
+
+Session: data/2021ABI/session_data/2021_05_21_ABI_S9.json
+  Valid: True
+  Stats:
+    n_utterances: 174
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 174
+    has_cdp_annotations: 37
+    pct_with_annotations: 100.0
+    pct_with_cdp: 21.3
+
+Session: data/2021ABI/session_data/output-2021-05-20-ABI-S1.json
+  Valid: True
+  Stats:
+    n_utterances: 39
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 39
+    has_cdp_annotations: 13
+    pct_with_annotations: 100.0
+    pct_with_cdp: 33.3
+
+Session: data/2021CMC/session_data/2021_10_07_CMC_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 203
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 203
+    has_cdp_annotations: 44
+    pct_with_annotations: 100.0
+    pct_with_cdp: 21.7
+
+Session: data/2021CMC/session_data/2021_10_07_CMC_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 121
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 121
+    has_cdp_annotations: 25
+    pct_with_annotations: 100.0
+    pct_with_cdp: 20.7
+
+Session: data/2021CMC/session_data/2021_10_07_CMC_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 169
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 169
+    has_cdp_annotations: 32
+    pct_with_annotations: 100.0
+    pct_with_cdp: 18.9
+
+Session: data/2021CMC/session_data/2021_10_07_CMC_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 187
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 187
+    has_cdp_annotations: 28
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.0
+
+Session: data/2021CMC/session_data/2021_10_07_CMC_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 174
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 174
+    has_cdp_annotations: 27
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.5
+
+Session: data/2021CMC/session_data/2021_10_07_CMC_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 176
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 176
+    has_cdp_annotations: 27
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.3
+
+Session: data/2021CMC/session_data/2021_10_07_CMC_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 131
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 131
+    has_cdp_annotations: 15
+    pct_with_annotations: 100.0
+    pct_with_cdp: 11.5
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 177
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 177
+    has_cdp_annotations: 46
+    pct_with_annotations: 100.0
+    pct_with_cdp: 26.0
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S10.json
+  Valid: True
+  Stats:
+    n_utterances: 182
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 182
+    has_cdp_annotations: 26
+    pct_with_annotations: 100.0
+    pct_with_cdp: 14.3
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S11.json
+  Valid: True
+  Stats:
+    n_utterances: 179
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 179
+    has_cdp_annotations: 32
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.9
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S12.json
+  Valid: True
+  Stats:
+    n_utterances: 126
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 126
+    has_cdp_annotations: 18
+    pct_with_annotations: 100.0
+    pct_with_cdp: 14.3
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S13.json
+  Valid: True
+  Stats:
+    n_utterances: 195
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 195
+    has_cdp_annotations: 58
+    pct_with_annotations: 100.0
+    pct_with_cdp: 29.7
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S14.json
+  Valid: True
+  Stats:
+    n_utterances: 258
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 258
+    has_cdp_annotations: 63
+    pct_with_annotations: 100.0
+    pct_with_cdp: 24.4
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 180
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 180
+    has_cdp_annotations: 26
+    pct_with_annotations: 100.0
+    pct_with_cdp: 14.4
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 169
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 169
+    has_cdp_annotations: 30
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.8
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 151
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 151
+    has_cdp_annotations: 34
+    pct_with_annotations: 100.0
+    pct_with_cdp: 22.5
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 195
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 195
+    has_cdp_annotations: 53
+    pct_with_annotations: 100.0
+    pct_with_cdp: 27.2
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 167
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 167
+    has_cdp_annotations: 38
+    pct_with_annotations: 100.0
+    pct_with_cdp: 22.8
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 151
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 151
+    has_cdp_annotations: 29
+    pct_with_annotations: 100.0
+    pct_with_cdp: 19.2
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S8.json
+  Valid: True
+  Stats:
+    n_utterances: 173
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 173
+    has_cdp_annotations: 34
+    pct_with_annotations: 100.0
+    pct_with_cdp: 19.7
+
+Session: data/2021CMC/session_data/2021_10_08_CMC_S9.json
+  Valid: True
+  Stats:
+    n_utterances: 184
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 184
+    has_cdp_annotations: 28
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.2
+
+Session: data/2021MND/session_data/2021_04_22_MND_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 199
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 199
+    has_cdp_annotations: 51
+    pct_with_annotations: 100.0
+    pct_with_cdp: 25.6
+
+Session: data/2021MND/session_data/2021_04_22_MND_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 1
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 1
+    has_cdp_annotations: 0
+    pct_with_annotations: 100.0
+    pct_with_cdp: 0.0
+
+Session: data/2021MND/session_data/2021_04_22_MND_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 163
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 163
+    has_cdp_annotations: 12
+    pct_with_annotations: 100.0
+    pct_with_cdp: 7.4
+
+Session: data/2021MND/session_data/2021_04_22_MND_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 240
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 240
+    has_cdp_annotations: 35
+    pct_with_annotations: 100.0
+    pct_with_cdp: 14.6
+
+Session: data/2021MND/session_data/2021_04_22_MND_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 222
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 222
+    has_cdp_annotations: 25
+    pct_with_annotations: 100.0
+    pct_with_cdp: 11.3
+
+Session: data/2021MND/session_data/2021_04_22_MND_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 228
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 228
+    has_cdp_annotations: 43
+    pct_with_annotations: 100.0
+    pct_with_cdp: 18.9
+
+Session: data/2021MND/session_data/2021_04_22_MND_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 187
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 187
+    has_cdp_annotations: 30
+    pct_with_annotations: 100.0
+    pct_with_cdp: 16.0
+
+Session: data/2021MND/session_data/2021_04_22_MND_S8.json
+  Valid: True
+  Stats:
+    n_utterances: 201
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 201
+    has_cdp_annotations: 17
+    pct_with_annotations: 100.0
+    pct_with_cdp: 8.5
+
+Session: data/2021MND/session_data/2021_04_23_MND_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 153
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 153
+    has_cdp_annotations: 29
+    pct_with_annotations: 100.0
+    pct_with_cdp: 19.0
+
+Session: data/2021MND/session_data/2021_04_23_MND_S10.json
+  Valid: True
+  Stats:
+    n_utterances: 223
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 223
+    has_cdp_annotations: 35
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.7
+
+Session: data/2021MND/session_data/2021_04_23_MND_S11.json
+  Valid: True
+  Stats:
+    n_utterances: 214
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 214
+    has_cdp_annotations: 34
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.9
+
+Session: data/2021MND/session_data/2021_04_23_MND_S12.json
+  Valid: True
+  Stats:
+    n_utterances: 193
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 193
+    has_cdp_annotations: 16
+    pct_with_annotations: 100.0
+    pct_with_cdp: 8.3
+
+Session: data/2021MND/session_data/2021_04_23_MND_S13.json
+  Valid: True
+  Stats:
+    n_utterances: 209
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 209
+    has_cdp_annotations: 42
+    pct_with_annotations: 100.0
+    pct_with_cdp: 20.1
+
+Session: data/2021MND/session_data/2021_04_23_MND_S14.json
+  Valid: True
+  Stats:
+    n_utterances: 204
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 204
+    has_cdp_annotations: 39
+    pct_with_annotations: 100.0
+    pct_with_cdp: 19.1
+
+Session: data/2021MND/session_data/2021_04_23_MND_S15.json
+  Valid: True
+  Stats:
+    n_utterances: 213
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 213
+    has_cdp_annotations: 45
+    pct_with_annotations: 100.0
+    pct_with_cdp: 21.1
+
+Session: data/2021MND/session_data/2021_04_23_MND_S16.json
+  Valid: True
+  Stats:
+    n_utterances: 186
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 186
+    has_cdp_annotations: 25
+    pct_with_annotations: 100.0
+    pct_with_cdp: 13.4
+
+Session: data/2021MND/session_data/2021_04_23_MND_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 218
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 218
+    has_cdp_annotations: 40
+    pct_with_annotations: 100.0
+    pct_with_cdp: 18.3
+
+Session: data/2021MND/session_data/2021_04_23_MND_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 134
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 134
+    has_cdp_annotations: 18
+    pct_with_annotations: 100.0
+    pct_with_cdp: 13.4
+
+Session: data/2021MND/session_data/2021_04_23_MND_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 182
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 182
+    has_cdp_annotations: 35
+    pct_with_annotations: 100.0
+    pct_with_cdp: 19.2
+
+Session: data/2021MND/session_data/2021_04_23_MND_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 176
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 176
+    has_cdp_annotations: 38
+    pct_with_annotations: 100.0
+    pct_with_cdp: 21.6
+
+Session: data/2021MND/session_data/2021_04_23_MND_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 259
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 259
+    has_cdp_annotations: 34
+    pct_with_annotations: 100.0
+    pct_with_cdp: 13.1
+
+Session: data/2021MND/session_data/2021_04_23_MND_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 202
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 202
+    has_cdp_annotations: 36
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.8
+
+Session: data/2021MND/session_data/2021_04_23_MND_S8.json
+  Valid: True
+  Stats:
+    n_utterances: 175
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 175
+    has_cdp_annotations: 28
+    pct_with_annotations: 100.0
+    pct_with_cdp: 16.0
+
+Session: data/2021MND/session_data/2021_04_23_MND_S9.json
+  Valid: True
+  Stats:
+    n_utterances: 180
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 180
+    has_cdp_annotations: 12
+    pct_with_annotations: 100.0
+    pct_with_cdp: 6.7
+
+Session: data/2021MZT/session_data/2021_09_30_MZT_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 145
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 145
+    has_cdp_annotations: 10
+    pct_with_annotations: 100.0
+    pct_with_cdp: 6.9
+
+Session: data/2021MZT/session_data/2021_09_30_MZT_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 123
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 123
+    has_cdp_annotations: 28
+    pct_with_annotations: 100.0
+    pct_with_cdp: 22.8
+
+Session: data/2021MZT/session_data/2021_09_30_MZT_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 147
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 147
+    has_cdp_annotations: 24
+    pct_with_annotations: 100.0
+    pct_with_cdp: 16.3
+
+Session: data/2021MZT/session_data/2021_09_30_MZT_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 130
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 130
+    has_cdp_annotations: 19
+    pct_with_annotations: 100.0
+    pct_with_cdp: 14.6
+
+Session: data/2021MZT/session_data/2021_09_30_MZT_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 39
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 39
+    has_cdp_annotations: 10
+    pct_with_annotations: 100.0
+    pct_with_cdp: 25.6
+
+Session: data/2021MZT/session_data/2021_09_30_MZT_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 425
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 425
+    has_cdp_annotations: 80
+    pct_with_annotations: 100.0
+    pct_with_cdp: 18.8
+
+Session: data/2021MZT/session_data/2021_10_01_MZT_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 201
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 201
+    has_cdp_annotations: 26
+    pct_with_annotations: 100.0
+    pct_with_cdp: 12.9
+
+Session: data/2021MZT/session_data/2021_10_01_MZT_S11.json
+  Valid: True
+  Stats:
+    n_utterances: 132
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 132
+    has_cdp_annotations: 31
+    pct_with_annotations: 100.0
+    pct_with_cdp: 23.5
+
+Session: data/2021MZT/session_data/2021_10_01_MZT_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 181
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 181
+    has_cdp_annotations: 30
+    pct_with_annotations: 100.0
+    pct_with_cdp: 16.6
+
+Session: data/2021MZT/session_data/2021_10_01_MZT_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 249
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 249
+    has_cdp_annotations: 45
+    pct_with_annotations: 100.0
+    pct_with_cdp: 18.1
+
+Session: data/2021MZT/session_data/2021_10_01_MZT_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 220
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 220
+    has_cdp_annotations: 50
+    pct_with_annotations: 100.0
+    pct_with_cdp: 22.7
+
+Session: data/2021MZT/session_data/2021_10_01_MZT_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 243
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 243
+    has_cdp_annotations: 46
+    pct_with_annotations: 100.0
+    pct_with_cdp: 18.9
+
+Session: data/2021MZT/session_data/2021_10_01_MZT_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 184
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 184
+    has_cdp_annotations: 28
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.2
+
+Session: data/2021MZT/session_data/2021_10_01_MZT_S8.json
+  Valid: True
+  Stats:
+    n_utterances: 180
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 180
+    has_cdp_annotations: 32
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.8
+
+Session: data/2021MZT/session_data/2021_10_01_MZT_S9.json
+  Valid: True
+  Stats:
+    n_utterances: 197
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 197
+    has_cdp_annotations: 41
+    pct_with_annotations: 100.0
+    pct_with_cdp: 20.8
+
+Session: data/2021NES/session_data/2021_11_04_NES_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 115
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 115
+    has_cdp_annotations: 30
+    pct_with_annotations: 100.0
+    pct_with_cdp: 26.1
+
+Session: data/2021NES/session_data/2021_11_04_NES_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 174
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 174
+    has_cdp_annotations: 20
+    pct_with_annotations: 100.0
+    pct_with_cdp: 11.5
+
+Session: data/2021NES/session_data/2021_11_04_NES_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 244
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 244
+    has_cdp_annotations: 70
+    pct_with_annotations: 100.0
+    pct_with_cdp: 28.7
+
+Session: data/2021NES/session_data/2021_11_04_NES_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 219
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 219
+    has_cdp_annotations: 37
+    pct_with_annotations: 100.0
+    pct_with_cdp: 16.9
+
+Session: data/2021NES/session_data/2021_11_04_NES_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 187
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 187
+    has_cdp_annotations: 31
+    pct_with_annotations: 100.0
+    pct_with_cdp: 16.6
+
+Session: data/2021NES/session_data/2021_11_04_NES_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 172
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 172
+    has_cdp_annotations: 39
+    pct_with_annotations: 100.0
+    pct_with_cdp: 22.7
+
+Session: data/2021NES/session_data/2021_11_05_NES_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 382
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 382
+    has_cdp_annotations: 88
+    pct_with_annotations: 100.0
+    pct_with_cdp: 23.0
+
+Session: data/2021NES/session_data/2021_11_05_NES_S10.json
+  Valid: True
+  Stats:
+    n_utterances: 276
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 276
+    has_cdp_annotations: 49
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.8
+
+Session: data/2021NES/session_data/2021_11_05_NES_S11.json
+  Valid: True
+  Stats:
+    n_utterances: 148
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 148
+    has_cdp_annotations: 41
+    pct_with_annotations: 100.0
+    pct_with_cdp: 27.7
+
+Session: data/2021NES/session_data/2021_11_05_NES_S12.json
+  Valid: True
+  Stats:
+    n_utterances: 255
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 255
+    has_cdp_annotations: 44
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.3
+
+Session: data/2021NES/session_data/2021_11_05_NES_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 163
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 163
+    has_cdp_annotations: 45
+    pct_with_annotations: 100.0
+    pct_with_cdp: 27.6
+
+Session: data/2021NES/session_data/2021_11_05_NES_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 315
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 315
+    has_cdp_annotations: 72
+    pct_with_annotations: 100.0
+    pct_with_cdp: 22.9
+
+Session: data/2021NES/session_data/2021_11_05_NES_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 225
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 225
+    has_cdp_annotations: 76
+    pct_with_annotations: 100.0
+    pct_with_cdp: 33.8
+
+Session: data/2021NES/session_data/2021_11_05_NES_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 299
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 299
+    has_cdp_annotations: 66
+    pct_with_annotations: 100.0
+    pct_with_cdp: 22.1
+
+Session: data/2021NES/session_data/2021_11_05_NES_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 339
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 339
+    has_cdp_annotations: 77
+    pct_with_annotations: 100.0
+    pct_with_cdp: 22.7
+
+Session: data/2021NES/session_data/2021_11_05_NES_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 347
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 347
+    has_cdp_annotations: 64
+    pct_with_annotations: 100.0
+    pct_with_cdp: 18.4
+
+Session: data/2021NES/session_data/2021_11_05_NES_S8.json
+  Valid: True
+  Stats:
+    n_utterances: 148
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 148
+    has_cdp_annotations: 43
+    pct_with_annotations: 100.0
+    pct_with_cdp: 29.1
+
+Session: data/2021NES/session_data/2021_11_05_NES_S9.json
+  Valid: True
+  Stats:
+    n_utterances: 266
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 266
+    has_cdp_annotations: 51
+    pct_with_annotations: 100.0
+    pct_with_cdp: 19.2
+
+Session: data/2021SLU/session_data/2021_06_10_SLU_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 213
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 213
+    has_cdp_annotations: 49
+    pct_with_annotations: 100.0
+    pct_with_cdp: 23.0
+
+Session: data/2021SLU/session_data/2021_06_10_SLU_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 190
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 190
+    has_cdp_annotations: 32
+    pct_with_annotations: 100.0
+    pct_with_cdp: 16.8
+
+Session: data/2021SLU/session_data/2021_06_10_SLU_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 178
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 178
+    has_cdp_annotations: 49
+    pct_with_annotations: 100.0
+    pct_with_cdp: 27.5
+
+Session: data/2021SLU/session_data/2021_06_10_SLU_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 308
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 308
+    has_cdp_annotations: 43
+    pct_with_annotations: 100.0
+    pct_with_cdp: 14.0
+
+Session: data/2021SLU/session_data/2021_06_10_SLU_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 202
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 202
+    has_cdp_annotations: 49
+    pct_with_annotations: 100.0
+    pct_with_cdp: 24.3
+
+Session: data/2021SLU/session_data/2021_06_10_SLU_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 249
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 249
+    has_cdp_annotations: 30
+    pct_with_annotations: 100.0
+    pct_with_cdp: 12.0
+
+Session: data/2021SLU/session_data/2021_06_10_SLU_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 205
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 205
+    has_cdp_annotations: 46
+    pct_with_annotations: 100.0
+    pct_with_cdp: 22.4
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 269
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 269
+    has_cdp_annotations: 43
+    pct_with_annotations: 100.0
+    pct_with_cdp: 16.0
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S10.json
+  Valid: True
+  Stats:
+    n_utterances: 246
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 246
+    has_cdp_annotations: 36
+    pct_with_annotations: 100.0
+    pct_with_cdp: 14.6
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S11.json
+  Valid: True
+  Stats:
+    n_utterances: 201
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 201
+    has_cdp_annotations: 38
+    pct_with_annotations: 100.0
+    pct_with_cdp: 18.9
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S12.json
+  Valid: True
+  Stats:
+    n_utterances: 257
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 257
+    has_cdp_annotations: 44
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.1
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S13.json
+  Valid: True
+  Stats:
+    n_utterances: 257
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 257
+    has_cdp_annotations: 39
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.2
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 247
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 247
+    has_cdp_annotations: 29
+    pct_with_annotations: 100.0
+    pct_with_cdp: 11.7
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 229
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 229
+    has_cdp_annotations: 31
+    pct_with_annotations: 100.0
+    pct_with_cdp: 13.5
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 209
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 209
+    has_cdp_annotations: 44
+    pct_with_annotations: 100.0
+    pct_with_cdp: 21.1
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 180
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 180
+    has_cdp_annotations: 18
+    pct_with_annotations: 100.0
+    pct_with_cdp: 10.0
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 253
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 253
+    has_cdp_annotations: 34
+    pct_with_annotations: 100.0
+    pct_with_cdp: 13.4
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 199
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 199
+    has_cdp_annotations: 39
+    pct_with_annotations: 100.0
+    pct_with_cdp: 19.6
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S8.json
+  Valid: True
+  Stats:
+    n_utterances: 262
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 262
+    has_cdp_annotations: 31
+    pct_with_annotations: 100.0
+    pct_with_cdp: 11.8
+
+Session: data/2021SLU/session_data/2021_06_11_SLU_S9.json
+  Valid: True
+  Stats:
+    n_utterances: 260
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 260
+    has_cdp_annotations: 40
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.4
+
+Session: data/2022MND/session_data/2022_04_07_MND_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 283
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 283
+    has_cdp_annotations: 33
+    pct_with_annotations: 100.0
+    pct_with_cdp: 11.7
+
+Session: data/2022MND/session_data/2022_04_07_MND_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 271
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 271
+    has_cdp_annotations: 46
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.0
+
+Session: data/2022MND/session_data/2022_04_07_MND_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 141
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 141
+    has_cdp_annotations: 16
+    pct_with_annotations: 100.0
+    pct_with_cdp: 11.3
+
+Session: data/2022MND/session_data/2022_04_07_MND_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 257
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 257
+    has_cdp_annotations: 38
+    pct_with_annotations: 100.0
+    pct_with_cdp: 14.8
+
+Session: data/2022MND/session_data/2022_04_07_MND_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 258
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 258
+    has_cdp_annotations: 34
+    pct_with_annotations: 100.0
+    pct_with_cdp: 13.2
+
+Session: data/2022MND/session_data/2022_04_07_MND_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 234
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 234
+    has_cdp_annotations: 25
+    pct_with_annotations: 100.0
+    pct_with_cdp: 10.7
+
+Session: data/2022MND/session_data/2022_04_08_MND_S1.json
+  Valid: True
+  Stats:
+    n_utterances: 230
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 230
+    has_cdp_annotations: 37
+    pct_with_annotations: 100.0
+    pct_with_cdp: 16.1
+
+Session: data/2022MND/session_data/2022_04_08_MND_S10.json
+  Valid: True
+  Stats:
+    n_utterances: 197
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 197
+    has_cdp_annotations: 13
+    pct_with_annotations: 100.0
+    pct_with_cdp: 6.6
+
+Session: data/2022MND/session_data/2022_04_08_MND_S11.json
+  Valid: True
+  Stats:
+    n_utterances: 211
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 211
+    has_cdp_annotations: 46
+    pct_with_annotations: 100.0
+    pct_with_cdp: 21.8
+
+Session: data/2022MND/session_data/2022_04_08_MND_S12.json
+  Valid: True
+  Stats:
+    n_utterances: 12
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 12
+    has_cdp_annotations: 3
+    pct_with_annotations: 100.0
+    pct_with_cdp: 25.0
+
+Session: data/2022MND/session_data/2022_04_08_MND_S2.json
+  Valid: True
+  Stats:
+    n_utterances: 312
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 312
+    has_cdp_annotations: 51
+    pct_with_annotations: 100.0
+    pct_with_cdp: 16.3
+
+Session: data/2022MND/session_data/2022_04_08_MND_S3.json
+  Valid: True
+  Stats:
+    n_utterances: 281
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 281
+    has_cdp_annotations: 28
+    pct_with_annotations: 100.0
+    pct_with_cdp: 10.0
+
+Session: data/2022MND/session_data/2022_04_08_MND_S4.json
+  Valid: True
+  Stats:
+    n_utterances: 216
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 216
+    has_cdp_annotations: 17
+    pct_with_annotations: 100.0
+    pct_with_cdp: 7.9
+
+Session: data/2022MND/session_data/2022_04_08_MND_S5.json
+  Valid: True
+  Stats:
+    n_utterances: 255
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 255
+    has_cdp_annotations: 36
+    pct_with_annotations: 100.0
+    pct_with_cdp: 14.1
+
+Session: data/2022MND/session_data/2022_04_08_MND_S6.json
+  Valid: True
+  Stats:
+    n_utterances: 6
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 6
+    has_cdp_annotations: 2
+    pct_with_annotations: 100.0
+    pct_with_cdp: 33.3
+
+Session: data/2022MND/session_data/2022_04_08_MND_S7.json
+  Valid: True
+  Stats:
+    n_utterances: 259
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 259
+    has_cdp_annotations: 44
+    pct_with_annotations: 100.0
+    pct_with_cdp: 17.0
+
+Session: data/2022MND/session_data/2022_04_08_MND_S8.json
+  Valid: True
+  Stats:
+    n_utterances: 365
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 365
+    has_cdp_annotations: 32
+    pct_with_annotations: 100.0
+    pct_with_cdp: 8.8
+
+Session: data/2022MND/session_data/2022_04_08_MND_S9.json
+  Valid: True
+  Stats:
+    n_utterances: 273
+    missing_start_time: 0
+    missing_end_time: 0
+    missing_both_times: 0
+    pct_missing_times: 0.0
+    has_annotations: 273
+    has_cdp_annotations: 42
+    pct_with_annotations: 100.0
+    pct_with_cdp: 15.4
+
+--------------------------------------------------------------------------------
+AGGREGATE STATISTICS
+--------------------------------------------------------------------------------
+
+Total utterances across all sessions: 30558
+Utterances with CDP annotations: 5319
+Overall CDP annotation coverage: 17.4%
