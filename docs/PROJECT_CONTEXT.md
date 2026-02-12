@@ -119,20 +119,33 @@ This repository analyzes **Coordination and Decision Practices (CDP)** in SCIALO
 
 ---
 
-## The 8 CDP Categories (Behavioral Codes)
+## What We Measure: CDP Score Diversity
 
-**What gets counted as "CDP"**: Any annotation category applied to an utterance. These are the 8 behavioral codes used in SCIALOG annotations:
+**Focus**: "Coordination and Decision Practices" (CDP) annotations only
 
-1. **Coordination and Decision Practices** - Structuring work, decision-making
-2. **Knowledge Sharing** - Information exchange, teaching
-3. **Information Seeking** - Asking questions, requesting clarification
-4. **Idea Management** - Proposing, building on, organizing ideas
-5. **Evaluation Practices** - Assessment, critique, validation
-6. **Relational Climate** - Social dynamics, rapport-building
-7. **Participation Dynamics** - Turn-taking, engagement patterns
-8. **Integration Practices** - Synthesis, cross-disciplinary connection
+**The 8 SCIALOG Categories** (for context):
+1. **Coordination and Decision Practices** ⭐ **OUR FOCUS**
+2. Knowledge Sharing
+3. Information Seeking  
+4. Idea Management
+5. Evaluation Practices
+6. Relational Climate
+7. Participation Dynamics
+8. Integration Practices
 
-**Key Point**: An utterance can have **multiple** CDP categories (multi-label). Entropy measures the **diversity** of categories used in a segment - higher entropy = more varied behavioral repertoire.
+**What CDP Measures**: When an utterance has the CDP annotation, it includes a **score** field:
+- **Score 1**: Basic coordination (structuring contributions, simple process management)
+- **Score 2**: Advanced coordination (explicit agenda-setting, complex decision-making)
+
+**What Entropy Measures**: The diversity of CDP **intensity levels** (score 1 vs score 2) within a segment.
+- **High entropy** (~1.0): Mix of score 1 and score 2 utterances (varied coordination intensity)
+- **Low entropy** (~0.0): All utterances have same score (uniform coordination level)
+
+**Example**: 
+- Segment with 5 score-1 and 5 score-2 CDP utterances → High entropy (diverse coordination)
+- Segment with 10 score-1 CDP utterances → Low entropy (uniform coordination)
+
+**Research Question**: Do teams start with diverse coordination levels (high entropy) and converge to uniform coordination (low entropy) by the end?
 
 **Example**: If a segment uses all 8 categories equally, normalized entropy ≈ 1.0. If only 1 category is used, entropy = 0.0.
 
@@ -264,8 +277,8 @@ print(f"Mean entropy: {nes_2021['entropy_end'].mean():.3f}")
 - **Normal**: 78.3% match rate is expected (some sessions lack outcome data)
 
 **4. All entropy values near 0.9**
-- **Not a bug**: This is real data - sessions genuinely show high CDP diversity
-- **Interpretation**: Teams use 6-7 different behavioral categories throughout
+- **Not a bug**: This is real data - sessions genuinely show high behavioral diversity across all 8 categories
+- **Interpretation**: Teams use 6-7 different annotation categories throughout (not just "Coordination and Decision Practices")
 
 ### Verification Commands
 

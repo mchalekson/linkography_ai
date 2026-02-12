@@ -2,45 +2,45 @@
 ENTROPY TRAJECTORY ANALYSIS
 ================================================================================
 
-Number of sessions: 156
+Number of sessions: 138
 
 --------------------------------------------------------------------------------
 SUMMARY STATISTICS BY PHASE
 --------------------------------------------------------------------------------
 
 BEGINNING:
-  Mean:   0.8837
-  Median: 0.8954
-  Std:    0.0822
+  Mean:   0.7335
+  Median: 0.8063
+  Std:    0.2589
 
 MIDDLE:
-  Mean:   0.8779
-  Median: 0.8865
-  Std:    0.0850
+  Mean:   0.6500
+  Median: 0.8113
+  Std:    0.3751
 
 END:
-  Mean:   0.9094
-  Median: 0.9133
-  Std:    0.0362
+  Mean:   0.7446
+  Median: 0.7755
+  Std:    0.2017
 
 --------------------------------------------------------------------------------
 PAIRED COMPARISONS (with 95% Bootstrap CIs)
 --------------------------------------------------------------------------------
 
 Beginning vs Middle:
-  Mean difference: 0.0059
-  95% CI: [-0.0132, 0.0253]
-  → No significant difference (CI includes 0)
+  Mean difference: 0.0835
+  95% CI: [0.0074, 0.1624]
+  → Significantly HIGHER in first phase (CI excludes 0)
 
 Middle vs End:
-  Mean difference: -0.0315
-  95% CI: [-0.0467, -0.0196]
+  Mean difference: -0.0946
+  95% CI: [-0.1668, -0.0250]
   → Significantly LOWER in first phase (CI excludes 0)
 
 Beginning vs End:
-  Mean difference: -0.0257
-  95% CI: [-0.0411, -0.0138]
-  → Significantly LOWER in first phase (CI excludes 0)
+  Mean difference: -0.0112
+  95% CI: [-0.0675, 0.0434]
+  → No significant difference (CI includes 0)
 
 --------------------------------------------------------------------------------
 INTERPRETATION

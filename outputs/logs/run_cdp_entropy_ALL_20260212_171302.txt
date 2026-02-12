@@ -1,0 +1,4 @@
+conference_arg=ALL
+conferences_run=['2020NES', '2021ABI', '2021CMC', '2021MND', '2021MZT', '2021NES', '2021SLU', '2022MND']
+sessions_total=157
+output_table=/Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/outputs/tables/cdp_entropy_by_session_ALL_20260212_171302.csv

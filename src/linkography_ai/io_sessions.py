@@ -52,12 +52,16 @@ def _extract_cdp_from_utterance_dict(u: Dict[str, Any]) -> List[str]:
         if isinstance(v, list):
             return [str(x).strip() for x in v if x is not None and str(x).strip()]
 
-    # Nested dict patterns - the KEYS are the CDP categories
+    # Nested dict patterns - extract CDP score as the "code"
     ad = u.get("annotation_dict") or u.get("annotations") or {}
     if isinstance(ad, dict):
-        # Return all annotation category names as CDP codes
-        return [str(key).strip() for key in ad.keys() if key and str(key).strip() and str(key).lower() != 'none']
-
+        cdp_data = ad.get("Coordination and Decision Practices")
+        if cdp_data and isinstance(cdp_data, dict):
+            # Extract the score value (1 or 2) as the CDP "code"
+            score = cdp_data.get("score")
+            if score is not None:
+                return [f"CDP_score_{score}"]
+    
     return []
 
 
