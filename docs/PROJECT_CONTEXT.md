@@ -574,9 +574,3 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 - **Incomplete timestamps**: Some sessions have malformed `start_time`/`end_time`.
 
 ---
-
-## Questions or Issues
-
-Contact **Max Chalekson** or **Evey** for clarifications.
-
-**Repository**: [https://github.com/mchalekson/linkography_ai](https://github.com/mchalekson/linkography_ai)
