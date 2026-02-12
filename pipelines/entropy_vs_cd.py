@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-"""
+"""Slide 3: Entropy vs Coordination/Decision
+
 make_slide3_entropy_vs_cd.py
 
 Replicate Slide 3 (Entropy vs Coordination/Decision) chunk using

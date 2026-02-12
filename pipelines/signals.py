@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-"""
+"""Slide 1: Signals by time bin
+
 make_slide1_signals.py
 
 Replicate Slide 1 plotting: per-bin minutes of coordination/decision and structural

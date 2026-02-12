@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-"""
+"""Slide 2: Convergence detection
+
 make_slide2_convergence.py
 
 Replicate Slide 10 - Part 2: Convergence Detection and Visualization

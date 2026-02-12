@@ -1,3 +1,5 @@
+"""Slide 7: Batch entropy pipeline across all conferences/sessions."""
+
 from __future__ import annotations
 
 import argparse

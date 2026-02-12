@@ -10,10 +10,10 @@ Repository layout
 -----------------
 - **`src/linkography_ai`**: core code implementing IO, segmentation, and signal computations. See [src/linkography_ai](src/linkography_ai).
 - **`pipelines/`**: analysis and batch processing pipelines:
-  - `slide1_signals.py` — compute per-bin minutes of coordination/decision and structural wrap signals, with smoothing.
-  - `slide2_convergence.py` — detect strict convergence (agreement phrase + commitment code + not structural wrap) and plot convergence vs structural signals.
-  - `slide3_entropy_vs_cd.py` — compute and plot entropy vs coordination/decision minutes using time-binned analysis.
-  - `slide7_run_cdp_entropy_all.py` — batch runner that iterates datasets, computes per-session CDP counts and entropies, and writes tables and logs to `outputs/`.
+  - `signals.py` — compute per-bin minutes of coordination/decision and structural wrap signals, with smoothing. (Slide 1)
+  - `convergence.py` — detect strict convergence (agreement phrase + commitment code + not structural wrap) and plot convergence vs structural signals. (Slide 2)
+  - `entropy_vs_cd.py` — compute and plot entropy vs coordination/decision minutes using time-binned analysis. (Slide 3)
+  - `run_cdp_entropy_all.py` — batch runner that iterates datasets, computes per-session CDP counts and entropies, and writes tables and logs to `outputs/`. (Slide 7)
 - **`data/`**: per-conference folders (e.g., `data/2020NES`) containing `session_data/` JSON files and session outcome files. Session JSONs are expected under `data/<CONFERENCE>/session_data/*.json`.
 
 Reproducibility and installation
@@ -40,19 +40,19 @@ Each slide pipeline can be run on a single session and produces a PNG figure and
 
 **Slide 1: Signals by time bin**
 ```bash
-python pipelines/slide1_signals.py --session data/2021NES/session_data/2021_11_04_NES_S6.json
+python pipelines/signals.py --session data/2021NES/session_data/2021_11_04_NES_S6.json
 ```
 Outputs: `figures/generated/slide1_<session>.png` and `outputs/logs/slide1_<session>.txt`
 
 **Slide 2: Convergence detection**
 ```bash
-python pipelines/slide2_convergence.py --session data/2021NES/session_data/2021_11_04_NES_S6.json --print-context
+python pipelines/convergence.py --session data/2021NES/session_data/2021_11_04_NES_S6.json --print-context
 ```
 Outputs: `figures/generated/slide2_<session>.png` and `outputs/logs/slide2_<session>.txt`
 
 **Slide 3: Entropy vs Coordination/Decision**
 ```bash
-python pipelines/slide3_entropy_vs_cd.py --session data/2021NES/session_data/2021_11_04_NES_S6.json
+python pipelines/entropy_vs_cd.py --session data/2021NES/session_data/2021_11_04_NES_S6.json
 ```
 Outputs: `figures/generated/slide3_<session>.png` and `outputs/logs/slide3_<session>.txt`
 
@@ -66,7 +66,7 @@ All slide pipelines support these common flags:
 
 Running the batch entropy pipeline
 --------------------------
-The batch entropy pipeline in `pipelines/slide7_run_cdp_entropy_all.py` processes entire conferences or all datasets. It provides these CLI flags:
+The batch entropy pipeline in `pipelines/run_cdp_entropy_all.py` processes entire conferences or all datasets. It provides these CLI flags:
 
 - `--conference` : conference id (e.g., `2021MZT`) or `ALL` (default)
 - `--normalize`  : compute normalized Shannon entropy (divide by log2(K))
@@ -75,7 +75,7 @@ The batch entropy pipeline in `pipelines/slide7_run_cdp_entropy_all.py` processe
 Example
 
 ```bash
-python pipelines/slide7_run_cdp_entropy_all.py --conference 2021MZT --normalize --max_sessions 0
+python pipelines/run_cdp_entropy_all.py --conference 2021MZT --normalize --max_sessions 0
 ```
 
 Outputs
@@ -126,4 +126,4 @@ Where to look in the codebase
 - IO and CDP extraction: [src/linkography_ai/io_sessions.py](src/linkography_ai/io_sessions.py)
 - Segmentation (thirds): [src/linkography_ai/segmentation.py](src/linkography_ai/segmentation.py)
 - Entropy implementation: [src/linkography_ai/entropy.py](src/linkography_ai/entropy.py)
-- Batch runner: [pipelines/slide7_run_cdp_entropy_all.py](pipelines/slide7_run_cdp_entropy_all.py)
+- Batch runner: [pipelines/run_cdp_entropy_all.py](pipelines/run_cdp_entropy_all.py)
