@@ -9,7 +9,11 @@ This README documents reproducibility steps, repository layout, the signal defin
 Repository layout
 -----------------
 - **`src/linkography_ai`**: core code implementing IO, segmentation, and signal computations. See [src/linkography_ai](src/linkography_ai).
-- **`pipelines/make_slide7_run_cdp_entropy_all.py`**: batch runner that iterates datasets, computes per-session CDP counts and entropies, and writes tables and logs to `outputs/`. See [pipelines/make_slide7_run_cdp_entropy_all.py](pipelines/make_slide7_run_cdp_entropy_all.py).
+- **`pipelines/`**: analysis and batch processing pipelines:
+  - `make_slide1_signals.py` — compute per-bin minutes of coordination/decision and structural wrap signals, with smoothing.
+  - `make_slide2_convergence.py` — detect strict convergence (agreement phrase + commitment code + not structural wrap) and plot convergence vs structural signals.
+  - `make_slide3_entropy_vs_cd.py` — compute and plot entropy vs coordination/decision minutes using time-binned analysis.
+  - `make_slide7_run_cdp_entropy_all.py` — batch runner that iterates datasets, computes per-session CDP counts and entropies, and writes tables and logs to `outputs/`.
 - **`data/`**: per-conference folders (e.g., `data/2020NES`) containing `session_data/` JSON files and session outcome files. Session JSONs are expected under `data/<CONFERENCE>/session_data/*.json`.
 
 Reproducibility and installation
@@ -29,9 +33,40 @@ python -m pip install -e .
 pip install pandas
 ```
 
-Running the batch pipeline
+Running individual slide pipelines
+----------------------------------
+
+Each slide pipeline can be run on a single session and produces a PNG figure and a log file with signal statistics.
+
+**Slide 1: Signals by time bin**
+```bash
+python pipelines/make_slide1_signals.py --session data/2021NES/session_data/2021_11_04_NES_S6.json
+```
+Outputs: `figures/generated/slide1_<session>.png` and `outputs/logs/slide1_<session>.txt`
+
+**Slide 2: Convergence detection**
+```bash
+python pipelines/make_slide2_convergence.py --session data/2021NES/session_data/2021_11_04_NES_S6.json --print-context
+```
+Outputs: `figures/generated/slide2_<session>.png` and `outputs/logs/slide2_<session>.txt`
+
+**Slide 3: Entropy vs Coordination/Decision**
+```bash
+python pipelines/make_slide3_entropy_vs_cd.py --session data/2021NES/session_data/2021_11_04_NES_S6.json
+```
+Outputs: `figures/generated/slide3_<session>.png` and `outputs/logs/slide3_<session>.txt`
+
+All slide pipelines support these common flags:
+- `--bin-sec` : bin width in seconds (default 60)
+- `--smooth-window` : rolling mean window size (default 3)
+- `--last-third-only` : restrict to last third of meeting (default True)
+- `--out-fig` : custom output figure path
+- `--out-log` : custom output log path
+- `--print-context` : print nearby utterances around callouts
+
+Running the batch entropy pipeline
 --------------------------
-The pipeline discovered in `pipelines/make_slide7_run_cdp_entropy_all.py` provides these CLI flags:
+The batch entropy pipeline in `pipelines/make_slide7_run_cdp_entropy_all.py` processes entire conferences or all datasets. It provides these CLI flags:
 
 - `--conference` : conference id (e.g., `2021MZT`) or `ALL` (default)
 - `--normalize`  : compute normalized Shannon entropy (divide by log2(K))

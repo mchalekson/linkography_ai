@@ -95,11 +95,18 @@ The following items are presented as open methodological questions or concrete n
 
 8. Implementation pointers (where to look in code)
 ------------------------------------------------
+
+**Core library:**
 - CDP extraction and session IO: [src/linkography_ai/io_sessions.py](../src/linkography_ai/io_sessions.py)
 - Index-based segmentation (thirds): [src/linkography_ai/segmentation.py](../src/linkography_ai/segmentation.py)
 - Shannon entropy routine: [src/linkography_ai/entropy.py](../src/linkography_ai/entropy.py)
-- Batch pipeline (index-based, dataset-level): [pipelines/make_slide7_run_cdp_entropy_all.py](../pipelines/make_slide7_run_cdp_entropy_all.py)
 - Timeline-aware analyses, structural wrap heuristics, and plotting helpers: [src/linkography_ai/slides.py](../src/linkography_ai/slides.py)
+
+**Pipelines (reproducible analysis scripts):**
+- Slide 1: Signals by time bin — [pipelines/make_slide1_signals.py](../pipelines/make_slide1_signals.py)
+- Slide 2: Convergence detection — [pipelines/make_slide2_convergence.py](../pipelines/make_slide2_convergence.py)
+- Slide 3: Entropy vs Coordination/Decision — [pipelines/make_slide3_entropy_vs_cd.py](../pipelines/make_slide3_entropy_vs_cd.py)
+- Batch pipeline (index-based, dataset-level): [pipelines/make_slide7_run_cdp_entropy_all.py](../pipelines/make_slide7_run_cdp_entropy_all.py)
 
 9. Short guidance for collaborators
 ----------------------------------
