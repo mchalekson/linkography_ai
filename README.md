@@ -85,33 +85,30 @@ Outputs
 The output table contains these columns (produced per session):
 - `conference`, `session_id`, `n_utterances`, `outcome`
 - For each segment (`beginning`, `middle`, `end`):
-	- `entropy_<segment>`: Shannon entropy for CDP categories in that segment
+	- `entropy_<segment>`: Shannon entropy for CDP **score** categories in that segment (score 1 vs score 2)
 	- `n_cdp_<segment>`: total number of CDP annotations counted in that segment
-	- `n_unique_cdp_<segment>`: number of unique CDP categories observed in that segment
+	- `n_unique_cdp_<segment>`: number of unique CDP **score** categories observed in that segment
 
 Data and expected JSON structure
 --------------------------------
 Session JSON files under `data/<CONFERENCE>/session_data/` can be either:
-- an object with an `utterances` list, or
+- an object with an `all_data` list (preferred), or
 - a plain list of utterance objects.
 
-Each utterance object should provide one of the text fields: `transcript`, `text`, or `utterance`. CDP annotations may appear in several forms; the IO routines look for:
-
-- top-level lists named `cdp`, `CDP`, or `coordination_decision_practices`
-- nested annotation dicts under `annotation_dict` / `annotations` with keys like `Coordination and Decision Practices`, `CDP`, or `cdp`
+Each utterance object should provide one of the text fields: `transcript`, `text`, or `utterance`. CDP annotations are read from nested annotation dicts under `annotation_dict` / `annotations` with the key `Coordination and Decision Practices`. The pipeline extracts the **score** field (1 or 2) and records it as `CDP_score_1` or `CDP_score_2`.
 
 Files and functions that implement these behaviors are in `src/linkography_ai/io_sessions.py` (see `_extract_cdp_from_utterance_dict` and `load_session_utterances`).
 
 Signal definitions (technical)
 ----------------------------
 - Coordination & Decision Practices (CDP):
-	- CDP are categorical labels attached to individual utterances. The code extracts CDP labels as a list of strings per utterance and treats multiple labels per utterance as multiple counts.
+	- CDP are categorical **scores** attached to individual utterances (score 1 = basic, score 2 = advanced). The code extracts the score as `CDP_score_1` or `CDP_score_2` and treats each as a single count per annotated utterance.
 
 - Time-binned aggregation (structural wrap):
 	- Sessions are time-binned using a simple thirds segmentation implemented in `segment_thirds(n)`. Each utterance is assigned to one of `beginning`, `middle`, or `end` according to its index within the session; this is the repository's operationalization of structural wrap/time-bin.
 
 - Entropy (Shannon):
-	- For each time-bin, the pipeline counts occurrences of each CDP category and computes Shannon entropy: H = -sum(p_i log2 p_i).
+	- For each time-bin, the pipeline counts occurrences of each CDP **score** category and computes Shannon entropy: H = -sum(p_i log2 p_i).
 	- The implementation is `shannon_entropy_from_counts(counts, normalize=False)` in `src/linkography_ai/entropy.py`.
 	- The `--normalize` flag divides H by log2(K) where K is the number of nonzero categories, yielding a value in [0,1] when K>1.
 
