@@ -1,0 +1,5 @@
+Slide 1 signals
+Session: 2021_11_04_NES_S6
+
+Callout found: True
+Callout: (74:41–75:11) "Okay, so, uh, I think we can, uh, we can start with, uh, Roger, uh, to give us a quick update on the, uh, the proposal. Uh, I think we need to, uh, to have a clear plan for how we're going to achieve the goals. Uh, I think we need to, uh, to have a clear plan for how we're going to achieve the goals. Uh, I think we need to, uh, to have a clear plan for how we're going to achieve the goals."

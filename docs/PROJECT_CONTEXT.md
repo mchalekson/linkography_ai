@@ -37,7 +37,7 @@ Interpretive scope for this operationalization:
 The repository contains two operational patterns for temporal aggregation, each implemented for different analysis needs:
 
 - Index-based thirds (coarse structural wrap):
-  - Implemented in [src/linkography_ai/segmentation.py](../src/linkography_ai/segmentation.py) and used by the batch pipeline [pipelines/make_slide7_run_cdp_entropy_all.py](../pipelines/make_slide7_run_cdp_entropy_all.py).
+  - Implemented in [src/linkography_ai/segmentation.py](../src/linkography_ai/segmentation.py) and used by the batch pipeline [pipelines/slide7_run_cdp_entropy_all.py](../pipelines/slide7_run_cdp_entropy_all.py).
   - Behavior: given $n$ utterances in a session, utterance indices are partitioned into three contiguous bins by integer division: first $\lfloor n/3 \rfloor$ indices → `beginning`, next $\lfloor n/3 \rfloor$ indices → `middle`, remainder → `end`.
   - Rationale: simple, annotation-agnostic segmentation that avoids relying on timing metadata.
 
@@ -103,10 +103,10 @@ The following items are presented as open methodological questions or concrete n
 - Timeline-aware analyses, structural wrap heuristics, and plotting helpers: [src/linkography_ai/slides.py](../src/linkography_ai/slides.py)
 
 **Pipelines (reproducible analysis scripts):**
-- Slide 1: Signals by time bin — [pipelines/make_slide1_signals.py](../pipelines/make_slide1_signals.py)
-- Slide 2: Convergence detection — [pipelines/make_slide2_convergence.py](../pipelines/make_slide2_convergence.py)
-- Slide 3: Entropy vs Coordination/Decision — [pipelines/make_slide3_entropy_vs_cd.py](../pipelines/make_slide3_entropy_vs_cd.py)
-- Batch pipeline (index-based, dataset-level): [pipelines/make_slide7_run_cdp_entropy_all.py](../pipelines/make_slide7_run_cdp_entropy_all.py)
+- Slide 1: Signals by time bin — [pipelines/slide1_signals.py](../pipelines/slide1_signals.py)
+- Slide 2: Convergence detection — [pipelines/slide2_convergence.py](../pipelines/slide2_convergence.py)
+- Slide 3: Entropy vs Coordination/Decision — [pipelines/slide3_entropy_vs_cd.py](../pipelines/slide3_entropy_vs_cd.py)
+- Batch pipeline (index-based, dataset-level): [pipelines/slide7_run_cdp_entropy_all.py](../pipelines/slide7_run_cdp_entropy_all.py)
 
 9. Short guidance for collaborators
 ----------------------------------

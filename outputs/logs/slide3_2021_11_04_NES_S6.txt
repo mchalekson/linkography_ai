@@ -1,0 +1,9 @@
+Slide 3: Entropy vs Coordination/Decision
+Session: 2021_11_04_NES_S6
+File: /Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/data/2021NES/session_data/2021_11_04_NES_S6.json
+Bins (sec): 60
+Smooth window: 3
+Exclude structural from entropy: True
+
+Callout found: True
+(74:41-75:11) "Okay, so, uh, I think we can, uh, we can start with, uh, Roger, uh, to give us a quick update on the, uh, the proposal. Uh, I think we need to, uh, to have a clear plan for how we're going to achieve the goals. Uh, I think we need to, uh, to have a clear plan for how we're going to achieve the goals. Uh, I think we need to, uh, to have a clear plan for how we're going to achieve the goals."

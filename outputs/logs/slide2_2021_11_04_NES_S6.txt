@@ -1,0 +1,13 @@
+Slide 10 - Part 2: Convergence Detection
+Session: 2021_11_04_NES_S6
+File: /Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/data/2021NES/session_data/2021_11_04_NES_S6.json
+Last third only: True
+Bin width (sec): 60
+Smooth window: 3
+
+Strictly convergent utterances found: 2
+
+============================================================
+CALLOUT:
+============================================================
+(72:42–73:08) "Okay, yeah, I agree with you, Will. Uh, I think we need to, uh, to be more specific about what we're going to do. Uh, I think we need to, uh, to have a clear plan for how we're going to achieve the goals. Uh, I think we need to, uh, to have a clear plan for how we're going to achieve the goals. Uh, I think we need to, uh, to have a clear plan for how we're going to achieve the goals."
