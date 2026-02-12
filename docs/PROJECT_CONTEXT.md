@@ -19,7 +19,23 @@ In the codebase, coordination entropy is computed from per-utterance CDP labels 
 - Extraction: each utterance in a session yields a list of CDP labels (see [src/linkography_ai/io_sessions.py](src/linkography_ai/io_sessions.py)). Multiple labels on the same utterance are treated as multiple counts.
 - Aggregation: utterance-level labels are aggregated into a bin (either an index-based tertile or a fixed-duration time bin; see next section).
 - Distribution: within each bin, counts per CDP category are converted to proportions $p_i$.
-- Entropy: Shannon entropy H = -sum_i p_i $log2$ $p_i$ is computed on those proportions. An optional normalization divides H by $log2(K)$ where K is the number of observed (nonzero) categories, producing values bounded (approximately) in [0,1]. The implementation is in [src/linkography_ai/entropy.py](src/linkography_ai/entropy.py).
+- - **Entropy (Shannon):**
+
+  Shannon entropy is computed as:
+
+  $$
+  H = -\sum_i p_i \log_2(p_i)
+  $$
+
+  where $p_i$ is the proportion of CDP category $i$ within the bin.
+
+  An optional normalization divides $H$ by:
+
+  $$
+  \log_2(K)
+  $$
+
+  where $K$ is the number of observed (nonzero) categories, producing values bounded (approximately) in $[0,1]$ when $K > 1$. The implementation is in [src/linkography_ai/entropy.py](src/linkography_ai/entropy.py).
 
 Interpretive scope for this operationalization:
 - High entropy indicates a broad mix of CDP categories in the bin (more behavioral variety / unpredictability in label identity).
