@@ -38,7 +38,7 @@ The repository contains two operational patterns for temporal aggregation, each 
 
 - Index-based thirds (coarse structural wrap):
   - Implemented in [src/linkography_ai/segmentation.py](src/linkography_ai/segmentation.py) and used by the batch pipeline [pipelines/run_cdp_entropy_all.py](pipelines/run_cdp_entropy_all.py).
-  - Behavior: given n utterances in a session, utterance indices are partitioned into three contiguous bins by integer division: first n//3 indices → `beginning`, next (n//3) indices → `middle`, remainder → `end`.
+  - Behavior: given $n$ utterances in a session, utterance indices are partitioned into three contiguous bins by integer division: first $\lfloor n/3 \rfloor$ indices → `beginning`, next $\lfloor n/3 \rfloor$ indices → `middle`, remainder → `end`.
   - Rationale: simple, annotation-agnostic segmentation that avoids relying on timing metadata.
 
 - Time-based bins and last-third windows (fine-grained, timeline-aware):
@@ -57,7 +57,7 @@ Differences and coexistence:
 - Equal weighting of counts: each CDP label occurrence contributes equally to the distribution (no speaker-weighting, no duration-weighting in the index-based pipeline). In the time-bin pipeline, ‘minutes of CDP’ is computed separately as a duration-based signal.
 - Bin choice matters: index-based thirds assume uniform phase length in terms of number of utterances; fixed-duration bins assume timestamps accurately represent meeting progress. Both are coarse approximations of the latent “phases” of interaction.
 - Multiple labels per utterance: when an utterance contains multiple CDP labels, the implementation counts each label. This treats multi-labeled turns as evidence of multiple simultaneous coordination behaviors rather than a single composite state.
-- Normalization caveats: normalized entropy rescales H by log2(K); when K is small (e.g., K<=1) normalization is degenerate and handled in code by returning 0.0 in that case.
+- Normalization caveats: normalized entropy rescales $H$ by $\log_2(K)$; when $K$ is small (e.g., $K \leq 1$) normalization is degenerate and handled in code by returning 0.0 in that case.
 
 6. What this repository currently does NOT attempt
 -----------------------------------------------
@@ -78,7 +78,7 @@ The following items are presented as open methodological questions or concrete n
 
 - Sensitivity to temporal binning:
   - Compare index-based thirds, fixed-duration bins, and adaptive phase detection (e.g., changepoint detection) to see how bin choice affects entropy dynamics.
-  - Evaluate how smoothing parameters and bin width (`bin_sec`) influence observed patterns.
+  - Evaluate how smoothing parameters and bin width ($\text{bin}_{\text{sec}}$) influence observed patterns.
 
 - Alternative summary statistics and null models:
   - Compare Shannon entropy to alternative diversity measures (Simpson, Gini, richness) and to resampling-based null models that preserve marginal counts.
