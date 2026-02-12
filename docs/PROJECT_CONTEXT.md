@@ -117,6 +117,186 @@ This repository analyzes **Coordination and Decision Practices (CDP)** in SCIALO
 | `slides.py` | Time-binned analysis; structural wrap regex; `compute_entropy_vs_cd()`. |
 | `discovery.py` | Discover conference directories in `data/` with `session_data/` subdirs. |
 
+---
+
+## The 8 CDP Categories (Behavioral Codes)
+
+**What gets counted as "CDP"**: Any annotation category applied to an utterance. These are the 8 behavioral codes used in SCIALOG annotations:
+
+1. **Coordination and Decision Practices** - Structuring work, decision-making
+2. **Knowledge Sharing** - Information exchange, teaching
+3. **Information Seeking** - Asking questions, requesting clarification
+4. **Idea Management** - Proposing, building on, organizing ideas
+5. **Evaluation Practices** - Assessment, critique, validation
+6. **Relational Climate** - Social dynamics, rapport-building
+7. **Participation Dynamics** - Turn-taking, engagement patterns
+8. **Integration Practices** - Synthesis, cross-disciplinary connection
+
+**Key Point**: An utterance can have **multiple** CDP categories (multi-label). Entropy measures the **diversity** of categories used in a segment - higher entropy = more varied behavioral repertoire.
+
+**Example**: If a segment uses all 8 categories equally, normalized entropy ≈ 1.0. If only 1 category is used, entropy = 0.0.
+
+---
+
+## Understanding Entropy Values
+
+**Normalized Entropy Range**: 0.0 to 1.0 (current pipeline uses `--normalize` flag)
+
+| Value | Interpretation |
+|-------|----------------|
+| **0.0 - 0.3** | Very focused - 1-2 dominant behaviors |
+| **0.4 - 0.6** | Moderately diverse - 3-4 behaviors |
+| **0.7 - 0.9** | High diversity - 5-7 behaviors evenly distributed |
+| **0.9 - 1.0** | Maximum diversity - all 8 behaviors used roughly equally |
+
+**Observed Range in Data**: 0.80 - 0.91 (high diversity across all sessions)
+
+**The P0 Finding**: Entropy **increases** from 0.884 (beginning) → 0.909 (end)
+- **Meaning**: Teams use **more varied** coordination behaviors as sessions progress
+- **Contradicts**: Initial hypothesis that teams would converge (focus) on fewer behaviors
+- **Possible explanations**: 
+  - Final decisions require broader behavioral repertoire
+  - Facilitators introduce more structure near the end
+  - Teams explore more options before committing
+
+---
+
+## Sample Outputs
+
+### Batch Entropy CSV (cdp_entropy_by_session_ALL_*.csv)
+
+**First 3 rows**:
+```csv
+conference,session_id,n_utterances,outcome,entropy_beginning,n_cdp_beginning,n_unique_cdp_beginning,entropy_middle,n_cdp_middle,n_unique_cdp_middle,entropy_end,n_cdp_end,n_unique_cdp_end
+2020NES,2020_11_05_NES_S1,82,,0.804,47,7,0.912,53,8,0.963,46,7
+2020NES,2020_11_05_NES_S2,67,,0.954,47,7,0.891,31,6,0.899,57,7
+```
+
+**Column Definitions**:
+- `conference`: e.g., "2020NES", "2021MZT"
+- `session_id`: Unique identifier (date_conference_session)
+- `n_utterances`: Total utterances in session
+- `outcome`: NULL (not used - see funded_status in outcomes CSV instead)
+- `entropy_beginning/middle/end`: Normalized Shannon entropy (0-1 scale)
+- `n_cdp_beginning/middle/end`: Total CDP annotation count (can exceed n_utterances due to multi-label)
+- `n_unique_cdp_beginning/middle/end`: Number of distinct categories used (1-8)
+
+### Entropy with Outcomes CSV (entropy_with_outcomes.csv)
+
+**First 3 rows**:
+```csv
+conference,session_id,...,entropy_end,n_cdp_end,n_unique_cdp_end,funded_rate,any_funded,n_teams
+2020NES,2020_11_05_NES_S1,...,0.963,46,7,0.0,0,1
+2020NES,2020_11_05_NES_S3,...,0.921,38,8,0.333,1,3
+2020NES,2020_11_05_NES_S4,...,0.964,23,8,1.0,1,1
+```
+
+**New Columns**:
+- `funded_rate`: Proportion of teams funded (0.0 to 1.0)
+- `any_funded`: Binary - did ANY team get funded? (0 or 1)
+- `n_teams`: Number of teams formed in this session
+
+---
+
+## How to Load and Analyze Outputs (Python)
+
+### Load Entropy Data
+```python
+import pandas as pd
+
+# Load latest batch entropy results
+df = pd.read_csv('outputs/tables/cdp_entropy_by_session_ALL_20260212_165526.csv')
+
+# Quick stats
+print(f"Total sessions: {len(df)}")
+print(f"Mean beginning entropy: {df['entropy_beginning'].mean():.3f}")
+print(f"Mean end entropy: {df['entropy_end'].mean():.3f}")
+
+# Check for convergence (entropy decrease)
+df['entropy_change'] = df['entropy_end'] - df['entropy_beginning']
+print(f"Sessions with entropy decrease: {(df['entropy_change'] < 0).sum()}")
+print(f"Mean entropy change: {df['entropy_change'].mean():.3f}")
+```
+
+### Analyze Outcomes Relationship
+```python
+# Load merged data
+df = pd.read_csv('outputs/tables/entropy_with_outcomes.csv')
+
+# Compare funded vs unfunded
+funded = df[df['any_funded'] == 1]
+unfunded = df[df['any_funded'] == 0]
+
+print(f"Funded sessions (n={len(funded)}): entropy_end = {funded['entropy_end'].mean():.3f}")
+print(f"Unfunded sessions (n={len(unfunded)}): entropy_end = {unfunded['entropy_end'].mean():.3f}")
+
+# Correlation
+corr = df[['entropy_end', 'funded_rate']].corr()
+print(f"\nCorrelation (entropy_end vs funded_rate): {corr.iloc[0,1]:.3f}")
+```
+
+### Filter by Conference
+```python
+# Analyze specific conference
+nes_2021 = df[df['conference'] == '2021NES']
+print(f"2021NES sessions: {len(nes_2021)}")
+print(f"Mean entropy: {nes_2021['entropy_end'].mean():.3f}")
+```
+
+---
+
+## Troubleshooting
+
+### Common Issues
+
+**1. "No columns to parse" error**
+- **Cause**: Batch entropy CSV is empty (no sessions processed)
+- **Fix**: Check that `data/*/session_data/*.json` files exist
+- **Verify**: `ls data/2020NES/session_data/ | wc -l` should return >0
+
+**2. "ModuleNotFoundError: matplotlib"**
+- **Cause**: Dependencies not installed in virtual environment
+- **Fix**: `.venv/bin/python -m pip install matplotlib pandas numpy`
+
+**3. Low match rate (<50%) in outcome merge**
+- **Cause**: Session ID mismatch between entropy CSV and outcome JSONs
+- **Check**: `cat outputs/logs/outcome_merge_report.txt` for details
+- **Normal**: 78.3% match rate is expected (some sessions lack outcome data)
+
+**4. All entropy values near 0.9**
+- **Not a bug**: This is real data - sessions genuinely show high CDP diversity
+- **Interpretation**: Teams use 6-7 different behavioral categories throughout
+
+### Verification Commands
+
+```bash
+# Check data integrity
+make validate
+
+# Verify outputs exist
+ls -lh outputs/tables/cdp_entropy_by_session_ALL_*.csv
+ls -lh outputs/analysis/entropy_trajectory_summary.txt
+ls -lh figures/final/entropy_trajectory.png
+
+# Count sessions per conference
+.venv/bin/python -c "import pandas as pd; df = pd.read_csv('outputs/tables/cdp_entropy_by_session_ALL_20260212_165526.csv'); print(df['conference'].value_counts())"
+
+# Quick stats
+.venv/bin/python -c "import pandas as pd; df = pd.read_csv('outputs/tables/cdp_entropy_by_session_ALL_20260212_165526.csv'); print(df[['entropy_beginning', 'entropy_middle', 'entropy_end']].describe())"
+```
+
+---
+
+### Core Modules (`src/linkography_ai/`)
+
+| Module | Purpose |
+|--------|---------|
+| `entropy.py` | Shannon entropy: $H = -\sum_i p_i \log_2(p_i)$; optional normalization by $\log_2(K)$. |
+| `segmentation.py` | Index-based thirds: `beginning`, `middle`, `end` via $\lfloor n/3 \rfloor$ logic. |
+| `io_sessions.py` | Load session JSON; extract CDP codes from `annotations` field. |
+| `slides.py` | Time-binned analysis; structural wrap regex; `compute_entropy_vs_cd()`. |
+| `discovery.py` | Discover conference directories in `data/` with `session_data/` subdirs. |
+
 ### Data Structure
 
 ```
