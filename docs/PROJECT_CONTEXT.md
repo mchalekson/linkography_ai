@@ -1,6 +1,6 @@
 # CDP Entropy Analysis — Integration README
 
-**Last updated**: February 12, 2026
+**Last updated**: February 13, 2026
 
 ---
 
