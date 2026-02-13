@@ -86,7 +86,7 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 | **Example session logs** | `outputs/logs/slide1_2021_11_04_NES_S6.txt` | Callout: longest commitment-coded utterance. |
 | | `outputs/logs/slide2_2021_11_04_NES_S6.txt` | Callout: longest convergence utterance. |
 | | `outputs/logs/slide3_2021_11_04_NES_S6.txt` | Session metadata + callout. |
-| **Codebook** | `codebook/codebook.md` | Definitions for 8 CDP behavioral codes. |
+| **Codebook** | `codebook/codebook.md` | CDP annotation definitions (including score 1 vs 2). |
 | **Project README** | `README.md` | Installation, usage, data structure reference. |
 
 **Note**: `figures/final/` exists but is empty (reserved for publication-ready outputs).
@@ -113,7 +113,7 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 |--------|---------|
 | `entropy.py` | Shannon entropy: $H = -\sum_i p_i \log_2(p_i)$; optional normalization by $\log_2(K)$. |
 | `segmentation.py` | Index-based thirds: `beginning`, `middle`, `end` via $\lfloor n/3 \rfloor$ logic. |
-| `io_sessions.py` | Load session JSON; extract CDP codes from `annotations` field. |
+| `io_sessions.py` | Load session JSON; extract CDP annotations/scores from `annotations` field. |
 | `slides.py` | Time-binned analysis; structural wrap regex; `compute_entropy_vs_cd()`. |
 | `discovery.py` | Discover conference directories in `data/` with `session_data/` subdirs. |
 
@@ -123,15 +123,7 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 
 **Focus**: "Coordination and Decision Practices" (CDP) annotations only
 
-**The 8 SCIALOG Categories** (for context):
-1. **Coordination and Decision Practices** ⭐ **OUR FOCUS**
-2. Knowledge Sharing
-3. Information Seeking  
-4. Idea Management
-5. Evaluation Practices
-6. Relational Climate
-7. Participation Dynamics
-8. Integration Practices
+**Scope**: We ignore all other annotation categories and only analyze **CDP**.
 
 **What CDP Measures**: When an utterance has the CDP annotation, it includes a **score** field:
 - **Score 1**: Basic coordination (structuring contributions, simple process management)
@@ -145,32 +137,29 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 - Segment with 5 score-1 and 5 score-2 CDP utterances → High entropy (diverse coordination)
 - Segment with 10 score-1 CDP utterances → Low entropy (uniform coordination)
 
-**Research Question**: Do teams start with diverse coordination levels (high entropy) and converge to uniform coordination (low entropy) by the end?
-
-**Example**: If a segment uses all 8 categories equally, normalized entropy ≈ 1.0. If only 1 category is used, entropy = 0.0.
+**Research Question**: Do teams start with a **mixed** use of CDP scores (high entropy) and converge to a **single** CDP score (low entropy) by the end?
 
 ---
 
-## Understanding Entropy Values
+## Understanding Entropy Values (CDP Scores Only)
 
 **Normalized Entropy Range**: 0.0 to 1.0 (current pipeline uses `--normalize` flag)
 
+Since we only use **two** CDP score levels (1 vs 2), interpretation is **binary**:
+
 | Value | Interpretation |
 |-------|----------------|
-| **0.0 - 0.3** | Very focused - 1-2 dominant behaviors |
-| **0.4 - 0.6** | Moderately diverse - 3-4 behaviors |
-| **0.7 - 0.9** | High diversity - 5-7 behaviors evenly distributed |
-| **0.9 - 1.0** | Maximum diversity - all 8 behaviors used roughly equally |
+| **0.0** | All CDP utterances are the **same score** (all 1s or all 2s) |
+| **~1.0** | **Balanced mix** of score 1 and score 2 CDP utterances |
 
-**Observed Range in Data**: 0.80 - 0.91 (high diversity across all sessions)
+**Observed Range in Data**: ~0.73 - 0.75 (stable mix of score 1 vs 2)
 
 **The P0 Finding**: Entropy remains **stable** from 0.733 (beginning) → 0.745 (end)
-- **Meaning**: Teams use **more varied** coordination behaviors as sessions progress
-- **Contradicts**: Initial hypothesis that teams would converge (focus) on fewer behaviors
-- **Possible explanations**: 
-  - Final decisions require broader behavioral repertoire
-  - Facilitators introduce more structure near the end
-  - Teams explore more options before committing
+- **Meaning**: Teams keep a **steady mix** of basic (score 1) and advanced (score 2) coordination.
+- **Contradicts**: Initial hypothesis that teams would converge to **one** coordination intensity.
+- **Possible explanations**:
+   - Sessions require both basic and advanced coordination throughout.
+   - Facilitators sustain a mix of process structuring and decision-making.
 
 ---
 
@@ -181,8 +170,8 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 **First 3 rows**:
 ```csv
 conference,session_id,n_utterances,outcome,entropy_beginning,n_cdp_beginning,n_unique_cdp_beginning,entropy_middle,n_cdp_middle,n_unique_cdp_middle,entropy_end,n_cdp_end,n_unique_cdp_end
-2020NES,2020_11_05_NES_S1,82,,0.804,47,7,0.912,53,8,0.963,46,7
-2020NES,2020_11_05_NES_S2,67,,0.954,47,7,0.891,31,6,0.899,57,7
+2020NES,2020_11_05_NES_S1,82,,0.804,47,2,0.912,53,2,0.963,46,2
+2020NES,2020_11_05_NES_S2,67,,0.954,47,2,0.891,31,2,0.899,57,2
 ```
 
 **Column Definitions**:
@@ -192,16 +181,16 @@ conference,session_id,n_utterances,outcome,entropy_beginning,n_cdp_beginning,n_u
 - `outcome`: NULL (not used - see funded_status in outcomes CSV instead)
 - `entropy_beginning/middle/end`: Normalized Shannon entropy (0-1 scale)
 - `n_cdp_beginning/middle/end`: Total CDP annotation count (can exceed n_utterances due to multi-label)
-- `n_unique_cdp_beginning/middle/end`: Number of distinct categories used (1-8)
+- `n_unique_cdp_beginning/middle/end`: Number of distinct CDP **score levels** used (1 or 2)
 
 ### Entropy with Outcomes CSV (entropy_with_outcomes.csv)
 
 **First 3 rows**:
 ```csv
 conference,session_id,...,entropy_end,n_cdp_end,n_unique_cdp_end,funded_rate,any_funded,n_teams
-2020NES,2020_11_05_NES_S1,...,0.963,46,7,0.0,0,1
-2020NES,2020_11_05_NES_S3,...,0.921,38,8,0.333,1,3
-2020NES,2020_11_05_NES_S4,...,0.964,23,8,1.0,1,1
+2020NES,2020_11_05_NES_S1,...,0.963,46,2,0.0,0,1
+2020NES,2020_11_05_NES_S3,...,0.921,38,2,0.333,1,3
+2020NES,2020_11_05_NES_S4,...,0.964,23,2,1.0,1,1
 ```
 
 **New Columns**:
@@ -277,8 +266,8 @@ print(f"Mean entropy: {nes_2021['entropy_end'].mean():.3f}")
 - **Normal**: 78.3% match rate is expected (some sessions lack outcome data)
 
 **4. All entropy values near 0.9**
-- **Not a bug**: This is real data - sessions genuinely show high behavioral diversity across all 8 categories
-- **Interpretation**: Teams use 6-7 different annotation categories throughout (not just "Coordination and Decision Practices")
+- **Not a bug**: This is real data - it indicates a **balanced mix** of CDP score 1 and score 2.
+- **Interpretation**: Sessions are using both coordination intensity levels rather than converging on just one.
 
 ### Verification Commands
 
@@ -306,7 +295,7 @@ ls -lh figures/final/entropy_trajectory.png
 |--------|---------|
 | `entropy.py` | Shannon entropy: $H = -\sum_i p_i \log_2(p_i)$; optional normalization by $\log_2(K)$. |
 | `segmentation.py` | Index-based thirds: `beginning`, `middle`, `end` via $\lfloor n/3 \rfloor$ logic. |
-| `io_sessions.py` | Load session JSON; extract CDP codes from `annotations` field. |
+| `io_sessions.py` | Load session JSON; extract CDP annotations/scores from `annotations` field. |
 | `slides.py` | Time-binned analysis; structural wrap regex; `compute_entropy_vs_cd()`. |
 | `discovery.py` | Discover conference directories in `data/` with `session_data/` subdirs. |
 
@@ -359,7 +348,7 @@ data/
   ]
 }
 ```
-**Note**: `annotations` is a nested dict where each key is a CDP category containing `explanation`, `score`, `score_justification`, and `when` fields.
+**Note**: `annotations` is a nested dict where each key is an annotation category; we only use **Coordination and Decision Practices** entries (with `score` and `when`).
 
 **Outcome JSON format** (actual structure):
 ```json
@@ -409,7 +398,7 @@ data/
 
 ### 1. CDP Extraction (`io_sessions.py`)
 
-**Purpose**: Load session JSON files and extract CDP codes from multi-label annotations.
+**Purpose**: Load session JSON files and extract CDP annotations (including scores).
 
 **Method**:
 - Parse `all_data` array; extract `annotations` dict.
@@ -446,7 +435,7 @@ data/
 ```python
 H = -sum(p_i * log2(p_i) for p_i in ps)
 if normalize:
-    H /= log2(K)  # K = number of unique codes
+   H /= log2(K)  # K = number of unique score levels (1 or 2)
 ```
 
 **File**: [src/linkography_ai/entropy.py](../src/linkography_ai/entropy.py)  
@@ -509,7 +498,7 @@ is_convergence = (
 **Purpose**: Dual-axis plot of entropy and CD minutes over time bins.
 
 **Method**:
-- Compute per-bin CDP entropy using `shannon_entropy_from_counts()` on code distributions.
+- Compute per-bin CDP entropy using `shannon_entropy_from_counts()` on **score-level** distributions.
 - Compute per-bin CD minutes (commitment-coded duration).
 - Plot both on same timeline.
 
@@ -526,7 +515,7 @@ is_convergence = (
 1. Discover conferences via `list_conferences()`.
 2. For each session:
    - Segment into thirds (index-based).
-   - Count CDP codes per segment.
+   - Count CDP **score levels** per segment.
    - Compute entropy (beginning, middle, end).
 3. Output CSV with columns: `conference`, `session_id`, `n_utterances`, `outcome`, `entropy_beginning`, `entropy_middle`, `entropy_end`, `n_cdp_*`, `n_unique_cdp_*`.
 
@@ -541,7 +530,7 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 - `conference`, `session_id`, `n_utterances`, `outcome`
 - `entropy_beginning`, `entropy_middle`, `entropy_end`
 - `n_cdp_beginning`, `n_cdp_middle`, `n_cdp_end` (total counts)
-- `n_unique_cdp_beginning`, `n_unique_cdp_middle`, `n_unique_cdp_end` (unique codes)
+- `n_unique_cdp_beginning`, `n_unique_cdp_middle`, `n_unique_cdp_end` (unique **score levels**: 1 or 2)
 
 **Current status**: ✅ **COMPLETE** - Full run executed on 2026-02-12 16:55:26.
 
@@ -621,9 +610,9 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 **Output**: `outputs/tables/cdp_entropy_by_session_ALL_*.csv`, `outputs/logs/run_cdp_entropy_ALL_*.txt`
 
 **Column interpretation**:
-- `entropy_*`: Shannon entropy of CDP code distribution in that segment (higher = more diverse).
-- `n_cdp_*`: Total CDP code instances (multi-label utterances counted per code).
-- `n_unique_cdp_*`: Number of distinct CDP codes used.
+- `entropy_*`: Shannon entropy of CDP **score** distribution in that segment (higher = more mixed).
+- `n_cdp_*`: Total CDP annotations (utterances labeled with CDP).
+- `n_unique_cdp_*`: Number of distinct CDP **score levels** used (1 or 2).
 - `outcome`: Session success label (⚠️ currently NULL; needs validation).
 
 ### Common Flags
@@ -659,10 +648,10 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 - **End entropy**: 0.745 ± 0.202
 - **Beginning → End change**: +0.026 [95% CI: -0.041, -0.014] ⚠️ Significant INCREASE
 
-**Interpretation**: Teams use **more diverse** coordination behaviors as sessions progress, contradicting the convergence hypothesis. This may indicate:
-- Teams explore more strategies near session end
-- Facilitators introduce new coordination patterns
-- Final decision-making requires broader behavioral repertoire
+**Interpretation**: Teams use a **more mixed** CDP score profile as sessions progress, contradicting the convergence hypothesis. This may indicate:
+- Teams maintain both basic and advanced coordination throughout
+- Facilitators sustain a balance of structuring and decision-making
+- Final decision-making requires both coordination levels
 
 **Outputs**: 
 - ✅ `outputs/analysis/entropy_trajectory_summary.txt`
@@ -728,9 +717,7 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 
 **Method**:
 1. Run `run_cdp_entropy_all.py` twice: once with `--normalize`, once without.
-2. Compute correlation between `entropy_end` (raw) and `n_unique_cdp_end`.
-3. Repeat for normalized entropy.
-4. If raw entropy strongly correlates with K, prefer normalized.
+2. Compare rankings and effect sizes across sessions.
 
 **Inputs**: Same as Priority 1.
 
@@ -738,9 +725,9 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 - `outputs/analysis/entropy_normalization_comparison.txt`
 - `figures/final/raw_vs_normalized_entropy_scatter.png`
 
-**Assumptions**: K varies sufficiently across sessions to matter.
+**Assumptions**: With CDP-only analysis, $K=2$ (scores 1 vs 2).
 
-**Risks**: If K is constant (≈8 codes always present), normalization has no effect.
+**Risks**: Normalization likely has **no effect** when $K$ is constant.
 
 ---
 
@@ -780,9 +767,9 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 - `outputs/tables/structural_wrap_by_segment.csv` (MISSING)
 - `figures/final/structural_wrap_vs_entropy.png`
 
-**Assumptions**: Regex accurately captures wrap language; wrap is independent of CDP codes.
+**Assumptions**: Regex accurately captures wrap language; wrap is independent of CDP scores.
 
-**Risks**: Wrap may be highly correlated with "Coordination and Decision Practices" code, inflating correlations.
+**Risks**: Wrap may be highly correlated with CDP **scores**, inflating correlations.
 
 ---
 
@@ -791,14 +778,14 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 7. **Speaker-level entropy**: Compute entropy per speaker; identify high-diversity vs low-diversity contributors.
    - **Missing**: Speaker extraction from JSON; speaker-level aggregation logic.
 
-8. **Code co-occurrence analysis**: Build co-occurrence matrix for CDP codes; identify systematic multi-label patterns.
-   - **Method**: Pair-wise counts; chi-square test.
+8. **Score transition analysis**: Track switches between CDP score 1 and score 2 across time bins.
+   - **Method**: Transition counts; chi-square test.
 
 9. **Temporal autocorrelation**: Measure lag-1 autocorrelation in entropy time series.
    - **Output**: Autocorrelation table per session.
 
 10. **Outcome prediction model**: Logistic regression predicting success from entropy features.
-    - **Features**: `entropy_beginning`, `entropy_end`, `entropy_decay`, `n_unique_cdp_end`.
+   - **Features**: `entropy_beginning`, `entropy_end`, `entropy_decay`, `score2_share_end`.
     - **MISSING**: Train/test split; cross-validation.
 
 11. **Cross-conference comparison**: Compare entropy distributions across SCIALOG cohorts (2020 vs 2021 vs 2022).
@@ -820,13 +807,12 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
    - **Trade-off**: Finer bins capture dynamics but increase noise.
    - **Current recommendation**: Use 60s for within-session plots; use thirds for cross-session stats.
 
-3. **Rare code filtering**: Should codes with <3 occurrences be excluded?
-   - **Risk**: Rare codes inflate K, lowering normalized entropy.
-   - **Current status**: No filtering implemented.
+3. **Score imbalance handling**: Should we down-weight segments with extreme score imbalance?
+   - **Risk**: Highly imbalanced segments push entropy toward 0.0, masking nuanced shifts.
+   - **Current status**: No adjustment implemented.
 
-4. **Multi-label handling**: Should we weight by 1/n_codes per utterance?
-   - **Current**: Each code counted once per utterance.
-   - **Alternative**: Weight by $1 / \text{n_codes}$ to avoid inflating counts.
+4. **Multi-label handling**: (Not applicable for CDP-only scores unless multiple CDP scores appear on one utterance.)
+   - **Current**: Each CDP score counted once per utterance when present.
 
 ### Known Limitations
 
