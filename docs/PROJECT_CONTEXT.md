@@ -727,7 +727,8 @@ python pipelines/run_cdp_entropy_all.py --conference ALL --normalize --max_sessi
 
 **Assumptions**: With CDP-only analysis, $K=2$ (scores 1 vs 2).
 
-**Risks**: Normalization likely has **no effect** when $K$ is constant.
+**Risks**: Normalization likely has **no effect** when $K$ is constant (CDP-only scores means $K=2$).
+**Note**: The codebook contains 8 categories overall, but this analysis uses only the CDP category and its two score levels.
 
 ---
 
