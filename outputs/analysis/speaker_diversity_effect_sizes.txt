@@ -1,0 +1,6 @@
+SPEAKER DIVERSITY EFFECT SIZES (FUNDED - UNFUNDED)
+================================================================================
+
+gini_score1: diff=0.061 (95% CI [0.015, 0.107]), d=0.463
+gini_score2: diff=0.088 (95% CI [0.034, 0.138]), d=0.591
+speaker_participation_cdp: diff=-0.010 (95% CI [-0.068, 0.048]), d=-0.064

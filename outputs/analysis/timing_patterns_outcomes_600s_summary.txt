@@ -1,0 +1,38 @@
+MEETING TIMING PATTERNS vs OUTCOMES ANALYSIS
+================================================================================
+
+Bin size: 600 seconds
+Sessions analyzed: 156
+Funded sessions: 68
+Unfunded sessions: 55
+
+purity_ratio
+  Funded:   0.324 ± 0.175
+  Unfunded: 0.347 ± 0.190
+  p-value: 0.5179
+
+mixed_ratio
+  Funded:   0.668 ± 0.175
+  Unfunded: 0.639 ± 0.193
+  p-value: 0.3807
+
+mean_jump
+  Funded:   0.447 ± 0.195
+  Unfunded: 0.473 ± 0.213
+  p-value: 0.6235
+
+max_jump
+  Funded:   0.871 ± 0.240
+  Unfunded: 0.847 ± 0.246
+  p-value: 0.5980
+
+n_transitions
+  Funded:   2.485 ± 1.366
+  Unfunded: 2.436 ± 1.288
+  p-value: 0.9707
+
+entropy_trend
+  Funded:   -0.060 ± 0.428
+  Unfunded: -0.008 ± 0.388
+  p-value: 0.4027
+

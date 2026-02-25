@@ -1,0 +1,22 @@
+CDP COHORT EFFECT SIZES (RANK-BISERIAL)
+================================================================================
+Source: /Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/outputs/tables/cdp_entropy_by_session_ALL_20260225_103253.csv
+
+entropy_beginning
+--------------------------------------------------------------------------------
+  2020 vs 2021: rbc=-0.005
+  2020 vs 2022: rbc=-0.120
+  2021 vs 2022: rbc=-0.152
+
+entropy_middle
+--------------------------------------------------------------------------------
+  2020 vs 2021: rbc=-0.284
+  2020 vs 2022: rbc=-0.484
+  2021 vs 2022: rbc=-0.351
+
+entropy_end
+--------------------------------------------------------------------------------
+  2020 vs 2021: rbc=-0.185
+  2020 vs 2022: rbc=-0.262
+  2021 vs 2022: rbc=-0.173
+
