@@ -1,0 +1,164 @@
+P3 CDP DEEP DIVES: EXECUTION SUMMARY
+================================================================================
+Date: February 25, 2026
+Status: ✅ COMPLETE - All 5 new analyses executed successfully
+
+PURPOSE
+================================================================================
+Shift from aggregate entropy metrics (P0-P1) to understanding HOW Coordination
+and Decision Practices (CDP) are used across different dimensions:
+  - Content: What are score 1 vs score 2 utterances?
+  - Speaker: Who drives advanced coordination? How balanced is participation?
+  - Timing: When do teams shift between basic and advanced practices?
+  - Cohort: Do patterns differ across conference years?
+  - Roles: Do specific speaker roles drive CDP adoption?
+
+PIPELINE EXECUTION LOG
+================================================================================
+
+1. cdp_content_analysis.py ✅ EXECUTED
+   Command: python pipelines/cdp_content_analysis.py
+   Output files:
+     - outputs/tables/cdp_content_analysis.csv (156 sessions)
+     - outputs/analysis/cdp_content_analysis_summary.txt
+   Key finding: Score 1 utterances 71% frequent, 19 tokens; Score 2 utterances
+                29% frequent, 49 tokens (2.6× longer)
+
+2. speaker_level_cdp.py ✅ EXECUTED
+   Command: python pipelines/speaker_level_cdp.py
+   Output files:
+     - outputs/tables/speaker_level_cdp.csv (156 sessions)
+     - outputs/analysis/speaker_level_cdp_summary.txt
+   Key finding: Score 2 (advanced CDP) more balanced across speakers
+                (Gini=0.289) vs Score 1 (Gini=0.418)
+
+3. fine_grained_cdp_timing.py ✅ EXECUTED
+   Command: python pipelines/fine_grained_cdp_timing.py
+   Output files:
+     - outputs/tables/cdp_fine_grained_entropy_300s.csv (1,322 bins)
+     - outputs/analysis/cdp_fine_grained_summary_300s.txt
+   Key finding: Mean entropy per 5-min bin 0.418 (std=0.440); high variance
+                suggests dynamic shifts between score 1 and score 2
+
+4. cdp_by_cohort.py ✅ EXECUTED
+   Command: python pipelines/cdp_by_cohort.py
+   Output files:
+     - outputs/analysis/cdp_by_cohort_summary.txt
+   Key finding: No significant year effect in beginning/end segments (p>0.05);
+                middle segment shows trend (H=7.90, p~0.02) with 2022 teams
+                showing lower entropy (0.427 vs 0.664 in 2021)
+
+5. speaker_role_cdp.py ✅ EXECUTED
+   Command: python pipelines/speaker_role_cdp.py
+   Output files:
+     - outputs/tables/speaker_role_cdp.csv (156 sessions)
+     - outputs/analysis/speaker_role_cdp_summary.txt
+   Key finding: Framework ready; no explicit facilitator roles found in current
+                dataset. Analysis ready for role-enriched datasets.
+
+INTEGRATION WITH EXISTING PIPELINE
+================================================================================
+
+Updated Files:
+  ✅ Makefile: Added 5 new targets (cdp_content, speaker_cdp, fine_grained,
+              cohort, speaker_role); integrated into main 'all' target
+  ✅ README.md: Documented all 5 new pipelines with usage examples and key
+               findings; added to codebase reference section
+  ✅ docs/PROJECT_CONTEXT.md: Added P3 findings section with detailed 
+                              interpretation of each analysis
+
+Pipeline Targets Added:
+  - make cdp_content    → Run content analysis (utterance-level by score)
+  - make speaker_cdp    → Run speaker-level diversity analysis
+  - make fine_grained   → Run fine-grained CDP timing (5-min bins)
+  - make cohort         → Compare CDP patterns across conference years
+  - make speaker_role   → Analyze speaker role effects on CDP
+
+SUMMARY STATISTICS
+================================================================================
+
+Dataset Coverage:
+  - Total sessions analyzed: 156
+  - Total time bins (5-min): 1,322
+  - Conferences: 8 (2020NES, 2021ABI, 2021CMC, 2021MND, 2021MZT, 2021NES,
+                     2021SLU, 2022MND)
+
+Key Metrics Generated:
+  - CDP utterance counts and token lengths (content analysis)
+  - Gini coefficients for speaker concentration (speaker diversity)
+  - Fine-grained entropy distributions (timing analysis)
+  - Kruskal-Wallis H-tests for cohort comparison (year effects)
+  - Speaker role frequency distributions (role analysis)
+
+NEXT STEPS
+================================================================================
+
+Recommended Follow-Up Analyses:
+1. Correlate speaker diversity metrics (Gini) with session outcomes
+   → Do sessions with balanced advanced coordination (low Gini for score 2)
+     have higher funding rates?
+
+2. Identify inflection points in fine-grained timing
+   → Which sessions show sharp entropy transitions? What triggered them?
+   → Do inflection point timings correlate with discussion topics or
+     decision points?
+
+3. Investigate 2022 cohort middle-segment pattern
+   → Why do 2022 teams show lower entropy mid-meeting?
+   → Is this strategy-driven (more focused decision-making) or
+     constraint-driven (shorter sessions)?
+
+4. Qualitative validation
+   → Sample high/low Gini sessions; manually review speaker participation
+   → Sample high/low entropy bins; identify what content triggers transitions
+
+5. Role-enriched dataset
+   → If metadata becomes available, immediately re-run speaker_role_cdp.py
+   → Correlate role distributions with outcome success
+
+FILES AND LOCATIONS
+================================================================================
+
+Source Pipelines:
+  - pipelines/cdp_content_analysis.py (158 lines)
+  - pipelines/speaker_level_cdp.py (168 lines)
+  - pipelines/fine_grained_cdp_timing.py (156 lines)
+  - pipelines/cdp_by_cohort.py (130 lines)
+  - pipelines/speaker_role_cdp.py (162 lines)
+
+Output Tables (CSVs):
+  - outputs/tables/cdp_content_analysis.csv
+  - outputs/tables/speaker_level_cdp.csv
+  - outputs/tables/cdp_fine_grained_entropy_300s.csv
+  - outputs/tables/speaker_role_cdp.csv
+
+Output Reports (Text):
+  - outputs/analysis/cdp_content_analysis_summary.txt
+  - outputs/analysis/speaker_level_cdp_summary.txt
+  - outputs/analysis/cdp_fine_grained_summary_300s.txt
+  - outputs/analysis/cdp_by_cohort_summary.txt
+  - outputs/analysis/speaker_role_cdp_summary.txt
+
+TESTING AND VALIDATION
+================================================================================
+
+All pipelines execute without errors. Output files validated:
+  ✅ All CSVs load cleanly with pandas
+  ✅ Column names match expected schema
+  ✅ Numerical values within expected ranges
+  ✅ Summary statistics match CSV aggregates
+
+End-to-End Pipeline Test:
+  $ make cdp_content && make speaker_cdp && make fine_grained && \
+    make cohort && make speaker_role
+  ✅ All 5 pipelines execute in sequence without dependency issues
+  ✅ Total runtime: ~15 seconds
+
+Integration Test:
+  $ make all  # Runs full pipeline including new CDP analyses
+  ✅ Successfully completes all 15 targets (validate, batch_entropy, analyze,
+     merge_outcomes, test_outcomes, batch_convergence, compare_binning,
+     compare_normalization, time_pressure, outcome_model, + 5 new CDP analyses)
+
+================================================================================
+END SUMMARY

@@ -1,0 +1,12 @@
+SPEAKER-LEVEL CDP ANALYSIS
+================================================================================
+
+Sessions analyzed: 156
+
+Mean speakers with CDP: 6.74
+Mean total speakers: 13.28
+Mean CDP participation: 0.52
+
+Gini (score 1 concentration): 0.418
+Gini (score 2 concentration): 0.289
+(Lower Gini = more balanced; higher = concentrated)

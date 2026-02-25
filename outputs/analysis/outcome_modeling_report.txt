@@ -1,0 +1,29 @@
+OUTCOME MODELING REPORT
+================================================================================
+
+Predictors used: entropy_end, entropy_change, strict_conv_rate_last_third, structural_wrap_rate_last_third, time_pressure_total, decision_closure_total
+
+Target: funded_rate
+n = 117
+R^2 = 0.1298
+Coefficients:
+  intercept: 0.2564
+  entropy_end: -0.2299
+  entropy_change: -0.0179
+  strict_conv_rate_last_third: 0.9021
+  structural_wrap_rate_last_third: 0.6544
+  time_pressure_total: 0.1050
+  decision_closure_total: 0.0328
+
+Target: any_funded
+n = 117
+R^2 = 0.1976
+Coefficients:
+  intercept: 0.5376
+  entropy_end: -0.5917
+  entropy_change: 0.1744
+  strict_conv_rate_last_third: 0.7781
+  structural_wrap_rate_last_third: 1.1640
+  time_pressure_total: 0.1419
+  decision_closure_total: 0.0525
+

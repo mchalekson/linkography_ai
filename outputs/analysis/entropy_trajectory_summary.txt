@@ -29,17 +29,17 @@ PAIRED COMPARISONS (with 95% Bootstrap CIs)
 
 Beginning vs Middle:
   Mean difference: 0.0835
-  95% CI: [0.0074, 0.1624]
+  95% CI: [0.0065, 0.1596]
   → Significantly HIGHER in first phase (CI excludes 0)
 
 Middle vs End:
   Mean difference: -0.0946
-  95% CI: [-0.1668, -0.0250]
+  95% CI: [-0.1658, -0.0238]
   → Significantly LOWER in first phase (CI excludes 0)
 
 Beginning vs End:
   Mean difference: -0.0112
-  95% CI: [-0.0675, 0.0434]
+  95% CI: [-0.0683, 0.0443]
   → No significant difference (CI includes 0)
 
 --------------------------------------------------------------------------------

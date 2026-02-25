@@ -1,0 +1,4 @@
+Batch Convergence Detection
+sessions_total=157
+output_table=/Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/outputs/tables/convergence_rates_by_session.csv
+scatter_figure=/Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/figures/final/convergence_vs_entropy_scatter.png

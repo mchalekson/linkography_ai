@@ -1,0 +1,12 @@
+CDP CONTENT ANALYSIS SUMMARY
+================================================================================
+
+Sessions analyzed: 156
+
+Mean score 1 utterances: 24.03
+Mean score 2 utterances: 9.30
+Mean % score 1: 70.9%
+Mean % score 2: 29.1%
+
+Mean token count (score 1): 18.61
+Mean token count (score 2): 48.84

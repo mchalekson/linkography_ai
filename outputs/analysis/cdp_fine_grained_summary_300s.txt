@@ -1,0 +1,7 @@
+CDP FINE-GRAINED ENTROPY (300s bins)
+================================================================================
+
+Total bin-level observations: 1322
+Mean entropy per bin: 0.4177
+Std entropy: 0.4399
+Entropy range: [0.0000, 1.0000]

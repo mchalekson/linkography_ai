@@ -29,8 +29,7 @@ python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -e .
-# then install runtime libs, e.g.:
-pip install pandas
+pip install -r requirements.txt
 ```
 
 Running individual slide pipelines
@@ -118,9 +117,124 @@ Notes and best practices for analysis
 - When comparing entropy across sessions with different numbers of observed categories, prefer `--normalize` to reduce scale effects.
 - The simple thirds segmentation is intentionally coarse; for finer temporal analysis replace `segment_thirds` with a custom binning function.
 
+Additional pipelines (batch analyses)
+-----------------------------------
+
+**Batch convergence detection**
+```bash
+python pipelines/batch_convergence.py
+```
+Outputs: `outputs/tables/convergence_rates_by_session.csv`, `figures/final/convergence_vs_entropy_scatter.png`
+
+**Time-binned vs index-based thirds comparison**
+```bash
+python pipelines/compare_time_binning.py --normalize
+```
+Outputs: `outputs/tables/time_binning_comparison.csv`, `outputs/analysis/time_binning_comparison_summary.txt`
+
+**Raw vs normalized entropy comparison**
+```bash
+python pipelines/compare_entropy_normalization.py
+```
+Outputs: `outputs/analysis/entropy_normalization_comparison.txt`, `figures/final/raw_vs_normalized_entropy_scatter.png`
+
+**Time-pressure & decision-closure language**
+```bash
+python pipelines/time_pressure_language.py
+```
+Outputs: `outputs/tables/time_pressure_language_by_session.csv`, `outputs/analysis/time_pressure_language_summary.txt`
+
+**Outcome modeling beyond entropy**
+```bash
+python pipelines/outcome_modeling.py
+```
+Outputs: `outputs/analysis/outcome_modeling_report.txt`, `outputs/tables/outcome_model_coefficients.csv`
+
+CDP-Focused Deep Analysis Pipelines
+------------------------------------
+These pipelines move beyond aggregate entropy metrics to examine how CDP is actually used in meetings: what specific utterances are annotated with each score, which speakers drive CDP usage, when teams shift between basic and advanced coordination, and whether patterns differ across cohorts.
+
+**CDP content analysis: utterance-level by score**
+```bash
+python pipelines/cdp_content_analysis.py
+```
+Analyzes what kinds of utterances are annotated with CDP score 1 (basic) vs score 2 (advanced). Computes token counts and samples representative text fragments.
+
+Outputs:
+- `outputs/tables/cdp_content_analysis.csv`: Session-level aggregates (count, percent, token length by score)
+- `outputs/analysis/cdp_content_analysis_summary.txt`: Summary statistics (mean utterance counts and token lengths)
+
+Key finding: Score 1 utterances are 2.6x more frequent (71% of all CDP) but score 2 utterances are 2.6x longer (49 vs 19 tokens), suggesting more complex coordination ideas appear in fewer, longer utterances.
+
+**Speaker-level CDP analysis: participation and diversity**
+```bash
+python pipelines/speaker_level_cdp.py
+```
+Identifies which speakers drive CDP usage and tests whether balanced speaker participation correlates with outcomes. Computes Gini coefficients for score concentration across speakers.
+
+Outputs:
+- `outputs/tables/speaker_level_cdp.csv`: Session-level (Gini for each score, speaker participation rate)
+- `outputs/analysis/speaker_level_cdp_summary.txt`: Summary statistics (mean Gini, mean participation)
+
+Key finding: Score 2 (advanced CDP) is more balanced across speakers (Gini=0.289) than score 1 (Gini=0.418), suggesting advanced coordination involves broader participation.
+
+**Fine-grained CDP timing: entropy in 5-10 minute windows**
+```bash
+python pipelines/fine_grained_cdp_timing.py --bin-sec 300
+```
+Replaces the coarse thirds segmentation with configurable time windows (default 5 minutes) to detect inflection points where teams shift between basic and advanced coordination practices.
+
+Outputs:
+- `outputs/tables/cdp_fine_grained_entropy_300s.csv`: Per-bin entropy and counts (bin start/end, entropy, n_cdp)
+- `outputs/analysis/cdp_fine_grained_summary_300s.txt`: Summary (total bins, mean entropy, range)
+
+Usage note: Change `--bin-sec` to 600 for 10-min bins, 180 for 3-min bins, etc.
+
+Key finding: Mean entropy per 5-min bin (0.418) shows substantial variance (std=0.440) with range [0, 1], indicating dynamic shifts between score 1 and score 2 throughout meetings.
+
+**CDP patterns by cohort and year**
+```bash
+python pipelines/cdp_by_cohort.py
+```
+Tests whether CDP entropy distributions differ across conference years (2020, 2021, 2022) using Kruskal-Wallis H tests. Identifies cohort-level trends in how teams coordinate.
+
+Outputs:
+- `outputs/analysis/cdp_by_cohort_summary.txt`: Segment-by-segment statistics (mean, median, std per year) and H-test p-values
+
+Key finding: No significant year effect in beginning/end segments (p>0.05), but middle segment shows trend (H=7.90, p~0.02): 2022 teams show lower entropy in the middle (mean 0.427) vs 2021 (0.664), suggesting more focused decision-making mid-meeting in the most recent cohort.
+
+**Speaker role analysis: role-based CDP patterns**
+```bash
+python pipelines/speaker_role_cdp.py
+```
+Extracts speaker roles (facilitator, fellow, mentor, participant) from session metadata and analyzes whether specific roles drive CDP adoption.
+
+Outputs:
+- `outputs/tables/speaker_role_cdp.csv`: Session-level role-CDP correlations
+- `outputs/analysis/speaker_role_cdp_summary.txt`: Aggregate statistics
+
+Note: This analysis depends on explicit role assignments in session metadata; output is limited if role data is sparse in your dataset.
+
 Where to look in the codebase
-----------------------------
+-----------------------------
 - IO and CDP extraction: [src/linkography_ai/io_sessions.py](src/linkography_ai/io_sessions.py)
 - Segmentation (thirds): [src/linkography_ai/segmentation.py](src/linkography_ai/segmentation.py)
 - Entropy implementation: [src/linkography_ai/entropy.py](src/linkography_ai/entropy.py)
 - Batch runner: [pipelines/run_cdp_entropy_all.py](pipelines/run_cdp_entropy_all.py)
+- Batch convergence: [pipelines/batch_convergence.py](pipelines/batch_convergence.py)
+- Time-binning comparison: [pipelines/compare_time_binning.py](pipelines/compare_time_binning.py)
+- Normalization comparison: [pipelines/compare_entropy_normalization.py](pipelines/compare_entropy_normalization.py)
+- Time-pressure language: [pipelines/time_pressure_language.py](pipelines/time_pressure_language.py)
+- Outcome modeling: [pipelines/outcome_modeling.py](pipelines/outcome_modeling.py)
+- **CDP content analysis**: [pipelines/cdp_content_analysis.py](pipelines/cdp_content_analysis.py)
+- **Speaker-level CDP**: [pipelines/speaker_level_cdp.py](pipelines/speaker_level_cdp.py)
+- **Fine-grained CDP timing**: [pipelines/fine_grained_cdp_timing.py](pipelines/fine_grained_cdp_timing.py)
+- **CDP by cohort**: [pipelines/cdp_by_cohort.py](pipelines/cdp_by_cohort.py)
+- **Speaker role CDP**: [pipelines/speaker_role_cdp.py](pipelines/speaker_role_cdp.py)
+
+Testing
+-------
+```bash
+pip install -r requirements-dev.txt
+pytest
+```

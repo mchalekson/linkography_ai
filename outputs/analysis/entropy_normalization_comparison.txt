@@ -1,0 +1,20 @@
+ENTROPY NORMALIZATION COMPARISON
+================================================================================
+
+Source CSV: /Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/outputs/tables/cdp_entropy_by_session_ALL_20260225_091354.csv
+
+BEGINNING
+  Mean diff (raw - normalized): 0.094348
+  Median diff: 0.000000
+  Std diff: 0.177350
+
+MIDDLE
+  Mean diff (raw - normalized): 0.055939
+  Median diff: 0.000000
+  Std diff: 0.158168
+
+END
+  Mean diff (raw - normalized): 0.098492
+  Median diff: 0.000000
+  Std diff: 0.176948
+

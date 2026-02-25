@@ -1,0 +1,6 @@
+SPEAKER ROLE AND CDP ANALYSIS
+================================================================================
+
+Sessions analyzed: 156
+Sessions with facilitator identified: 0
+

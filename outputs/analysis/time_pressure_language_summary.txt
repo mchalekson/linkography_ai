@@ -1,0 +1,23 @@
+TIME PRESSURE LANGUAGE SUMMARY
+================================================================================
+
+Sessions analyzed: 157
+
+TIME_PRESSURE
+--------------------------------------------------------------------------------
+Total mean: 0.59
+Total median: 0.00
+By segment (mean counts):
+  beginning: 0.05
+  middle: 0.15
+  end: 0.38
+
+DECISION_CLOSURE
+--------------------------------------------------------------------------------
+Total mean: 2.32
+Total median: 2.00
+By segment (mean counts):
+  beginning: 0.75
+  middle: 0.58
+  end: 0.99
+

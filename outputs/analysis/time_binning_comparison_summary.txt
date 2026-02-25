@@ -1,0 +1,25 @@
+TIME-BASED vs INDEX-BASED THIRDS COMPARISON
+================================================================================
+
+Sessions analyzed: 157
+
+BEGINNING
+  Mean diff (time - index): -0.0025
+  Median diff: 0.0000
+  Std diff: 0.0949
+
+MIDDLE
+  Mean diff (time - index): -0.0908
+  Median diff: 0.0000
+  Std diff: 0.3873
+
+END
+  Mean diff (time - index): 0.0023
+  Median diff: 0.0000
+  Std diff: 0.0938
+
+CORRELATIONS (time vs index)
+--------------------------------------------------------------------------------
+  beginning: r = 0.9341
+  middle: r = 0.5239
+  end: r = 0.9111
