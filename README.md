@@ -72,7 +72,7 @@ linkography_ai/
 
 ---
 
-## Key Findings (1 minute)
+## Key Findings
 
 ### ✅ What Predicts Funding Success
 
@@ -238,7 +238,7 @@ pytest
 | File | Purpose | When to Read |
 |------|---------|--------------|
 | **`docs/PROJECT_CONTEXT.md`** | Complete reproducibility guide (STEP 1-5) | **START HERE** |
-| `README.md` (this file) | Quick overview + navigation | First 5 minutes |
+| `README.md` (this file) | Quick overview + navigation
 | `codebook/codebook.md` | CDP annotation definitions | Understanding behavioral codes |
 | `Makefile` | Pipeline orchestration | Running batch analyses |
 
