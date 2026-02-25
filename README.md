@@ -272,5 +272,3 @@ NICO (Northwestern Institute on Complex Systems)
 - 📈 **Visualization**: [figures/final/gini_by_funding.png](figures/final/gini_by_funding.png)
 - 🔬 **All pipelines**: [pipelines/](pipelines/)
 - 💻 **Core code**: [src/linkography_ai/](src/linkography_ai/)
-
-**Time budget**: 5 minutes to understand, 10 minutes to reproduce, 1 hour to extend.
