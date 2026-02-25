@@ -131,6 +131,8 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 | **Raw vs normalized plot** | `figures/final/raw_vs_normalized_entropy_scatter.png` | ✅ **GENERATED** - Scatter plot |
 | **Outcome modeling report** | `outputs/analysis/outcome_modeling_report.txt` | ✅ **GENERATED** - Linear models |
 | **Outcome model coefficients** | `outputs/tables/outcome_model_coefficients.csv` | ✅ **GENERATED** - Coefficients table |
+| **CDP by cohort summary** | `outputs/analysis/cdp_by_cohort_summary.txt` | ✅ **GENERATED** - Year-by-year entropy | 
+| **CDP by cohort pairwise** | `outputs/analysis/cdp_by_cohort_pairwise.txt` | ✅ **GENERATED** - Pairwise Mann-Whitney U + Holm |
 | **Speaker diversity vs outcomes** | `outputs/analysis/speaker_diversity_outcomes_summary.txt` | ✅ **GENERATED** - Gini/participation vs funding |
 | **Speaker diversity + outcomes table** | `outputs/tables/speaker_diversity_with_outcomes.csv` | ✅ **GENERATED** - Merged session outcomes |
 | **Timing patterns vs outcomes** | `outputs/analysis/timing_patterns_outcomes_summary.txt` | ✅ **GENERATED** - Timing features vs funding |
@@ -303,6 +305,11 @@ Since entropy alone does not predict outcomes, we shifted focus to **how** CDP i
   - 2021: mean 0.664 (higher entropy, mixed coordination)
   - 2020: mean 0.717 (highest entropy)
 - **End segment**: No significant cohort effect (H = 2.71, p > 0.05)
+
+**Pairwise tests** (`cdp_by_cohort_pairwise.txt`):
+- **Beginning**: No pairwise differences (Holm-adjusted p ≥ 0.97)
+- **Middle**: 2020 vs 2022 (p = 0.028, Holm = 0.056) and 2021 vs 2022 (p = 0.022, Holm = 0.067) show **trend-level** separation; 2022 is consistently lower
+- **End**: No pairwise differences (Holm-adjusted p ≥ 0.26)
 
 **Interpretation**:
 - Recent cohorts (2022) show **more structured decision-making** in the middle phase
