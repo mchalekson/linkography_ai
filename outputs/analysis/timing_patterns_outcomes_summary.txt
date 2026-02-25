@@ -34,9 +34,9 @@ n_transitions
   p-value: 0.7072 ✗ not significant
 
 entropy_trend
-  Funded:   -0.046 ± 0.418
-  Unfunded: 0.054 ± 0.407
-  p-value: 0.1814 ✗ not significant
+  Funded:   -0.044 ± 0.408
+  Unfunded: 0.052 ± 0.400
+  p-value: 0.1768 ✗ not significant
 
 INTERPRETATION
 --------------------------------------------------------------------------------

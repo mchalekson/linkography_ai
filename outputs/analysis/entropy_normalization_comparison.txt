@@ -1,7 +1,7 @@
 ENTROPY NORMALIZATION COMPARISON
 ================================================================================
 
-Source CSV: /Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/outputs/tables/cdp_entropy_by_session_ALL_20260225_091354.csv
+Source CSV: /Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/outputs/tables/cdp_entropy_by_session_ALL_20260225_103253.csv
 
 BEGINNING
   Mean diff (raw - normalized): 0.094348

@@ -22,6 +22,6 @@ Cohen's d: -0.2512
 CORRELATION (funded_rate vs entropy_end)
 --------------------------------------------------------------------------------
 Pearson r: -0.1045
-Pearson r (bootstrap 95% CI): [-0.2874, 0.0902]
+Pearson r (bootstrap 95% CI): [-0.2939, 0.0936]
 Spearman rho: -0.0840
-Spearman rho (bootstrap 95% CI): [-0.2625, 0.0970]
+Spearman rho (bootstrap 95% CI): [-0.2605, 0.0970]

@@ -11,7 +11,7 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 **Current state**: ✅ **P0 Complete** - Full pipeline executed on all 157 sessions across 8 conferences. Core findings: Entropy remains **stable** (0.733 → 0.745, no significant change), suggesting teams maintain a consistent mix of basic and advanced coordination throughout. 78.3% of sessions successfully matched with funding outcome data. ✅ **P1 Outcomes testing complete** - No significant entropy differences between funded vs unfunded sessions. ✅ **P1/P2 Extensions complete** - Batch convergence, time-binning comparison, time-pressure language, and outcome modeling executed. ✅ **P3 CDP Deep Dives COMPLETE** - Five new analyses executed: content analysis (utterance-level), speaker-level diversity, fine-grained timing (5-min bins), cohort comparison (years), and role analysis. ✅ **P4 Outcomes-Focused CDP Analyses COMPLETE** - Speaker diversity vs outcomes, timing patterns vs outcomes, and meeting-profile classifier executed.
 
 **What it produces**:
-- **Batch entropy table**: `outputs/tables/cdp_entropy_by_session_ALL_20260225_091354.csv` ✅ **GENERATED** (157 sessions)
+- **Batch entropy table**: `outputs/tables/cdp_entropy_by_session_ALL_20260225_103253.csv` ✅ **GENERATED** (157 sessions)
 - **Entropy trajectory analysis**: `outputs/analysis/entropy_trajectory_summary.txt` ✅ **GENERATED**
 - **Entropy with outcomes**: `outputs/tables/entropy_with_outcomes.csv` ✅ **GENERATED** (123 matched sessions)
 - **Outcomes stats report**: `outputs/analysis/entropy_outcomes_stats.txt` ✅ **GENERATED**
@@ -34,6 +34,8 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 - **Speaker diversity vs outcomes**: `outputs/tables/speaker_diversity_with_outcomes.csv`, `outputs/analysis/speaker_diversity_outcomes_summary.txt` ✅ **GENERATED**
 - **Timing patterns vs outcomes**: `outputs/tables/timing_features_with_outcomes.csv`, `outputs/analysis/timing_patterns_outcomes_summary.txt` ✅ **GENERATED**
 - **Meeting profile classifier**: `outputs/tables/meeting_profile_classifier_results.csv`, `outputs/analysis/meeting_profile_classifier_results.txt` ✅ **GENERATED**
+- **Transcript validation (samples)**: `outputs/tables/cdp_transcript_validation_samples.csv` ✅ **GENERATED**
+- **Transcript validation (summary)**: `outputs/analysis/cdp_transcript_validation_summary.txt` ✅ **GENERATED**
 - **Trajectory visualization**: `figures/final/entropy_trajectory.png` ✅ **GENERATED**
 - **Session-level figures**: `figures/generated/slide*.png` (signals, convergence, entropy vs CD)
 - **Logs**: `outputs/logs/slide*.txt` (callouts and metadata)
@@ -114,7 +116,7 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 | Artifact | Path | Description |
 |----------|------|-------------|
 | **Notebook (exploratory)** | `notebooks/linkography-ai.ipynb` | Original slide analyses (Dec 2025); not executed. |
-| **Batch entropy table** | `outputs/tables/cdp_entropy_by_session_ALL_20260225_091354.csv` | ✅ **GENERATED** - 157 sessions, all 8 conferences |
+| **Batch entropy table** | `outputs/tables/cdp_entropy_by_session_ALL_20260225_103253.csv` | ✅ **GENERATED** - 157 sessions, all 8 conferences |
 | **Entropy trajectory analysis** | `outputs/analysis/entropy_trajectory_summary.txt` | ✅ **GENERATED** - Statistical tests showing stability |
 | **Entropy with outcomes** | `outputs/tables/entropy_with_outcomes.csv` | ✅ **GENERATED** - 123 matched sessions with funding data |
 | **Outcomes stats report** | `outputs/analysis/entropy_outcomes_stats.txt` | ✅ **GENERATED** - Mann-Whitney, effect size, correlations |
@@ -133,6 +135,8 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 | **Outcome model coefficients** | `outputs/tables/outcome_model_coefficients.csv` | ✅ **GENERATED** - Coefficients table |
 | **CDP by cohort summary** | `outputs/analysis/cdp_by_cohort_summary.txt` | ✅ **GENERATED** - Year-by-year entropy | 
 | **CDP by cohort pairwise** | `outputs/analysis/cdp_by_cohort_pairwise.txt` | ✅ **GENERATED** - Pairwise Mann-Whitney U + Holm |
+| **Transcript validation samples** | `outputs/tables/cdp_transcript_validation_samples.csv` | ✅ **GENERATED** - Excerpts by CDP pattern |
+| **Transcript validation summary** | `outputs/analysis/cdp_transcript_validation_summary.txt` | ✅ **GENERATED** - Qualitative evidence |
 | **Speaker diversity vs outcomes** | `outputs/analysis/speaker_diversity_outcomes_summary.txt` | ✅ **GENERATED** - Gini/participation vs funding |
 | **Speaker diversity + outcomes table** | `outputs/tables/speaker_diversity_with_outcomes.csv` | ✅ **GENERATED** - Merged session outcomes |
 | **Timing patterns vs outcomes** | `outputs/analysis/timing_patterns_outcomes_summary.txt` | ✅ **GENERATED** - Timing features vs funding |

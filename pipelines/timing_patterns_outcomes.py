@@ -28,11 +28,7 @@ def analyze_session_timing(session_bins: pd.DataFrame) -> dict:
 
     entropies = session_bins["entropy"].values
     
-    # Phase diversity: count pure score-1, pure score-2, and mixed bins
-    pure_score1 = (entropies < 0.1).sum()
-    pure_score2 = (entropies < 0.1).sum()  # This is wrong, but let me use a better metric
-    
-    # Better: use entropy to classify
+    # Phase diversity: use entropy to classify
     # Entropy near 0 = one score dominates
     # Entropy near 1 = mixed
     pure_bins = (entropies < 0.2).sum()  # Dominated by one score
@@ -49,8 +45,12 @@ def analyze_session_timing(session_bins: pd.DataFrame) -> dict:
     n_large_jumps = (entropy_diffs > 0.3).sum()  # Transitions
 
     # Temporal distribution: does entropy change over time?
-    first_third_entropy = entropies[:n_bins//3].mean() if n_bins > 0 else 0
-    last_third_entropy = entropies[2*n_bins//3:].mean() if n_bins > 0 else 0
+    if n_bins >= 3:
+        first_third_entropy = entropies[: n_bins // 3].mean()
+        last_third_entropy = entropies[2 * n_bins // 3 :].mean()
+    else:
+        first_third_entropy = entropies.mean() if n_bins > 0 else 0
+        last_third_entropy = entropies.mean() if n_bins > 0 else 0
     entropy_trend = last_third_entropy - first_third_entropy
 
     return {
