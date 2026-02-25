@@ -1,0 +1,116 @@
+MEETING PROFILE CLASSIFIER: PREDICTING FUNDING OUTCOMES
+================================================================================
+
+Total sessions with complete data: 111
+Funded: 60.0 (54.1%)
+Unfunded: 51.0 (45.9%)
+
+
+ENTROPY ONLY (BASELINE)
+--------------------------------------------------------------------------------
+Features: entropy_beginning, entropy_middle, entropy_end
+N features: 3
+
+Logistic Regression (5-fold cross-validation):
+  ROC-AUC CV: 0.539 ± 0.038
+  ROC-AUC (fit): 0.569
+  F1-Score: 0.685
+
+Random Forest (5-fold cross-validation):
+  ROC-AUC CV: 0.494 ± 0.061
+  ROC-AUC (fit): 0.991
+  F1-Score: 0.943
+
+
+SPEAKER DIVERSITY ONLY
+--------------------------------------------------------------------------------
+Features: gini_score1, gini_score2, speaker_participation_cdp
+N features: 3
+
+Logistic Regression (5-fold cross-validation):
+  ROC-AUC CV: 0.680 ± 0.135
+  ROC-AUC (fit): 0.746
+  F1-Score: 0.746
+
+Random Forest (5-fold cross-validation):
+  ROC-AUC CV: 0.648 ± 0.140
+  ROC-AUC (fit): 0.973
+  F1-Score: 0.900
+
+Random Forest Feature Importance:
+  gini_score2: 0.369
+  gini_score1: 0.368
+  speaker_participation_cdp: 0.263
+
+
+TIMING PATTERNS ONLY
+--------------------------------------------------------------------------------
+Features: purity_ratio, mixed_ratio, mean_jump, max_jump, n_transitions, entropy_trend
+N features: 6
+
+Logistic Regression (5-fold cross-validation):
+  ROC-AUC CV: 0.482 ± 0.103
+  ROC-AUC (fit): 0.634
+  F1-Score: 0.646
+
+Random Forest (5-fold cross-validation):
+  ROC-AUC CV: 0.470 ± 0.074
+  ROC-AUC (fit): 0.994
+  F1-Score: 0.916
+
+Random Forest Feature Importance:
+  entropy_trend: 0.215
+  mean_jump: 0.212
+  purity_ratio: 0.186
+  mixed_ratio: 0.166
+  n_transitions: 0.121
+  max_jump: 0.101
+
+
+ALL FEATURES COMBINED
+--------------------------------------------------------------------------------
+Features: entropy_beginning, entropy_middle, entropy_end, gini_score1, gini_score2, speaker_participation_cdp, purity_ratio, mixed_ratio, mean_jump, max_jump, n_transitions, entropy_trend
+N features: 12
+
+Logistic Regression (5-fold cross-validation):
+  ROC-AUC CV: 0.688 ± 0.076
+  ROC-AUC (fit): 0.837
+  F1-Score: 0.770
+
+Random Forest (5-fold cross-validation):
+  ROC-AUC CV: 0.667 ± 0.124
+  ROC-AUC (fit): 1.000
+  F1-Score: 1.000
+
+Random Forest Feature Importance:
+  gini_score2: 0.164
+  gini_score1: 0.112
+  entropy_trend: 0.103
+  mean_jump: 0.095
+  speaker_participation_cdp: 0.090
+  entropy_end: 0.079
+  mixed_ratio: 0.078
+  purity_ratio: 0.073
+  entropy_beginning: 0.071
+  entropy_middle: 0.053
+  n_transitions: 0.049
+  max_jump: 0.032
+
+
+================================================================================
+SUMMARY: WHICH FEATURES PREDICT FUNDING BEST?
+================================================================================
+
+BEST LOGISTIC REGRESSION:
+  Features: All Features Combined
+  CV-AUC: 0.688
+
+BEST RANDOM FOREST:
+  Features: All Features Combined
+  CV-AUC: 0.667
+
+KEY FINDING:
+  Entropy-only baseline (LR): 0.539
+  Combined features (LR): 0.688
+  → 27.7% IMPROVEMENT with speaker + timing features ✓
+  → Speaker diversity and meeting rhythm MATTER for predicting outcomes

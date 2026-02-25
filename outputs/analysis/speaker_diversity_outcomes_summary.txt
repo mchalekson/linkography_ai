@@ -1,0 +1,34 @@
+SPEAKER DIVERSITY vs OUTCOMES ANALYSIS
+================================================================================
+
+Sessions analyzed: 156
+Funded sessions: 68 (43.6%)
+Unfunded sessions: 55 (35.3%)
+
+GINI (Score 1 - Basic Coordination)
+--------------------------------------------------------------------------------
+Funded mean: 0.446 (std 0.131)
+Unfunded mean: 0.385 (std 0.132)
+Spearman r: nan (p=nan)
+Mann-Whitney U: p=0.0055, Cohen's d=0.463
+
+GINI (Score 2 - Advanced Coordination)
+--------------------------------------------------------------------------------
+Funded mean: 0.330 (std 0.154)
+Unfunded mean: 0.242 (std 0.143)
+Spearman r: nan (p=nan)
+Mann-Whitney U: p=0.0006, Cohen's d=0.591
+
+SPEAKER PARTICIPATION RATE
+--------------------------------------------------------------------------------
+Funded mean: 0.514 (std 0.147)
+Unfunded mean: 0.524 (std 0.186)
+Spearman r: nan (p=nan)
+Mann-Whitney U: p=0.9533, Cohen's d=-0.064
+
+INTERPRETATION
+--------------------------------------------------------------------------------
+✓ SIGNIFICANT: Advanced coordination balance (Gini score 2) differs between funded/unfunded
+  → Funded teams show HIGHER Gini (more concentrated): advanced coordination is more centralized
+✓ SIGNIFICANT: Basic coordination balance (Gini score 1) differs between funded/unfunded
+✗ NOT SIGNIFICANT: Overall speaker participation rate does not predict funding

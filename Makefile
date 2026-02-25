@@ -112,8 +112,23 @@ speaker_role:
 	@echo "==> Analyzing speaker roles and CDP usage..."
 	$(PYTHON) pipelines/speaker_role_cdp.py
 
+# Speaker diversity outcomes correlation
+speaker_diversity_outcomes:
+	@echo "==> Correlating speaker diversity metrics with outcomes..."
+	$(PYTHON) pipelines/speaker_diversity_outcomes.py
+
+# Timing patterns outcomes analysis
+timing_patterns_outcomes:
+	@echo "==> Analyzing timing patterns vs outcomes..."
+	$(PYTHON) pipelines/timing_patterns_outcomes.py
+
+# Meeting profile classifier
+meeting_profile:
+	@echo "==> Building meeting profile classifier..."
+	$(PYTHON) pipelines/meeting_profile_classifier.py
+
 # Run full pipeline
-all: validate batch_entropy analyze merge_outcomes test_outcomes batch_convergence compare_binning compare_normalization time_pressure outcome_model cdp_content speaker_cdp fine_grained cohort speaker_role
+all: validate batch_entropy analyze merge_outcomes test_outcomes batch_convergence compare_binning compare_normalization time_pressure outcome_model cdp_content speaker_cdp fine_grained cohort speaker_role speaker_diversity_outcomes timing_patterns_outcomes meeting_profile
 	@echo ""
 	@echo "================================================"
 	@echo "Pipeline complete!"
@@ -133,8 +148,14 @@ all: validate batch_entropy analyze merge_outcomes test_outcomes batch_convergen
 	@echo "  - outputs/tables/cdp_fine_grained_entropy_300s.csv"
 	@echo "  - outputs/analysis/cdp_fine_grained_summary_300s.txt"
 	@echo "  - outputs/analysis/cdp_by_cohort_summary.txt"
-	@echo "  - outputs/tables/speaker_role_cdp.csv"
-	@echo "  - outputs/analysis/speaker_role_cdp_summary.txt"
+	@echo ""
+	@echo "Outcome Prediction Models:"
+	@echo "  - outputs/tables/speaker_diversity_with_outcomes.csv"
+	@echo "  - outputs/analysis/speaker_diversity_outcomes_summary.txt"
+	@echo "  - outputs/tables/timing_features_with_outcomes.csv"
+	@echo "  - outputs/analysis/timing_patterns_outcomes_summary.txt"
+	@echo "  - outputs/tables/meeting_profile_classifier_results.csv"
+	@echo "  - outputs/analysis/meeting_profile_classifier_results.txt"
 	@echo ""
 
 # Clean outputs

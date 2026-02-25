@@ -1,0 +1,62 @@
+MEETING TIMING PATTERNS vs OUTCOMES ANALYSIS
+================================================================================
+
+Sessions analyzed: 156
+Funded sessions: 68 (43.6%)
+Unfunded sessions: 55 (35.3%)
+
+KEY TIMING FEATURES
+--------------------------------------------------------------------------------
+
+purity_ratio
+  Funded:   0.471 ± 0.170
+  Unfunded: 0.513 ± 0.180
+  p-value: 0.1977 ✗ not significant
+
+mixed_ratio
+  Funded:   0.527 ± 0.171
+  Unfunded: 0.481 ± 0.178
+  p-value: 0.1404 ✗ not significant
+
+mean_jump
+  Funded:   0.460 ± 0.191
+  Unfunded: 0.475 ± 0.177
+  p-value: 0.4923 ✗ not significant
+
+max_jump
+  Funded:   0.925 ± 0.183
+  Unfunded: 0.933 ± 0.151
+  p-value: 0.7262 ✗ not significant
+
+n_transitions
+  Funded:   4.103 ± 2.220
+  Unfunded: 3.745 ± 1.724
+  p-value: 0.7072 ✗ not significant
+
+entropy_trend
+  Funded:   -0.046 ± 0.418
+  Unfunded: 0.054 ± 0.407
+  p-value: 0.1814 ✗ not significant
+
+INTERPRETATION
+--------------------------------------------------------------------------------
+✗ No significant timing pattern differences between funded/unfunded
+
+
+MEETING RHYTHM PROFILES
+--------------------------------------------------------------------------------
+Purity Ratio: Fraction of bins dominated by one coordination type (score 1 or 2)
+  High purity → Clear phase separation (focused phases)
+  Low purity → Mixed coordination throughout
+
+Mixed Ratio: Fraction of bins with balanced score 1 and score 2
+  High mixed → Simultaneous coordination and decision-making
+  Low mixed → Teams switch between modes cleanly
+
+n_Transitions: Number of large entropy jumps (>0.3)
+  High transitions → Teams deliberately shift between phases
+  Low transitions → Steady state coordination style
+
+Entropy Trend: Change from first third to last third
+  Positive → Teams transition toward more mixed coordination
+  Negative → Teams focus/narrow coordination over time

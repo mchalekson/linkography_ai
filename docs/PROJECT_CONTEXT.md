@@ -8,7 +8,7 @@
 
 This repository analyzes **Coordination and Decision Practices (CDP)** score diversity in SCIALOG team discussions using Shannon entropy and temporal dynamics. The goal is to understand whether the **intensity of coordination behaviors** (measured as entropy over CDP score 1 vs score 2 distributions) varies across discussion phases, relates to session outcomes, and exhibits temporal patterns.
 
-**Current state**: ✅ **P0 Complete** - Full pipeline executed on all 157 sessions across 8 conferences. Core findings: Entropy remains **stable** (0.733 → 0.745, no significant change), suggesting teams maintain a consistent mix of basic and advanced coordination throughout. 78.3% of sessions successfully matched with funding outcome data. ✅ **P1 Outcomes testing complete** - No significant entropy differences between funded vs unfunded sessions. ✅ **P1/P2 Extensions complete** - Batch convergence, time-binning comparison, time-pressure language, and outcome modeling executed. ✅ **P3 CDP Deep Dives COMPLETE** - Five new analyses executed: content analysis (utterance-level), speaker-level diversity, fine-grained timing (5-min bins), cohort comparison (years), and role analysis.
+**Current state**: ✅ **P0 Complete** - Full pipeline executed on all 157 sessions across 8 conferences. Core findings: Entropy remains **stable** (0.733 → 0.745, no significant change), suggesting teams maintain a consistent mix of basic and advanced coordination throughout. 78.3% of sessions successfully matched with funding outcome data. ✅ **P1 Outcomes testing complete** - No significant entropy differences between funded vs unfunded sessions. ✅ **P1/P2 Extensions complete** - Batch convergence, time-binning comparison, time-pressure language, and outcome modeling executed. ✅ **P3 CDP Deep Dives COMPLETE** - Five new analyses executed: content analysis (utterance-level), speaker-level diversity, fine-grained timing (5-min bins), cohort comparison (years), and role analysis. ✅ **P4 Outcomes-Focused CDP Analyses COMPLETE** - Speaker diversity vs outcomes, timing patterns vs outcomes, and meeting-profile classifier executed.
 
 **What it produces**:
 - **Batch entropy table**: `outputs/tables/cdp_entropy_by_session_ALL_20260225_091354.csv` ✅ **GENERATED** (157 sessions)
@@ -31,6 +31,9 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 - **Fine-grained CDP timing**: `outputs/tables/cdp_fine_grained_entropy_300s.csv`, `outputs/analysis/cdp_fine_grained_summary_300s.txt` ✅ **GENERATED**
 - **CDP by cohort**: `outputs/analysis/cdp_by_cohort_summary.txt` ✅ **GENERATED**
 - **Speaker role CDP**: `outputs/tables/speaker_role_cdp.csv`, `outputs/analysis/speaker_role_cdp_summary.txt` ✅ **GENERATED**
+- **Speaker diversity vs outcomes**: `outputs/tables/speaker_diversity_with_outcomes.csv`, `outputs/analysis/speaker_diversity_outcomes_summary.txt` ✅ **GENERATED**
+- **Timing patterns vs outcomes**: `outputs/tables/timing_features_with_outcomes.csv`, `outputs/analysis/timing_patterns_outcomes_summary.txt` ✅ **GENERATED**
+- **Meeting profile classifier**: `outputs/tables/meeting_profile_classifier_results.csv`, `outputs/analysis/meeting_profile_classifier_results.txt` ✅ **GENERATED**
 - **Trajectory visualization**: `figures/final/entropy_trajectory.png` ✅ **GENERATED**
 - **Session-level figures**: `figures/generated/slide*.png` (signals, convergence, entropy vs CD)
 - **Logs**: `outputs/logs/slide*.txt` (callouts and metadata)
@@ -46,7 +49,12 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 - **Cohort Effects**: No significant year effect in beginning/end segments (p>0.05); middle segment shows trend (H=7.90, p~0.02) with 2022 teams showing lower entropy mid-meeting (0.427 vs 0.664 in 2021)
 - **Speaker Roles**: Limited role metadata in sessions; analysis framework ready for role-enriched datasets
 
-**Next 3–5 analyses** (P1/P2/P3):
+**Key Findings (P4 — Outcomes-Focused CDP Analyses)**:
+- **Speaker Diversity vs Outcomes**: Funded sessions show **higher Gini** (more concentrated coordination) for both score 1 and score 2; participation rate not predictive.
+- **Timing Patterns vs Outcomes**: No significant differences in phase rhythm, transition counts, or entropy trends between funded vs unfunded sessions.
+- **Meeting Profile Classifier**: Combining speaker diversity + timing features improves ROC-AUC from **0.539 → 0.688** (~27.7% improvement) over entropy-only baseline.
+
+**Next 3–5 analyses** (P1/P2/P3/P4):
 1. ✅ **DONE** - Validated entropy trajectories (138 usable sessions; found stability, not convergence)
 2. ✅ **DONE** - Merged entropy with funding outcomes (123/157 matched, 78.3% success rate)
 3. ✅ **DONE** - Statistical testing: funded vs unfunded sessions show no significant entropy differences (Mann-Whitney p = 0.1925; d = -0.25)
@@ -58,6 +66,9 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 9. ✅ **DONE** - Speaker-level CDP diversity and participation rates (Gini metrics)
 10. ✅ **DONE** - Fine-grained CDP timing: 5-min bin entropy to detect inflection points
 11. ✅ **DONE** - CDP patterns by cohort year with Kruskal-Wallis H-tests
+12. ✅ **DONE** - Speaker diversity vs outcomes (Gini and coordination concentration)
+13. ✅ **DONE** - Timing patterns vs outcomes (phase rhythm and transitions)
+14. ✅ **DONE** - Meeting profile classifier (speaker + timing features)
 
 ---
 
@@ -120,6 +131,12 @@ This repository analyzes **Coordination and Decision Practices (CDP)** score div
 | **Raw vs normalized plot** | `figures/final/raw_vs_normalized_entropy_scatter.png` | ✅ **GENERATED** - Scatter plot |
 | **Outcome modeling report** | `outputs/analysis/outcome_modeling_report.txt` | ✅ **GENERATED** - Linear models |
 | **Outcome model coefficients** | `outputs/tables/outcome_model_coefficients.csv` | ✅ **GENERATED** - Coefficients table |
+| **Speaker diversity vs outcomes** | `outputs/analysis/speaker_diversity_outcomes_summary.txt` | ✅ **GENERATED** - Gini/participation vs funding |
+| **Speaker diversity + outcomes table** | `outputs/tables/speaker_diversity_with_outcomes.csv` | ✅ **GENERATED** - Merged session outcomes |
+| **Timing patterns vs outcomes** | `outputs/analysis/timing_patterns_outcomes_summary.txt` | ✅ **GENERATED** - Timing features vs funding |
+| **Timing features + outcomes table** | `outputs/tables/timing_features_with_outcomes.csv` | ✅ **GENERATED** - Per-session timing features |
+| **Meeting profile classifier** | `outputs/analysis/meeting_profile_classifier_results.txt` | ✅ **GENERATED** - ROC-AUC comparisons |
+| **Classifier results table** | `outputs/tables/meeting_profile_classifier_results.csv` | ✅ **GENERATED** - Model metrics |
 | **Example session figures** | `figures/generated/slide1_2021_11_04_NES_S6.png` | Signals plot (CD + wrap). |
 | | `figures/generated/slide2_2021_11_04_NES_S6.png` | Convergence detection plot. |
 | | `figures/generated/slide3_2021_11_04_NES_S6.png` | Entropy vs CD dual-axis plot. |
