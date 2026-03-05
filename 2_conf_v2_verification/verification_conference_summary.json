@@ -1,0 +1,21 @@
+{
+  "2021CMC": {
+    "matched_sessions": 21,
+    "mean_coverage": 0.764,
+    "mean_match_rate": 0.348,
+    "median_match_rate": 0.333,
+    "mean_corr": -0.052,
+    "median_corr": -0.051,
+    "low_coverage_lt_0.5": 1
+  },
+  "2020NES": {
+    "matched_sessions": 16,
+    "mean_coverage": 0.46,
+    "mean_match_rate": 0.219,
+    "median_match_rate": 0.167,
+    "mean_corr": -0.2,
+    "median_corr": -0.182,
+    "low_coverage_lt_0.5": 7
+  },
+  "total_matched_sessions": 37
+}

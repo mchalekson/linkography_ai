@@ -1,0 +1,2152 @@
+[
+  {
+    "session_id": "2020_11_05_NES_S1",
+    "cdp_metrics": {
+      "total_utterances": 148,
+      "score2_count": 106,
+      "score1_count": 144,
+      "score2_share": 0.7162162162162162,
+      "score1_share": 0.25675675675675674,
+      "entropy": -0.7406754923457348,
+      "gini_coefficient": 0.46138211382113825,
+      "unique_speakers": 12
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-386', 'utterance_count': 13, 'score2_share': 0.9230769230769231, 'entropy': -0.9081982440060684, 'unique_speakers': 10}, {'bin': 1, 'bin_range': '386-773', 'utterance_count': 8, 'score2_share': 0.875, 'entropy': -0.8626817271809589, 'unique_speakers': 4}, {'bin': 2, 'bin_range': '773-1160', 'utterance_count': 12, 'score2_share': 0.8333333333333334, 'entropy': -0.828767156056708, 'unique_speakers': 4}, {'bin': 3, 'bin_range': '1160-1547', 'utterance_count': 12, 'score2_share': 0.8333333333333334, 'entropy': -0.828767156056708, 'unique_speakers': 7}, {'bin': 4, 'bin_range': '1547-1933', 'utterance_count': 10, 'score2_share': 0.7, 'entropy': -0.7067275142755282, 'unique_speakers': 6}, {'bin': 5, 'bin_range': '1933-2320', 'utterance_count': 3, 'score2_share': 0.6666666666666666, 'entropy': -0.7367811436816926, 'unique_speakers': 2}, {'bin': 6, 'bin_range': '2320-2707', 'utterance_count': 11, 'score2_share': 0.45454545454545453, 'entropy': -0.6403190881100167, 'unique_speakers': 5}, {'bin': 7, 'bin_range': '2707-3094', 'utterance_count': 13, 'score2_share': 0.7692307692307693, 'entropy': -0.7563380639796647, 'unique_speakers': 6}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.7835725116684182,
+    "entropy_variance": 0.007890399592424269,
+    "entropy_sequence": [
+      -0.9081982440060684,
+      -0.8626817271809589,
+      -0.828767156056708,
+      -0.828767156056708,
+      -0.7067275142755282,
+      -0.7367811436816926,
+      -0.6403190881100167,
+      -0.7563380639796647
+    ]
+  },
+  {
+    "session_id": "2020_11_05_NES_S2",
+    "cdp_metrics": {
+      "total_utterances": 136,
+      "score2_count": 92,
+      "score1_count": 128,
+      "score2_share": 0.6764705882352942,
+      "score1_share": 0.2647058823529412,
+      "entropy": -0.7068392478826416,
+      "gini_coefficient": 0.3229308005427409,
+      "unique_speakers": 11
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-445', 'utterance_count': 7, 'score2_share': 0.8571428571428571, 'entropy': -0.8475550102349336, 'unique_speakers': 4}, {'bin': 1, 'bin_range': '445-890', 'utterance_count': 13, 'score2_share': 0.5384615384615384, 'entropy': -0.6549857048292481, 'unique_speakers': 6}, {'bin': 2, 'bin_range': '890-1335', 'utterance_count': 2, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 2}, {'bin': 3, 'bin_range': '1335-1780', 'utterance_count': 19, 'score2_share': 0.5263157894736842, 'entropy': -0.613422855383026, 'unique_speakers': 6}, {'bin': 4, 'bin_range': '1780-2225', 'utterance_count': 13, 'score2_share': 0.7692307692307693, 'entropy': -0.785517967485852, 'unique_speakers': 5}, {'bin': 5, 'bin_range': '2225-2670', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 6, 'bin_range': '2670-3115', 'utterance_count': 3, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 3}, {'bin': 7, 'bin_range': '3115-3561', 'utterance_count': 10, 'score2_share': 0.9, 'entropy': -0.8854377448471462, 'unique_speakers': 5}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.7233649103475257,
+    "entropy_variance": 0.10551821392538609,
+    "entropy_sequence": [
+      -0.8475550102349336,
+      -0.6549857048292481,
+      -1.0,
+      -0.613422855383026,
+      -0.785517967485852,
+      0,
+      -1.0,
+      -0.8854377448471462
+    ]
+  },
+  {
+    "session_id": "2020_11_05_NES_S3",
+    "cdp_metrics": {
+      "total_utterances": 103,
+      "score2_count": 58,
+      "score1_count": 98,
+      "score2_share": 0.5631067961165048,
+      "score1_share": 0.3883495145631068,
+      "entropy": -0.6752637494763015,
+      "gini_coefficient": 0.3533333333333333,
+      "unique_speakers": 10
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-382', 'utterance_count': 10, 'score2_share': 0.7, 'entropy': -0.7067275142755282, 'unique_speakers': 6}, {'bin': 1, 'bin_range': '382-764', 'utterance_count': 1, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 1}, {'bin': 2, 'bin_range': '764-1147', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 3, 'bin_range': '1147-1529', 'utterance_count': 10, 'score2_share': 0.8, 'entropy': -0.8049844718999243, 'unique_speakers': 6}, {'bin': 4, 'bin_range': '1529-1911', 'utterance_count': 9, 'score2_share': 0.3333333333333333, 'entropy': -0.6435737892668734, 'unique_speakers': 6}, {'bin': 5, 'bin_range': '1911-2294', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 6, 'bin_range': '2294-2676', 'utterance_count': 6, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 4}, {'bin': 7, 'bin_range': '2676-3059', 'utterance_count': 9, 'score2_share': 0.5555555555555556, 'entropy': -0.7103829587962573, 'unique_speakers': 4}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.6082085917798229,
+    "entropy_variance": 0.15813620298502168,
+    "entropy_sequence": [
+      -0.7067275142755282,
+      -1.0,
+      0,
+      -0.8049844718999243,
+      -0.6435737892668734,
+      0,
+      -1.0,
+      -0.7103829587962573
+    ]
+  },
+  {
+    "session_id": "2020_11_05_NES_S4",
+    "cdp_metrics": {
+      "total_utterances": 78,
+      "score2_count": 40,
+      "score1_count": 74,
+      "score2_share": 0.5128205128205128,
+      "score1_share": 0.4358974358974359,
+      "entropy": -0.6666420065281131,
+      "gini_coefficient": 0.34688346883468824,
+      "unique_speakers": 9
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-383', 'utterance_count': 16, 'score2_share': 0.6875, 'entropy': -0.7447376965845054, 'unique_speakers': 9}, {'bin': 1, 'bin_range': '383-767', 'utterance_count': 1, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 1}, {'bin': 2, 'bin_range': '767-1151', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 3, 'bin_range': '1151-1535', 'utterance_count': 6, 'score2_share': 0.6666666666666666, 'entropy': -0.6804138174397717, 'unique_speakers': 3}, {'bin': 4, 'bin_range': '1535-1919', 'utterance_count': 2, 'score2_share': 0.5, 'entropy': -0.7071067811865476, 'unique_speakers': 2}, {'bin': 5, 'bin_range': '1919-2303', 'utterance_count': 5, 'score2_share': 0.6, 'entropy': -0.6436434397448731, 'unique_speakers': 3}, {'bin': 6, 'bin_range': '2303-2687', 'utterance_count': 1, 'score2_share': 0.0, 'entropy': -1.0, 'unique_speakers': 1}, {'bin': 7, 'bin_range': '2687-3071', 'utterance_count': 10, 'score2_share': 0.6, 'entropy': -0.6606975453981235, 'unique_speakers': 5}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.6795749100442277,
+    "entropy_variance": 0.09625983668653064,
+    "entropy_sequence": [
+      -0.7447376965845054,
+      -1.0,
+      0,
+      -0.6804138174397717,
+      -0.7071067811865476,
+      -0.6436434397448731,
+      -1.0,
+      -0.6606975453981235
+    ]
+  },
+  {
+    "session_id": "2020_11_05_NES_S5",
+    "cdp_metrics": {
+      "total_utterances": 46,
+      "score2_count": 22,
+      "score1_count": 46,
+      "score2_share": 0.4782608695652174,
+      "score1_share": 0.5217391304347826,
+      "entropy": -0.707608097611511,
+      "gini_coefficient": 0.3571428571428572,
+      "unique_speakers": 11
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-380', 'utterance_count': 10, 'score2_share': 0.7, 'entropy': -0.7499787858254026, 'unique_speakers': 7}, {'bin': 1, 'bin_range': '380-760', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 2, 'bin_range': '760-1141', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 3, 'bin_range': '1141-1521', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 4, 'bin_range': '1521-1901', 'utterance_count': 6, 'score2_share': 0.6666666666666666, 'entropy': -0.7367811436816926, 'unique_speakers': 4}, {'bin': 5, 'bin_range': '1901-2282', 'utterance_count': 5, 'score2_share': 0.8, 'entropy': -0.8049844718999243, 'unique_speakers': 3}, {'bin': 6, 'bin_range': '2282-2662', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 7, 'bin_range': '2662-3043', 'utterance_count': 7, 'score2_share': 0.0, 'entropy': -1.0, 'unique_speakers': 4}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.4114680501758774,
+    "entropy_variance": 0.1998381403355344,
+    "entropy_sequence": [
+      -0.7499787858254026,
+      0,
+      0,
+      0,
+      -0.7367811436816926,
+      -0.8049844718999243,
+      0,
+      -1.0
+    ]
+  },
+  {
+    "session_id": "2020_11_05_NES_S6",
+    "cdp_metrics": {
+      "total_utterances": 53,
+      "score2_count": 32,
+      "score1_count": 48,
+      "score2_share": 0.6037735849056604,
+      "score1_share": 0.3018867924528302,
+      "entropy": -0.6639949426631498,
+      "gini_coefficient": 0.3961352657004831,
+      "unique_speakers": 9
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-181', 'utterance_count': 6, 'score2_share': 0.6666666666666666, 'entropy': -0.7367811436816926, 'unique_speakers': 3}, {'bin': 1, 'bin_range': '181-362', 'utterance_count': 1, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 1}, {'bin': 2, 'bin_range': '362-544', 'utterance_count': 4, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 3}, {'bin': 3, 'bin_range': '544-725', 'utterance_count': 3, 'score2_share': 0.6666666666666666, 'entropy': -0.7367811436816926, 'unique_speakers': 3}, {'bin': 4, 'bin_range': '725-906', 'utterance_count': 1, 'score2_share': 0.0, 'entropy': -1.0, 'unique_speakers': 1}, {'bin': 5, 'bin_range': '906-1088', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 6, 'bin_range': '1088-1269', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 7, 'bin_range': '1269-1451', 'utterance_count': 8, 'score2_share': 0.5, 'entropy': -0.627387227803356, 'unique_speakers': 5}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.6376186893958427,
+    "entropy_variance": 0.17526384234937278,
+    "entropy_sequence": [
+      -0.7367811436816926,
+      -1.0,
+      -1.0,
+      -0.7367811436816926,
+      -1.0,
+      0,
+      0,
+      -0.627387227803356
+    ]
+  },
+  {
+    "session_id": "2020_11_06_NES_S1",
+    "cdp_metrics": {
+      "total_utterances": 123,
+      "score2_count": 91,
+      "score1_count": 121,
+      "score2_share": 0.7398373983739838,
+      "score1_share": 0.24390243902439024,
+      "entropy": -0.7588905175406188,
+      "gini_coefficient": 0.3857142857142857,
+      "unique_speakers": 10
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-345', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 1, 'bin_range': '345-690', 'utterance_count': 2, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 2}, {'bin': 2, 'bin_range': '690-1035', 'utterance_count': 7, 'score2_share': 0.8571428571428571, 'entropy': -0.8475550102349336, 'unique_speakers': 6}, {'bin': 3, 'bin_range': '1035-1380', 'utterance_count': 9, 'score2_share': 0.7777777777777778, 'entropy': -0.7906920852666046, 'unique_speakers': 5}, {'bin': 4, 'bin_range': '1380-1725', 'utterance_count': 15, 'score2_share': 0.7333333333333333, 'entropy': -0.7346451267067641, 'unique_speakers': 5}, {'bin': 5, 'bin_range': '1725-2070', 'utterance_count': 10, 'score2_share': 0.7, 'entropy': -0.7499787858254026, 'unique_speakers': 5}, {'bin': 6, 'bin_range': '2070-2415', 'utterance_count': 5, 'score2_share': 0.6, 'entropy': -0.7177402143583604, 'unique_speakers': 3}, {'bin': 7, 'bin_range': '2415-2760', 'utterance_count': 8, 'score2_share': 0.875, 'entropy': -0.8626817271809589, 'unique_speakers': 8}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.712911618696628,
+    "entropy_variance": 0.0913060113710956,
+    "entropy_sequence": [
+      0,
+      -1.0,
+      -0.8475550102349336,
+      -0.7906920852666046,
+      -0.7346451267067641,
+      -0.7499787858254026,
+      -0.7177402143583604,
+      -0.8626817271809589
+    ]
+  },
+  {
+    "session_id": "2020_11_06_NES_S10",
+    "cdp_metrics": {
+      "total_utterances": 136,
+      "score2_count": 99,
+      "score1_count": 130,
+      "score2_share": 0.7279411764705882,
+      "score1_share": 0.22794117647058823,
+      "entropy": -0.7391684834640526,
+      "gini_coefficient": 0.46350832266325237,
+      "unique_speakers": 11
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-362', 'utterance_count': 12, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 5}, {'bin': 1, 'bin_range': '362-725', 'utterance_count': 8, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 4}, {'bin': 2, 'bin_range': '725-1088', 'utterance_count': 15, 'score2_share': 0.8666666666666667, 'entropy': -0.8555092076404425, 'unique_speakers': 6}, {'bin': 3, 'bin_range': '1088-1451', 'utterance_count': 15, 'score2_share': 0.4666666666666667, 'entropy': -0.6548013069761858, 'unique_speakers': 5}, {'bin': 4, 'bin_range': '1451-1814', 'utterance_count': 7, 'score2_share': 0.7142857142857143, 'entropy': -0.7564023201846115, 'unique_speakers': 5}, {'bin': 5, 'bin_range': '1814-2177', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 6, 'bin_range': '2177-2540', 'utterance_count': 3, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 3}, {'bin': 7, 'bin_range': '2540-2903', 'utterance_count': 11, 'score2_share': 0.7272727272727273, 'entropy': -0.7251579212163399, 'unique_speakers': 6}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.7489838445021975,
+    "entropy_variance": 0.11012069172234722,
+    "entropy_sequence": [
+      -1.0,
+      -1.0,
+      -0.8555092076404425,
+      -0.6548013069761858,
+      -0.7564023201846115,
+      0,
+      -1.0,
+      -0.7251579212163399
+    ]
+  },
+  {
+    "session_id": "2020_11_06_NES_S11",
+    "cdp_metrics": {
+      "total_utterances": 175,
+      "score2_count": 107,
+      "score1_count": 168,
+      "score2_share": 0.6114285714285714,
+      "score1_share": 0.3485714285714286,
+      "entropy": -0.6918961901640064,
+      "gini_coefficient": 0.3139534883720929,
+      "unique_speakers": 10
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-374', 'utterance_count': 10, 'score2_share': 0.8, 'entropy': -0.8049844718999243, 'unique_speakers': 6}, {'bin': 1, 'bin_range': '374-748', 'utterance_count': 10, 'score2_share': 0.7, 'entropy': -0.7499787858254026, 'unique_speakers': 5}, {'bin': 2, 'bin_range': '748-1123', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 3, 'bin_range': '1123-1497', 'utterance_count': 11, 'score2_share': 0.7272727272727273, 'entropy': -0.7626474388164377, 'unique_speakers': 5}, {'bin': 4, 'bin_range': '1497-1871', 'utterance_count': 10, 'score2_share': 0.9, 'entropy': -0.8854377448471462, 'unique_speakers': 6}, {'bin': 5, 'bin_range': '1871-2246', 'utterance_count': 12, 'score2_share': 0.8333333333333334, 'entropy': -0.828767156056708, 'unique_speakers': 5}, {'bin': 6, 'bin_range': '2246-2620', 'utterance_count': 15, 'score2_share': 0.5333333333333333, 'entropy': -0.6596870685780659, 'unique_speakers': 6}, {'bin': 7, 'bin_range': '2620-2995', 'utterance_count': 18, 'score2_share': 0.5555555555555556, 'entropy': -0.6435737892668734, 'unique_speakers': 7}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.6668845569113198,
+    "entropy_variance": 0.0792069209693895,
+    "entropy_sequence": [
+      -0.8049844718999243,
+      -0.7499787858254026,
+      0,
+      -0.7626474388164377,
+      -0.8854377448471462,
+      -0.828767156056708,
+      -0.6596870685780659,
+      -0.6435737892668734
+    ]
+  },
+  {
+    "session_id": "2020_11_06_NES_S12",
+    "cdp_metrics": {
+      "total_utterances": 158,
+      "score2_count": 97,
+      "score1_count": 140,
+      "score2_share": 0.6139240506329114,
+      "score1_share": 0.2721518987341772,
+      "entropy": -0.6614588511077538,
+      "gini_coefficient": 0.522982635342186,
+      "unique_speakers": 11
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-366', 'utterance_count': 14, 'score2_share': 0.5714285714285714, 'entropy': -0.6303494191046635, 'unique_speakers': 5}, {'bin': 1, 'bin_range': '366-733', 'utterance_count': 6, 'score2_share': 0.8333333333333334, 'entropy': -0.8287671560567079, 'unique_speakers': 5}, {'bin': 2, 'bin_range': '733-1099', 'utterance_count': 11, 'score2_share': 0.7272727272727273, 'entropy': -0.7626474388164377, 'unique_speakers': 2}, {'bin': 3, 'bin_range': '1099-1466', 'utterance_count': 10, 'score2_share': 0.8, 'entropy': -0.7787873060033003, 'unique_speakers': 4}, {'bin': 4, 'bin_range': '1466-1833', 'utterance_count': 16, 'score2_share': 0.5625, 'entropy': -0.6407619845663303, 'unique_speakers': 5}, {'bin': 5, 'bin_range': '1833-2199', 'utterance_count': 12, 'score2_share': 0.4166666666666667, 'entropy': -0.6059557353838961, 'unique_speakers': 4}, {'bin': 6, 'bin_range': '2199-2566', 'utterance_count': 12, 'score2_share': 0.5833333333333334, 'entropy': -0.6385695743091284, 'unique_speakers': 4}, {'bin': 7, 'bin_range': '2566-2933', 'utterance_count': 8, 'score2_share': 0.875, 'entropy': -0.8626817271809589, 'unique_speakers': 4}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.7185650426776778,
+    "entropy_variance": 0.010199935191051494,
+    "entropy_sequence": [
+      -0.6303494191046635,
+      -0.8287671560567079,
+      -0.7626474388164377,
+      -0.7787873060033003,
+      -0.6407619845663303,
+      -0.6059557353838961,
+      -0.6385695743091284,
+      -0.8626817271809589
+    ]
+  },
+  {
+    "session_id": "2020_11_06_NES_S2",
+    "cdp_metrics": {
+      "total_utterances": 139,
+      "score2_count": 90,
+      "score1_count": 132,
+      "score2_share": 0.6474820143884892,
+      "score1_share": 0.302158273381295,
+      "entropy": -0.6983989701896745,
+      "gini_coefficient": 0.5523809523809524,
+      "unique_speakers": 15
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-529', 'utterance_count': 10, 'score2_share': 0.5, 'entropy': -0.638158380008428, 'unique_speakers': 5}, {'bin': 1, 'bin_range': '529-1058', 'utterance_count': 6, 'score2_share': 0.5, 'entropy': -0.7071067811865476, 'unique_speakers': 3}, {'bin': 2, 'bin_range': '1058-1588', 'utterance_count': 15, 'score2_share': 0.8, 'entropy': -0.8049844718999243, 'unique_speakers': 5}, {'bin': 3, 'bin_range': '1588-2117', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 4, 'bin_range': '2117-2646', 'utterance_count': 10, 'score2_share': 0.8, 'entropy': -0.7787873060033003, 'unique_speakers': 7}, {'bin': 5, 'bin_range': '2646-3176', 'utterance_count': 7, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 6}, {'bin': 6, 'bin_range': '3176-3705', 'utterance_count': 15, 'score2_share': 0.6666666666666666, 'entropy': -0.6992503878001141, 'unique_speakers': 5}, {'bin': 7, 'bin_range': '3705-4235', 'utterance_count': 14, 'score2_share': 0.5, 'entropy': -0.6532093381761515, 'unique_speakers': 5}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.6601870831343082,
+    "entropy_variance": 0.08437335034098674,
+    "entropy_sequence": [
+      -0.638158380008428,
+      -0.7071067811865476,
+      -0.8049844718999243,
+      0,
+      -0.7787873060033003,
+      -1.0,
+      -0.6992503878001141,
+      -0.6532093381761515
+    ]
+  },
+  {
+    "session_id": "2020_11_06_NES_S3",
+    "cdp_metrics": {
+      "total_utterances": 66,
+      "score2_count": 41,
+      "score1_count": 63,
+      "score2_share": 0.6212121212121212,
+      "score1_share": 0.3333333333333333,
+      "entropy": -0.691761856863797,
+      "gini_coefficient": 0.38866396761133615,
+      "unique_speakers": 13
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-243', 'utterance_count': 7, 'score2_share': 0.8571428571428571, 'entropy': -0.8475550102349337, 'unique_speakers': 5}, {'bin': 1, 'bin_range': '243-487', 'utterance_count': 7, 'score2_share': 0.5714285714285714, 'entropy': -0.7125252565996784, 'unique_speakers': 4}, {'bin': 2, 'bin_range': '487-730', 'utterance_count': 4, 'score2_share': 0.5, 'entropy': -0.7071067811865476, 'unique_speakers': 4}, {'bin': 3, 'bin_range': '730-974', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 4, 'bin_range': '974-1218', 'utterance_count': 2, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 2}, {'bin': 5, 'bin_range': '1218-1461', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 6, 'bin_range': '1461-1705', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 7, 'bin_range': '1705-1949', 'utterance_count': 18, 'score2_share': 0.6666666666666666, 'entropy': -0.6861246511646393, 'unique_speakers': 7}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.49416396239822485,
+    "entropy_variance": 0.17760351424823723,
+    "entropy_sequence": [
+      -0.8475550102349337,
+      -0.7125252565996784,
+      -0.7071067811865476,
+      0,
+      -1.0,
+      0,
+      0,
+      -0.6861246511646393
+    ]
+  },
+  {
+    "session_id": "2020_11_06_NES_S4",
+    "cdp_metrics": {
+      "total_utterances": 169,
+      "score2_count": 121,
+      "score1_count": 163,
+      "score2_share": 0.7159763313609467,
+      "score1_share": 0.2485207100591716,
+      "entropy": -0.7364078506098448,
+      "gini_coefficient": 0.42132867132867147,
+      "unique_speakers": 13
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-464', 'utterance_count': 14, 'score2_share': 0.8571428571428571, 'entropy': -0.8475550102349336, 'unique_speakers': 6}, {'bin': 1, 'bin_range': '464-929', 'utterance_count': 15, 'score2_share': 0.7333333333333333, 'entropy': -0.7253620474023246, 'unique_speakers': 7}, {'bin': 2, 'bin_range': '929-1394', 'utterance_count': 4, 'score2_share': 0.75, 'entropy': -0.774519052838329, 'unique_speakers': 3}, {'bin': 3, 'bin_range': '1394-1859', 'utterance_count': 3, 'score2_share': 0.6666666666666666, 'entropy': -0.7367811436816926, 'unique_speakers': 3}, {'bin': 4, 'bin_range': '1859-2324', 'utterance_count': 25, 'score2_share': 0.56, 'entropy': -0.6800478401321519, 'unique_speakers': 11}, {'bin': 5, 'bin_range': '2324-2789', 'utterance_count': 4, 'score2_share': 0.75, 'entropy': -0.774519052838329, 'unique_speakers': 3}, {'bin': 6, 'bin_range': '2789-3254', 'utterance_count': 8, 'score2_share': 0.875, 'entropy': -0.8626817271809589, 'unique_speakers': 6}, {'bin': 7, 'bin_range': '3254-3719', 'utterance_count': 15, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 6}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.80018323428859,
+    "entropy_variance": 0.01020639072543398,
+    "entropy_sequence": [
+      -0.8475550102349336,
+      -0.7253620474023246,
+      -0.774519052838329,
+      -0.7367811436816926,
+      -0.6800478401321519,
+      -0.774519052838329,
+      -0.8626817271809589,
+      -1.0
+    ]
+  },
+  {
+    "session_id": "2020_11_06_NES_S7",
+    "cdp_metrics": {
+      "total_utterances": 154,
+      "score2_count": 105,
+      "score1_count": 146,
+      "score2_share": 0.6818181818181818,
+      "score1_share": 0.2662337662337662,
+      "entropy": -0.7122037817557257,
+      "gini_coefficient": 0.4145833333333333,
+      "unique_speakers": 12
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-422', 'utterance_count': 12, 'score2_share': 0.5833333333333334, 'entropy': -0.6620345435112608, 'unique_speakers': 6}, {'bin': 1, 'bin_range': '422-845', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 2, 'bin_range': '845-1267', 'utterance_count': 7, 'score2_share': 0.7142857142857143, 'entropy': -0.7564023201846115, 'unique_speakers': 4}, {'bin': 3, 'bin_range': '1267-1690', 'utterance_count': 9, 'score2_share': 0.8888888888888888, 'entropy': -0.8750895184433156, 'unique_speakers': 6}, {'bin': 4, 'bin_range': '1690-2113', 'utterance_count': 13, 'score2_share': 0.7692307692307693, 'entropy': -0.7563380639796649, 'unique_speakers': 6}, {'bin': 5, 'bin_range': '2113-2535', 'utterance_count': 9, 'score2_share': 0.7777777777777778, 'entropy': -0.7906920852666046, 'unique_speakers': 4}, {'bin': 6, 'bin_range': '2535-2958', 'utterance_count': 11, 'score2_share': 0.9090909090909091, 'entropy': -0.8941942942757897, 'unique_speakers': 6}, {'bin': 7, 'bin_range': '2958-3381', 'utterance_count': 19, 'score2_share': 0.5263157894736842, 'entropy': -0.6396045808574395, 'unique_speakers': 5}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.6717944258148358,
+    "entropy_variance": 0.08166750916029414,
+    "entropy_sequence": [
+      -0.6620345435112608,
+      0,
+      -0.7564023201846115,
+      -0.8750895184433156,
+      -0.7563380639796649,
+      -0.7906920852666046,
+      -0.8941942942757897,
+      -0.6396045808574395
+    ]
+  },
+  {
+    "session_id": "2020_11_06_NES_S8",
+    "cdp_metrics": {
+      "total_utterances": 201,
+      "score2_count": 104,
+      "score1_count": 186,
+      "score2_share": 0.5174129353233831,
+      "score1_share": 0.4079601990049751,
+      "entropy": -0.6531403515551016,
+      "gini_coefficient": 0.5797619047619047,
+      "unique_speakers": 14
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-514', 'utterance_count': 39, 'score2_share': 0.38461538461538464, 'entropy': -0.6549857048292481, 'unique_speakers': 11}, {'bin': 1, 'bin_range': '514-1028', 'utterance_count': 16, 'score2_share': 0.6875, 'entropy': -0.7447376965845054, 'unique_speakers': 8}, {'bin': 2, 'bin_range': '1028-1543', 'utterance_count': 7, 'score2_share': 0.7142857142857143, 'entropy': -0.7564023201846115, 'unique_speakers': 4}, {'bin': 3, 'bin_range': '1543-2057', 'utterance_count': 6, 'score2_share': 0.6666666666666666, 'entropy': -0.7367811436816926, 'unique_speakers': 3}, {'bin': 4, 'bin_range': '2057-2571', 'utterance_count': 4, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 2}, {'bin': 5, 'bin_range': '2571-3086', 'utterance_count': 7, 'score2_share': 0.5714285714285714, 'entropy': -0.6386750321046775, 'unique_speakers': 3}, {'bin': 6, 'bin_range': '3086-3600', 'utterance_count': 4, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 4}, {'bin': 7, 'bin_range': '3600-4115', 'utterance_count': 37, 'score2_share': 0.6216216216216216, 'entropy': -0.6546840583341978, 'unique_speakers': 6}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.7732832444648666,
+    "entropy_variance": 0.02163037677431273,
+    "entropy_sequence": [
+      -0.6549857048292481,
+      -0.7447376965845054,
+      -0.7564023201846115,
+      -0.7367811436816926,
+      -1.0,
+      -0.6386750321046775,
+      -1.0,
+      -0.6546840583341978
+    ]
+  },
+  {
+    "session_id": "2020_11_06_NES_S9",
+    "cdp_metrics": {
+      "total_utterances": 297,
+      "score2_count": 184,
+      "score1_count": 278,
+      "score2_share": 0.6195286195286195,
+      "score1_share": 0.3164983164983165,
+      "entropy": -0.6818686895688824,
+      "gini_coefficient": 0.5289062499999999,
+      "unique_speakers": 16
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-461', 'utterance_count': 22, 'score2_share': 0.36363636363636365, 'entropy': -0.6495359796778046, 'unique_speakers': 8}, {'bin': 1, 'bin_range': '461-923', 'utterance_count': 17, 'score2_share': 0.6470588235294118, 'entropy': -0.6749809219293518, 'unique_speakers': 7}, {'bin': 2, 'bin_range': '923-1385', 'utterance_count': 21, 'score2_share': 0.6190476190476191, 'entropy': -0.6572375668334179, 'unique_speakers': 5}, {'bin': 3, 'bin_range': '1385-1847', 'utterance_count': 21, 'score2_share': 0.7619047619047619, 'entropy': -0.7585669517727354, 'unique_speakers': 5}, {'bin': 4, 'bin_range': '1847-2309', 'utterance_count': 10, 'score2_share': 0.8, 'entropy': -0.8049844718999243, 'unique_speakers': 3}, {'bin': 5, 'bin_range': '2309-2771', 'utterance_count': 15, 'score2_share': 0.8666666666666667, 'entropy': -0.8555092076404425, 'unique_speakers': 7}, {'bin': 6, 'bin_range': '2771-3233', 'utterance_count': 24, 'score2_share': 0.875, 'entropy': -0.8510489872910312, 'unique_speakers': 8}, {'bin': 7, 'bin_range': '3233-3695', 'utterance_count': 30, 'score2_share': 0.4666666666666667, 'entropy': -0.6784332206176298, 'unique_speakers': 7}]",
+    "gemini_metrics": "[]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.7412871634577922,
+    "entropy_variance": 0.0076114316784821456,
+    "entropy_sequence": [
+      -0.6495359796778046,
+      -0.6749809219293518,
+      -0.6572375668334179,
+      -0.7585669517727354,
+      -0.8049844718999243,
+      -0.8555092076404425,
+      -0.8510489872910312,
+      -0.6784332206176298
+    ]
+  },
+  {
+    "session_id": "2021_10_07_CMC_S1",
+    "cdp_metrics": {
+      "total_utterances": 341,
+      "score2_count": 187,
+      "score1_count": 311,
+      "score2_share": 0.5483870967741935,
+      "score1_share": 0.36363636363636365,
+      "entropy": -0.651473549312238,
+      "gini_coefficient": 0.45623342175066317,
+      "unique_speakers": 13
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-551', 'utterance_count': 31, 'score2_share': 0.4838709677419355, 'entropy': -0.6237748313831305, 'unique_speakers': 12}, {'bin': 1, 'bin_range': '551-1103', 'utterance_count': 21, 'score2_share': 0.6190476190476191, 'entropy': -0.6899054798412445, 'unique_speakers': 6}, {'bin': 2, 'bin_range': '1103-1654', 'utterance_count': 15, 'score2_share': 0.8, 'entropy': -0.7814414616724249, 'unique_speakers': 9}, {'bin': 3, 'bin_range': '1654-2206', 'utterance_count': 26, 'score2_share': 0.5769230769230769, 'entropy': -0.6382449466321584, 'unique_speakers': 8}, {'bin': 4, 'bin_range': '2206-2758', 'utterance_count': 26, 'score2_share': 0.6923076923076923, 'entropy': -0.7082273947229994, 'unique_speakers': 7}, {'bin': 5, 'bin_range': '2758-3309', 'utterance_count': 21, 'score2_share': 0.6666666666666666, 'entropy': -0.7367811436816926, 'unique_speakers': 8}, {'bin': 6, 'bin_range': '3309-3861', 'utterance_count': 19, 'score2_share': 0.8421052631578947, 'entropy': -0.8355097941618154, 'unique_speakers': 9}, {'bin': 7, 'bin_range': '3861-4413', 'utterance_count': 44, 'score2_share': 0.4772727272727273, 'entropy': -0.6017114334798055, 'unique_speakers': 9}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Participation Dynamics', 'code_diversity': 8, 'utterance_count': 35}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 2, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Coordination and Decision Practices', 'code_diversity': 11, 'utterance_count': 24}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 13, 'utterance_count': 17}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 23}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 29}, {'chunk': 5, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 23}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 12, 'utterance_count': 43}, {'chunk': 7, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Relational Climate', 'code_diversity': 12, 'utterance_count': 45}]",
+    "match_rate": 0.125,
+    "matches": 1,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.4838709677419355,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6190476190476191,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5769230769230769,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6923076923076923,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6666666666666666,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.4772727272727273,
+        "gemini_decision_level": 2
+      }
+    ],
+    "score2_gemini_correlation": 0.01902460693627266,
+    "entropy_mean": -0.7019495606969088,
+    "entropy_variance": 0.006538893835036842,
+    "entropy_sequence": [
+      -0.6237748313831305,
+      -0.6899054798412445,
+      -0.7814414616724249,
+      -0.6382449466321584,
+      -0.7082273947229994,
+      -0.7367811436816926,
+      -0.8355097941618154,
+      -0.6017114334798055
+    ]
+  },
+  {
+    "session_id": "2021_10_07_CMC_S2",
+    "cdp_metrics": {
+      "total_utterances": 247,
+      "score2_count": 142,
+      "score1_count": 235,
+      "score2_share": 0.5748987854251012,
+      "score1_share": 0.3765182186234818,
+      "entropy": -0.677644310981671,
+      "gini_coefficient": 0.5708836617927529,
+      "unique_speakers": 13
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-527', 'utterance_count': 13, 'score2_share': 0.6923076923076923, 'entropy': -0.7082273947229994, 'unique_speakers': 7}, {'bin': 1, 'bin_range': '527-1054', 'utterance_count': 13, 'score2_share': 0.7692307692307693, 'entropy': -0.785517967485852, 'unique_speakers': 7}, {'bin': 2, 'bin_range': '1054-1581', 'utterance_count': 12, 'score2_share': 0.8333333333333334, 'entropy': -0.828767156056708, 'unique_speakers': 5}, {'bin': 3, 'bin_range': '1581-2108', 'utterance_count': 15, 'score2_share': 0.8666666666666667, 'entropy': -0.8412492767173826, 'unique_speakers': 6}, {'bin': 4, 'bin_range': '2108-2635', 'utterance_count': 15, 'score2_share': 0.8666666666666667, 'entropy': -0.8412492767173826, 'unique_speakers': 7}, {'bin': 5, 'bin_range': '2635-3162', 'utterance_count': 9, 'score2_share': 0.6666666666666666, 'entropy': -0.7367811436816926, 'unique_speakers': 5}, {'bin': 6, 'bin_range': '3162-3689', 'utterance_count': 25, 'score2_share': 0.44, 'entropy': -0.6088451943647456, 'unique_speakers': 5}, {'bin': 7, 'bin_range': '3689-4216', 'utterance_count': 19, 'score2_share': 0.3684210526315789, 'entropy': -0.6396045808574395, 'unique_speakers': 8}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 8, 'utterance_count': 14}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 6, 'utterance_count': 13}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 11, 'utterance_count': 19}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 11, 'utterance_count': 21}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Evaluation Practices', 'code_diversity': 7, 'utterance_count': 8}, {'chunk': 5, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 24}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 11, 'utterance_count': 46}, {'chunk': 7, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 2, 'engagement_level': 1, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 1, 'utterance_count': 2}]",
+    "match_rate": 0.125,
+    "matches": 1,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6923076923076923,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.7692307692307693,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8333333333333334,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8666666666666667,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8666666666666667,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.44,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.3684210526315789,
+        "gemini_decision_level": 2
+      }
+    ],
+    "score2_gemini_correlation": -0.33383136712919925,
+    "entropy_mean": -0.7487802488255253,
+    "entropy_variance": 0.008305466568948271,
+    "entropy_sequence": [
+      -0.7082273947229994,
+      -0.785517967485852,
+      -0.828767156056708,
+      -0.8412492767173826,
+      -0.8412492767173826,
+      -0.7367811436816926,
+      -0.6088451943647456,
+      -0.6396045808574395
+    ]
+  },
+  {
+    "session_id": "2021_10_07_CMC_S3",
+    "cdp_metrics": {
+      "total_utterances": 300,
+      "score2_count": 169,
+      "score1_count": 270,
+      "score2_share": 0.5633333333333334,
+      "score1_share": 0.33666666666666667,
+      "entropy": -0.6497796697091587,
+      "gini_coefficient": 0.529388560157791,
+      "unique_speakers": 15
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-524', 'utterance_count': 20, 'score2_share': 0.9, 'entropy': -0.8854377448471462, 'unique_speakers': 6}, {'bin': 1, 'bin_range': '524-1049', 'utterance_count': 16, 'score2_share': 0.6875, 'entropy': -0.7447376965845054, 'unique_speakers': 7}, {'bin': 2, 'bin_range': '1049-1573', 'utterance_count': 8, 'score2_share': 0.75, 'entropy': -0.774519052838329, 'unique_speakers': 5}, {'bin': 3, 'bin_range': '1573-2098', 'utterance_count': 8, 'score2_share': 0.875, 'entropy': -0.8626817271809589, 'unique_speakers': 5}, {'bin': 4, 'bin_range': '2098-2622', 'utterance_count': 9, 'score2_share': 0.5555555555555556, 'entropy': -0.6435737892668734, 'unique_speakers': 5}, {'bin': 5, 'bin_range': '2622-3147', 'utterance_count': 28, 'score2_share': 0.39285714285714285, 'entropy': -0.591667501819066, 'unique_speakers': 8}, {'bin': 6, 'bin_range': '3147-3671', 'utterance_count': 24, 'score2_share': 0.375, 'entropy': -0.5936875619949737, 'unique_speakers': 7}, {'bin': 7, 'bin_range': '3671-4196', 'utterance_count': 56, 'score2_share': 0.5357142857142857, 'entropy': -0.628330503511874, 'unique_speakers': 11}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 15}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 20}, {'chunk': 2, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 3, 'explicit_commitment': True, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 13}, {'chunk': 3, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 4, 'engagement_level': 4, 'explicit_commitment': True, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 22}, {'chunk': 4, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 4, 'engagement_level': 4, 'explicit_commitment': True, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 14}, {'chunk': 5, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 4, 'engagement_level': 4, 'explicit_commitment': True, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Evaluation Practices', 'code_diversity': 9, 'utterance_count': 39}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 4, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 10, 'utterance_count': 36}]",
+    "match_rate": 0.375,
+    "matches": 3,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.9,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6875,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.39285714285714285,
+        "gemini_decision_level": 4
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.375,
+        "gemini_decision_level": 4
+      }
+    ],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.7155794472554659,
+    "entropy_variance": 0.013974856787307541,
+    "entropy_sequence": [
+      -0.8854377448471462,
+      -0.7447376965845054,
+      -0.774519052838329,
+      -0.8626817271809589,
+      -0.6435737892668734,
+      -0.591667501819066,
+      -0.5936875619949737,
+      -0.628330503511874
+    ]
+  },
+  {
+    "session_id": "2021_10_07_CMC_S4",
+    "cdp_metrics": {
+      "total_utterances": 342,
+      "score2_count": 213,
+      "score1_count": 320,
+      "score2_share": 0.6228070175438597,
+      "score1_share": 0.3128654970760234,
+      "entropy": -0.6828222810176263,
+      "gini_coefficient": 0.44725328147788046,
+      "unique_speakers": 11
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-478', 'utterance_count': 32, 'score2_share': 0.6875, 'entropy': -0.7247244942268917, 'unique_speakers': 8}, {'bin': 1, 'bin_range': '478-957', 'utterance_count': 20, 'score2_share': 0.85, 'entropy': -0.8417560290630067, 'unique_speakers': 8}, {'bin': 2, 'bin_range': '957-1436', 'utterance_count': 14, 'score2_share': 0.9285714285714286, 'entropy': -0.9138839066775024, 'unique_speakers': 9}, {'bin': 3, 'bin_range': '1436-1915', 'utterance_count': 6, 'score2_share': 0.8333333333333334, 'entropy': -0.828767156056708, 'unique_speakers': 5}, {'bin': 4, 'bin_range': '1915-2394', 'utterance_count': 21, 'score2_share': 0.9047619047619048, 'entropy': -0.8813828892136895, 'unique_speakers': 8}, {'bin': 5, 'bin_range': '2394-2873', 'utterance_count': 28, 'score2_share': 0.7857142857142857, 'entropy': -0.7786708429550039, 'unique_speakers': 9}, {'bin': 6, 'bin_range': '2873-3352', 'utterance_count': 26, 'score2_share': 0.34615384615384615, 'entropy': -0.5897047080265553, 'unique_speakers': 5}, {'bin': 7, 'bin_range': '3352-3831', 'utterance_count': 40, 'score2_share': 0.45, 'entropy': -0.649779930731058, 'unique_speakers': 8}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 31}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 22}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 14}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 6, 'utterance_count': 18}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 32}, {'chunk': 5, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 11, 'utterance_count': 28}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 4, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 28}]",
+    "match_rate": 0.125,
+    "matches": 1,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6875,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.85,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.9285714285714286,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8333333333333334,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.9047619047619048,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.34615384615384615,
+        "gemini_decision_level": 4
+      }
+    ],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.7760837446188019,
+    "entropy_variance": 0.012928492808991339,
+    "entropy_sequence": [
+      -0.7247244942268917,
+      -0.8417560290630067,
+      -0.9138839066775024,
+      -0.828767156056708,
+      -0.8813828892136895,
+      -0.7786708429550039,
+      -0.5897047080265553,
+      -0.649779930731058
+    ]
+  },
+  {
+    "session_id": "2021_10_07_CMC_S5",
+    "cdp_metrics": {
+      "total_utterances": 283,
+      "score2_count": 158,
+      "score1_count": 249,
+      "score2_share": 0.558303886925795,
+      "score1_share": 0.3215547703180212,
+      "entropy": -0.6411460758210715,
+      "gini_coefficient": 0.4835249042145593,
+      "unique_speakers": 15
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-525', 'utterance_count': 25, 'score2_share': 0.44, 'entropy': -0.6252951824842033, 'unique_speakers': 6}, {'bin': 1, 'bin_range': '525-1051', 'utterance_count': 8, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 6}, {'bin': 2, 'bin_range': '1051-1576', 'utterance_count': 16, 'score2_share': 0.625, 'entropy': -0.6564856476108916, 'unique_speakers': 8}, {'bin': 3, 'bin_range': '1576-2102', 'utterance_count': 16, 'score2_share': 0.625, 'entropy': -0.6564856476108916, 'unique_speakers': 5}, {'bin': 4, 'bin_range': '2102-2627', 'utterance_count': 31, 'score2_share': 0.6451612903225806, 'entropy': -0.6681317087319543, 'unique_speakers': 7}, {'bin': 5, 'bin_range': '2627-3153', 'utterance_count': 21, 'score2_share': 0.7619047619047619, 'entropy': -0.7484310378085505, 'unique_speakers': 8}, {'bin': 6, 'bin_range': '3153-3678', 'utterance_count': 13, 'score2_share': 0.5384615384615384, 'entropy': -0.708676386373688, 'unique_speakers': 5}, {'bin': 7, 'bin_range': '3678-4204', 'utterance_count': 44, 'score2_share': 0.4090909090909091, 'entropy': -0.5857034501140931, 'unique_speakers': 12}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': True, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Coordination and Decision Practices', 'code_diversity': 5, 'utterance_count': 23}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 14}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Information Seeking', 'code_diversity': 11, 'utterance_count': 29}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Information Seeking', 'code_diversity': 7, 'utterance_count': 21}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 21}, {'chunk': 5, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 3, 'engagement_level': 3, 'explicit_commitment': True, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 26}, {'chunk': 6, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 3, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 10, 'utterance_count': 52}, {'chunk': 7, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 3, 'engagement_level': 2, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 2, 'utterance_count': 3}]",
+    "match_rate": 0.125,
+    "matches": 1,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 1.0,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.625,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.625,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6451612903225806,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.7619047619047619,
+        "gemini_decision_level": 3
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.5384615384615384,
+        "gemini_decision_level": 3
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.4090909090909091,
+        "gemini_decision_level": 3
+      }
+    ],
+    "score2_gemini_correlation": -0.29155223476563535,
+    "entropy_mean": -0.7061511325917841,
+    "entropy_variance": 0.01650932149119246,
+    "entropy_sequence": [
+      -0.6252951824842033,
+      -1.0,
+      -0.6564856476108916,
+      -0.6564856476108916,
+      -0.6681317087319543,
+      -0.7484310378085505,
+      -0.708676386373688,
+      -0.5857034501140931
+    ]
+  },
+  {
+    "session_id": "2021_10_07_CMC_S6",
+    "cdp_metrics": {
+      "total_utterances": 334,
+      "score2_count": 183,
+      "score1_count": 306,
+      "score2_share": 0.5479041916167665,
+      "score1_share": 0.36826347305389223,
+      "entropy": -0.6533140001247365,
+      "gini_coefficient": 0.5454545454545456,
+      "unique_speakers": 12
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-525', 'utterance_count': 41, 'score2_share': 0.36585365853658536, 'entropy': -0.6799222225405008, 'unique_speakers': 11}, {'bin': 1, 'bin_range': '525-1050', 'utterance_count': 19, 'score2_share': 0.631578947368421, 'entropy': -0.6612651559574394, 'unique_speakers': 5}, {'bin': 2, 'bin_range': '1050-1575', 'utterance_count': 13, 'score2_share': 0.6923076923076923, 'entropy': -0.7082273947229994, 'unique_speakers': 5}, {'bin': 3, 'bin_range': '1575-2100', 'utterance_count': 19, 'score2_share': 0.5789473684210527, 'entropy': -0.6762105051220133, 'unique_speakers': 7}, {'bin': 4, 'bin_range': '2100-2625', 'utterance_count': 31, 'score2_share': 0.6129032258064516, 'entropy': -0.6663659852870242, 'unique_speakers': 6}, {'bin': 5, 'bin_range': '2625-3150', 'utterance_count': 19, 'score2_share': 0.6842105263157895, 'entropy': -0.6967065289356942, 'unique_speakers': 7}, {'bin': 6, 'bin_range': '3150-3675', 'utterance_count': 10, 'score2_share': 0.5, 'entropy': -0.638158380008428, 'unique_speakers': 4}, {'bin': 7, 'bin_range': '3675-4200', 'utterance_count': 24, 'score2_share': 0.6666666666666666, 'entropy': -0.6933873151680517, 'unique_speakers': 7}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 9, 'utterance_count': 26}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 8, 'utterance_count': 17}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 10}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Idea Management', 'code_diversity': 9, 'utterance_count': 18}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 37}, {'chunk': 5, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 5, 'utterance_count': 6}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 18}, {'chunk': 7, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 3, 'engagement_level': 1, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Coordination and Decision Practices', 'code_diversity': 1, 'utterance_count': 1}]",
+    "match_rate": 0.125,
+    "matches": 1,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.631578947368421,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6923076923076923,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5789473684210527,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6129032258064516,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6842105263157895,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.5,
+        "gemini_decision_level": 3
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.6666666666666666,
+        "gemini_decision_level": 3
+      }
+    ],
+    "score2_gemini_correlation": 0.4210308715201542,
+    "entropy_mean": -0.6775304359677689,
+    "entropy_variance": 0.0005011846257195658,
+    "entropy_sequence": [
+      -0.6799222225405008,
+      -0.6612651559574394,
+      -0.7082273947229994,
+      -0.6762105051220133,
+      -0.6663659852870242,
+      -0.6967065289356942,
+      -0.638158380008428,
+      -0.6933873151680517
+    ]
+  },
+  {
+    "session_id": "2021_10_07_CMC_S7",
+    "cdp_metrics": {
+      "total_utterances": 242,
+      "score2_count": 150,
+      "score1_count": 224,
+      "score2_share": 0.6198347107438017,
+      "score1_share": 0.30578512396694213,
+      "entropy": -0.6773713497065087,
+      "gini_coefficient": 0.5,
+      "unique_speakers": 10
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-554', 'utterance_count': 4, 'score2_share': 0.25, 'entropy': -0.6035533905932737, 'unique_speakers': 3}, {'bin': 1, 'bin_range': '554-1109', 'utterance_count': 22, 'score2_share': 0.6818181818181818, 'entropy': -0.6987509781791393, 'unique_speakers': 8}, {'bin': 2, 'bin_range': '1109-1664', 'utterance_count': 6, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 4}, {'bin': 3, 'bin_range': '1664-2219', 'utterance_count': 16, 'score2_share': 0.8125, 'entropy': -0.8135674844334139, 'unique_speakers': 7}, {'bin': 4, 'bin_range': '2219-2773', 'utterance_count': 13, 'score2_share': 0.6153846153846154, 'entropy': -0.65394878840157, 'unique_speakers': 6}, {'bin': 5, 'bin_range': '2773-3328', 'utterance_count': 15, 'score2_share': 0.6666666666666666, 'entropy': -0.6824602226078237, 'unique_speakers': 4}, {'bin': 6, 'bin_range': '3328-3883', 'utterance_count': 21, 'score2_share': 0.7142857142857143, 'entropy': -0.7162033496506692, 'unique_speakers': 5}, {'bin': 7, 'bin_range': '3883-4438', 'utterance_count': 34, 'score2_share': 0.5588235294117647, 'entropy': -0.6536338273071383, 'unique_speakers': 8}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'None', 'code_diversity': 10, 'utterance_count': 55}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 9, 'utterance_count': 26}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 6, 'utterance_count': 6}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 16}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 42}, {'chunk': 5, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 4, 'utterance_count': 20}, {'chunk': 6, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 21}, {'chunk': 7, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 22}]",
+    "match_rate": 0.125,
+    "matches": 1,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6818181818181818,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 1.0,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8125,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6153846153846154,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6666666666666666,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.7142857142857143,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5588235294117647,
+        "gemini_decision_level": 2
+      }
+    ],
+    "score2_gemini_correlation": 0.5650271540159081,
+    "entropy_mean": -0.7277647551466285,
+    "entropy_variance": 0.015839251058002147,
+    "entropy_sequence": [
+      -0.6035533905932737,
+      -0.6987509781791393,
+      -1.0,
+      -0.8135674844334139,
+      -0.65394878840157,
+      -0.6824602226078237,
+      -0.7162033496506692,
+      -0.6536338273071383
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S1",
+    "cdp_metrics": {
+      "total_utterances": 303,
+      "score2_count": 134,
+      "score1_count": 278,
+      "score2_share": 0.44224422442244227,
+      "score1_share": 0.4752475247524752,
+      "entropy": -0.6454257605692992,
+      "gini_coefficient": 0.5669657693585908,
+      "unique_speakers": 17
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-580', 'utterance_count': 42, 'score2_share': 0.47619047619047616, 'entropy': -0.638559620459224, 'unique_speakers': 14}, {'bin': 1, 'bin_range': '580-1161', 'utterance_count': 14, 'score2_share': 0.5714285714285714, 'entropy': -0.6644831666711459, 'unique_speakers': 6}, {'bin': 2, 'bin_range': '1161-1742', 'utterance_count': 9, 'score2_share': 0.7777777777777778, 'entropy': -0.7906920852666046, 'unique_speakers': 7}, {'bin': 3, 'bin_range': '1742-2323', 'utterance_count': 15, 'score2_share': 0.4, 'entropy': -0.6596870685780659, 'unique_speakers': 4}, {'bin': 4, 'bin_range': '2323-2903', 'utterance_count': 19, 'score2_share': 0.5789473684210527, 'entropy': -0.652123137841929, 'unique_speakers': 6}, {'bin': 5, 'bin_range': '2903-3484', 'utterance_count': 14, 'score2_share': 0.5, 'entropy': -0.6532093381761515, 'unique_speakers': 7}, {'bin': 6, 'bin_range': '3484-4065', 'utterance_count': 33, 'score2_share': 0.42424242424242425, 'entropy': -0.6249807408030068, 'unique_speakers': 10}, {'bin': 7, 'bin_range': '4065-4646', 'utterance_count': 31, 'score2_share': 0.3225806451612903, 'entropy': -0.6187872901432416, 'unique_speakers': 8}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 10, 'utterance_count': 41}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 9}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 13, 'utterance_count': 9}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 13}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 2, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 20}, {'chunk': 5, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 20, 'utterance_count': 19}, {'chunk': 6, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 2, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': True, 'dominant_code': 'None', 'code_diversity': 9, 'utterance_count': 58}, {'chunk': 7, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 35}]",
+    "match_rate": 0.25,
+    "matches": 2,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.47619047619047616,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5714285714285714,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.7777777777777778,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5789473684210527,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.42424242424242425,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.3225806451612903,
+        "gemini_decision_level": 2
+      }
+    ],
+    "score2_gemini_correlation": -0.5329484884534392,
+    "entropy_mean": -0.6628153059924211,
+    "entropy_variance": 0.0029328420238458643,
+    "entropy_sequence": [
+      -0.638559620459224,
+      -0.6644831666711459,
+      -0.7906920852666046,
+      -0.6596870685780659,
+      -0.652123137841929,
+      -0.6532093381761515,
+      -0.6249807408030068,
+      -0.6187872901432416
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S10",
+    "cdp_metrics": {
+      "total_utterances": 321,
+      "score2_count": 193,
+      "score1_count": 303,
+      "score2_share": 0.6012461059190031,
+      "score1_share": 0.3426791277258567,
+      "entropy": -0.6800854185068201,
+      "gini_coefficient": 0.5315934065934067,
+      "unique_speakers": 16
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-549', 'utterance_count': 49, 'score2_share': 0.5510204081632653, 'entropy': -0.6925078863182265, 'unique_speakers': 15}, {'bin': 1, 'bin_range': '549-1099', 'utterance_count': 18, 'score2_share': 0.7777777777777778, 'entropy': -0.7906920852666046, 'unique_speakers': 7}, {'bin': 2, 'bin_range': '1099-1648', 'utterance_count': 21, 'score2_share': 0.5714285714285714, 'entropy': -0.6538006017332, 'unique_speakers': 8}, {'bin': 3, 'bin_range': '1648-2198', 'utterance_count': 23, 'score2_share': 0.6521739130434783, 'entropy': -0.685560179637383, 'unique_speakers': 7}, {'bin': 4, 'bin_range': '2198-2748', 'utterance_count': 21, 'score2_share': 0.5714285714285714, 'entropy': -0.6386750321046775, 'unique_speakers': 8}, {'bin': 5, 'bin_range': '2748-3297', 'utterance_count': 20, 'score2_share': 0.75, 'entropy': -0.7392365796331241, 'unique_speakers': 8}, {'bin': 6, 'bin_range': '3297-3847', 'utterance_count': 8, 'score2_share': 0.875, 'entropy': -0.8626817271809589, 'unique_speakers': 6}, {'bin': 7, 'bin_range': '3847-4397', 'utterance_count': 22, 'score2_share': 0.45454545454545453, 'entropy': -0.6032629940327965, 'unique_speakers': 7}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 10, 'utterance_count': 50}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 27}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 17}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 24}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 18}, {'chunk': 5, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 18}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 49}, {'chunk': 7, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 24}]",
+    "match_rate": 0.125,
+    "matches": 1,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "ambiguous",
+        "cdp_score2_share": 0.5510204081632653,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.7777777777777778,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5714285714285714,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6521739130434783,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5714285714285714,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.75,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.45454545454545453,
+        "gemini_decision_level": 3
+      }
+    ],
+    "score2_gemini_correlation": 0.17478613493814024,
+    "entropy_mean": -0.7083021357383714,
+    "entropy_variance": 0.007313761256849364,
+    "entropy_sequence": [
+      -0.6925078863182265,
+      -0.7906920852666046,
+      -0.6538006017332,
+      -0.685560179637383,
+      -0.6386750321046775,
+      -0.7392365796331241,
+      -0.8626817271809589,
+      -0.6032629940327965
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S11",
+    "cdp_metrics": {
+      "total_utterances": 321,
+      "score2_count": 196,
+      "score1_count": 307,
+      "score2_share": 0.6105919003115264,
+      "score1_share": 0.34579439252336447,
+      "entropy": -0.6895689924484976,
+      "gini_coefficient": 0.5457670820799312,
+      "unique_speakers": 13
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-563', 'utterance_count': 38, 'score2_share': 0.42105263157894735, 'entropy': -0.6489507111930719, 'unique_speakers': 11}, {'bin': 1, 'bin_range': '563-1126', 'utterance_count': 15, 'score2_share': 0.7333333333333333, 'entropy': -0.7346451267067641, 'unique_speakers': 6}, {'bin': 2, 'bin_range': '1126-1690', 'utterance_count': 27, 'score2_share': 0.6666666666666666, 'entropy': -0.6964998167100777, 'unique_speakers': 9}, {'bin': 3, 'bin_range': '1690-2253', 'utterance_count': 19, 'score2_share': 0.8947368421052632, 'entropy': -0.8704853482894063, 'unique_speakers': 6}, {'bin': 4, 'bin_range': '2253-2816', 'utterance_count': 14, 'score2_share': 0.8571428571428571, 'entropy': -0.8475550102349336, 'unique_speakers': 5}, {'bin': 5, 'bin_range': '2816-3380', 'utterance_count': 21, 'score2_share': 0.6190476190476191, 'entropy': -0.6899054798412445, 'unique_speakers': 7}, {'bin': 6, 'bin_range': '3380-3943', 'utterance_count': 20, 'score2_share': 0.8, 'entropy': -0.7848168428805429, 'unique_speakers': 7}, {'bin': 7, 'bin_range': '3943-4507', 'utterance_count': 25, 'score2_share': 0.64, 'entropy': -0.6827894904175866, 'unique_speakers': 6}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 6, 'utterance_count': 41}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Coordination and Decision Practices', 'code_diversity': 9, 'utterance_count': 22}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 25}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 16}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 15}, {'chunk': 5, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 19}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 26}, {'chunk': 7, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'extends_existing_idea', 'code_diversity': 15, 'utterance_count': 17}]",
+    "match_rate": 0.25,
+    "matches": 2,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.42105263157894735,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.7333333333333333,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6666666666666666,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8947368421052632,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8571428571428571,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6190476190476191,
+        "gemini_decision_level": 1
+      }
+    ],
+    "score2_gemini_correlation": -0.04029496979396136,
+    "entropy_mean": -0.7444559782842034,
+    "entropy_variance": 0.006633946681996498,
+    "entropy_sequence": [
+      -0.6489507111930719,
+      -0.7346451267067641,
+      -0.6964998167100777,
+      -0.8704853482894063,
+      -0.8475550102349336,
+      -0.6899054798412445,
+      -0.7848168428805429,
+      -0.6827894904175866
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S12",
+    "cdp_metrics": {
+      "total_utterances": 221,
+      "score2_count": 137,
+      "score1_count": 199,
+      "score2_share": 0.6199095022624435,
+      "score1_share": 0.28054298642533937,
+      "entropy": -0.6680832548684983,
+      "gini_coefficient": 0.23633156966490287,
+      "unique_speakers": 9
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-557', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 1, 'bin_range': '557-1115', 'utterance_count': 8, 'score2_share': 0.75, 'entropy': -0.774519052838329, 'unique_speakers': 6}, {'bin': 2, 'bin_range': '1115-1673', 'utterance_count': 17, 'score2_share': 0.8235294117647058, 'entropy': -0.8019601733663994, 'unique_speakers': 8}, {'bin': 3, 'bin_range': '1673-2231', 'utterance_count': 15, 'score2_share': 0.6666666666666666, 'entropy': -0.6824602226078237, 'unique_speakers': 8}, {'bin': 4, 'bin_range': '2231-2788', 'utterance_count': 9, 'score2_share': 0.8888888888888888, 'entropy': -0.8750895184433156, 'unique_speakers': 3}, {'bin': 5, 'bin_range': '2788-3346', 'utterance_count': 11, 'score2_share': 0.6363636363636364, 'entropy': -0.6774798631546639, 'unique_speakers': 5}, {'bin': 6, 'bin_range': '3346-3904', 'utterance_count': 33, 'score2_share': 0.5757575757575758, 'entropy': -0.638281677980451, 'unique_speakers': 7}, {'bin': 7, 'bin_range': '3904-4462', 'utterance_count': 33, 'score2_share': 0.5757575757575758, 'entropy': -0.6322690276591809, 'unique_speakers': 6}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': True, 'shared_vision': False, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 32}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 9}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 6, 'utterance_count': 13}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 20}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 10, 'utterance_count': 27}, {'chunk': 5, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 3, 'explicit_commitment': True, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Evaluation Practices', 'code_diversity': 9, 'utterance_count': 30}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 4, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 25}, {'chunk': 7, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 4, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 18}]",
+    "match_rate": 0.375,
+    "matches": 3,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.75,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8235294117647058,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6666666666666666,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8888888888888888,
+        "gemini_decision_level": 2
+      }
+    ],
+    "score2_gemini_correlation": -0.07641377058583389,
+    "entropy_mean": -0.6352574420062704,
+    "entropy_variance": 0.07318342162494426,
+    "entropy_sequence": [
+      0,
+      -0.774519052838329,
+      -0.8019601733663994,
+      -0.6824602226078237,
+      -0.8750895184433156,
+      -0.6774798631546639,
+      -0.638281677980451,
+      -0.6322690276591809
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S13",
+    "cdp_metrics": {
+      "total_utterances": 357,
+      "score2_count": 176,
+      "score1_count": 336,
+      "score2_share": 0.49299719887955185,
+      "score1_share": 0.4481792717086835,
+      "entropy": -0.6604576267121941,
+      "gini_coefficient": 0.4956043956043956,
+      "unique_speakers": 14
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-564', 'utterance_count': 45, 'score2_share': 0.4, 'entropy': -0.6448874951831908, 'unique_speakers': 10}, {'bin': 1, 'bin_range': '564-1128', 'utterance_count': 22, 'score2_share': 0.8636363636363636, 'entropy': -0.8529504812373233, 'unique_speakers': 7}, {'bin': 2, 'bin_range': '1128-1692', 'utterance_count': 12, 'score2_share': 0.9166666666666666, 'entropy': -0.9016977766595443, 'unique_speakers': 9}, {'bin': 3, 'bin_range': '1692-2256', 'utterance_count': 25, 'score2_share': 0.6, 'entropy': -0.68875800154489, 'unique_speakers': 7}, {'bin': 4, 'bin_range': '2256-2820', 'utterance_count': 30, 'score2_share': 0.5333333333333333, 'entropy': -0.6306281357340081, 'unique_speakers': 7}, {'bin': 5, 'bin_range': '2820-3384', 'utterance_count': 21, 'score2_share': 0.8571428571428571, 'entropy': -0.8333425279042993, 'unique_speakers': 8}, {'bin': 6, 'bin_range': '3384-3948', 'utterance_count': 14, 'score2_share': 0.5714285714285714, 'entropy': -0.6644831666711459, 'unique_speakers': 9}, {'bin': 7, 'bin_range': '3948-4512', 'utterance_count': 26, 'score2_share': 0.19230769230769232, 'entropy': -0.7303655044434576, 'unique_speakers': 10}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Coordination and Decision Practices', 'code_diversity': 6, 'utterance_count': 30}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 24}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 6, 'utterance_count': 16}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 11, 'utterance_count': 40}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 24}, {'chunk': 5, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 24}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 11, 'utterance_count': 20}, {'chunk': 7, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 4, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 10, 'utterance_count': 21}]",
+    "match_rate": 0.125,
+    "matches": 1,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.4,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8636363636363636,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.9166666666666666,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5333333333333333,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8571428571428571,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.19230769230769232,
+        "gemini_decision_level": 4
+      }
+    ],
+    "score2_gemini_correlation": -0.5284331193898559,
+    "entropy_mean": -0.7433891361722325,
+    "entropy_variance": 0.010993553006266112,
+    "entropy_sequence": [
+      -0.6448874951831908,
+      -0.8529504812373233,
+      -0.9016977766595443,
+      -0.68875800154489,
+      -0.6306281357340081,
+      -0.8333425279042993,
+      -0.6644831666711459,
+      -0.7303655044434576
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S14",
+    "cdp_metrics": {
+      "total_utterances": 432,
+      "score2_count": 219,
+      "score1_count": 385,
+      "score2_share": 0.5069444444444444,
+      "score1_share": 0.38425925925925924,
+      "entropy": -0.6350274046488137,
+      "gini_coefficient": 0.4178999295278365,
+      "unique_speakers": 11
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-555', 'utterance_count': 44, 'score2_share': 0.38636363636363635, 'entropy': -0.6608047882150361, 'unique_speakers': 10}, {'bin': 1, 'bin_range': '555-1110', 'utterance_count': 26, 'score2_share': 0.7307692307692307, 'entropy': -0.7303655044434576, 'unique_speakers': 6}, {'bin': 2, 'bin_range': '1110-1665', 'utterance_count': 16, 'score2_share': 0.6875, 'entropy': -0.7106698858423344, 'unique_speakers': 9}, {'bin': 3, 'bin_range': '1665-2221', 'utterance_count': 26, 'score2_share': 0.6538461538461539, 'entropy': -0.706924841769419, 'unique_speakers': 7}, {'bin': 4, 'bin_range': '2221-2776', 'utterance_count': 25, 'score2_share': 0.64, 'entropy': -0.6711447270352455, 'unique_speakers': 7}, {'bin': 5, 'bin_range': '2776-3331', 'utterance_count': 27, 'score2_share': 0.8148148148148148, 'entropy': -0.7927070962450925, 'unique_speakers': 7}, {'bin': 6, 'bin_range': '3331-3886', 'utterance_count': 40, 'score2_share': 0.475, 'entropy': -0.6020923835407442, 'unique_speakers': 8}, {'bin': 7, 'bin_range': '3886-4442', 'utterance_count': 54, 'score2_share': 0.35185185185185186, 'entropy': -0.5832315037182271, 'unique_speakers': 10}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 5, 'utterance_count': 39}, {'chunk': 1, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 24}, {'chunk': 2, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 12}, {'chunk': 3, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 7, 'utterance_count': 38}, {'chunk': 4, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 17}, {'chunk': 5, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 29}, {'chunk': 6, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 37}, {'chunk': 7, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 19}]",
+    "match_rate": 0.125,
+    "matches": 1,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.38636363636363635,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "ambiguous",
+        "cdp_score2_share": 0.7307692307692307,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "ambiguous",
+        "cdp_score2_share": 0.6875,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "ambiguous",
+        "cdp_score2_share": 0.6538461538461539,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "ambiguous",
+        "cdp_score2_share": 0.64,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "ambiguous",
+        "cdp_score2_share": 0.8148148148148148,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.35185185185185186,
+        "gemini_decision_level": 2
+      }
+    ],
+    "score2_gemini_correlation": 0.4955406417902845,
+    "entropy_mean": -0.6822425913511946,
+    "entropy_variance": 0.004677934206533554,
+    "entropy_sequence": [
+      -0.6608047882150361,
+      -0.7303655044434576,
+      -0.7106698858423344,
+      -0.706924841769419,
+      -0.6711447270352455,
+      -0.7927070962450925,
+      -0.6020923835407442,
+      -0.5832315037182271
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S2",
+    "cdp_metrics": {
+      "total_utterances": 305,
+      "score2_count": 155,
+      "score1_count": 284,
+      "score2_share": 0.5081967213114754,
+      "score1_share": 0.42295081967213116,
+      "entropy": -0.65541424152524,
+      "gini_coefficient": 0.4750000000000001,
+      "unique_speakers": 12
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-578', 'utterance_count': 16, 'score2_share': 0.625, 'entropy': -0.6844236951434803, 'unique_speakers': 8}, {'bin': 1, 'bin_range': '578-1157', 'utterance_count': 16, 'score2_share': 0.5, 'entropy': -0.7071067811865476, 'unique_speakers': 6}, {'bin': 2, 'bin_range': '1157-1736', 'utterance_count': 15, 'score2_share': 0.4, 'entropy': -0.6204626861993393, 'unique_speakers': 7}, {'bin': 3, 'bin_range': '1736-2315', 'utterance_count': 23, 'score2_share': 0.6956521739130435, 'entropy': -0.7072153193423113, 'unique_speakers': 9}, {'bin': 4, 'bin_range': '2315-2894', 'utterance_count': 10, 'score2_share': 0.7, 'entropy': -0.7067275142755282, 'unique_speakers': 5}, {'bin': 5, 'bin_range': '2894-3473', 'utterance_count': 13, 'score2_share': 0.7692307692307693, 'entropy': -0.7563380639796649, 'unique_speakers': 6}, {'bin': 6, 'bin_range': '3473-4052', 'utterance_count': 49, 'score2_share': 0.3877551020408163, 'entropy': -0.6170363386032579, 'unique_speakers': 8}, {'bin': 7, 'bin_range': '4052-4631', 'utterance_count': 38, 'score2_share': 0.5263157894736842, 'entropy': -0.6853236669039461, 'unique_speakers': 8}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 5, 'utterance_count': 17}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': True, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 24}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 36}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 17}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 6, 'utterance_count': 34}, {'chunk': 5, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 31}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 9, 'utterance_count': 66}, {'chunk': 7, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 4, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Evaluation Practices', 'code_diversity': 9, 'utterance_count': 32}]",
+    "match_rate": 0.25,
+    "matches": 2,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.625,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6956521739130435,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.7,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.3877551020408163,
+        "gemini_decision_level": 3
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.5263157894736842,
+        "gemini_decision_level": 4
+      }
+    ],
+    "score2_gemini_correlation": -0.1541915507600202,
+    "entropy_mean": -0.6855792582042595,
+    "entropy_variance": 0.0021893301638487863,
+    "entropy_sequence": [
+      -0.6844236951434803,
+      -0.7071067811865476,
+      -0.6204626861993393,
+      -0.7072153193423113,
+      -0.7067275142755282,
+      -0.7563380639796649,
+      -0.6170363386032579,
+      -0.6853236669039461
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S3",
+    "cdp_metrics": {
+      "total_utterances": 292,
+      "score2_count": 142,
+      "score1_count": 269,
+      "score2_share": 0.4863013698630137,
+      "score1_share": 0.4349315068493151,
+      "entropy": -0.6480645940060473,
+      "gini_coefficient": 0.5388841927303467,
+      "unique_speakers": 14
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-534', 'utterance_count': 48, 'score2_share': 0.5625, 'entropy': -0.6794198502703308, 'unique_speakers': 13}, {'bin': 1, 'bin_range': '534-1068', 'utterance_count': 18, 'score2_share': 0.5555555555555556, 'entropy': -0.628529787770252, 'unique_speakers': 4}, {'bin': 2, 'bin_range': '1068-1602', 'utterance_count': 14, 'score2_share': 0.6428571428571429, 'entropy': -0.6872431934890912, 'unique_speakers': 5}, {'bin': 3, 'bin_range': '1602-2137', 'utterance_count': 30, 'score2_share': 0.4666666666666667, 'entropy': -0.6204626861993393, 'unique_speakers': 8}, {'bin': 4, 'bin_range': '2137-2671', 'utterance_count': 33, 'score2_share': 0.696969696969697, 'entropy': -0.706969117199417, 'unique_speakers': 8}, {'bin': 5, 'bin_range': '2671-3205', 'utterance_count': 15, 'score2_share': 0.6, 'entropy': -0.6744213505912426, 'unique_speakers': 6}, {'bin': 6, 'bin_range': '3205-3739', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 7, 'bin_range': '3739-4274', 'utterance_count': 11, 'score2_share': 0.36363636363636365, 'entropy': -0.6495359796778046, 'unique_speakers': 5}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 8, 'utterance_count': 43}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 11, 'utterance_count': 20}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 16}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 12, 'utterance_count': 32}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 12, 'utterance_count': 31}, {'chunk': 5, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 11, 'utterance_count': 23}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Integration Practices', 'code_diversity': 13, 'utterance_count': 62}, {'chunk': 7, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 11, 'utterance_count': 45}]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.5625,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5555555555555556,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6428571428571429,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.4666666666666667,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.696969696969697,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.36363636363636365,
+        "gemini_decision_level": 3
+      }
+    ],
+    "score2_gemini_correlation": -0.5255740634043568,
+    "entropy_mean": -0.5808227456496847,
+    "entropy_variance": 0.055949166258485526,
+    "entropy_sequence": [
+      -0.6794198502703308,
+      -0.628529787770252,
+      -0.6872431934890912,
+      -0.6204626861993393,
+      -0.706969117199417,
+      -0.6744213505912426,
+      0,
+      -0.6495359796778046
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S4",
+    "cdp_metrics": {
+      "total_utterances": 280,
+      "score2_count": 166,
+      "score1_count": 257,
+      "score2_share": 0.5928571428571429,
+      "score1_share": 0.325,
+      "entropy": -0.6653046228250727,
+      "gini_coefficient": 0.5586995785671283,
+      "unique_speakers": 11
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-578', 'utterance_count': 16, 'score2_share': 0.625, 'entropy': -0.7237455477872322, 'unique_speakers': 6}, {'bin': 1, 'bin_range': '578-1156', 'utterance_count': 22, 'score2_share': 0.8636363636363636, 'entropy': -0.8529504812373233, 'unique_speakers': 7}, {'bin': 2, 'bin_range': '1156-1735', 'utterance_count': 4, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 3}, {'bin': 3, 'bin_range': '1735-2313', 'utterance_count': 10, 'score2_share': 0.8, 'entropy': -0.7787873060033003, 'unique_speakers': 6}, {'bin': 4, 'bin_range': '2313-2891', 'utterance_count': 17, 'score2_share': 0.8235294117647058, 'entropy': -0.8019601733663994, 'unique_speakers': 8}, {'bin': 5, 'bin_range': '2891-3470', 'utterance_count': 34, 'score2_share': 0.5882352941176471, 'entropy': -0.6751009804838861, 'unique_speakers': 6}, {'bin': 6, 'bin_range': '3470-4048', 'utterance_count': 19, 'score2_share': 0.7368421052631579, 'entropy': -0.7293945189361535, 'unique_speakers': 5}, {'bin': 7, 'bin_range': '4048-4627', 'utterance_count': 29, 'score2_share': 0.5862068965517241, 'entropy': -0.654985544877366, 'unique_speakers': 8}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 5, 'utterance_count': 20}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Idea Management', 'code_diversity': 8, 'utterance_count': 20}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 13}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 12}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 19}, {'chunk': 5, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 24}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 23}, {'chunk': 7, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 21}]",
+    "match_rate": 0.375,
+    "matches": 3,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.625,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8636363636363636,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 1.0,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8235294117647058,
+        "gemini_decision_level": 2
+      }
+    ],
+    "score2_gemini_correlation": -0.38363038432946545,
+    "entropy_mean": -0.7771155690864576,
+    "entropy_variance": 0.012356689916103145,
+    "entropy_sequence": [
+      -0.7237455477872322,
+      -0.8529504812373233,
+      -1.0,
+      -0.7787873060033003,
+      -0.8019601733663994,
+      -0.6751009804838861,
+      -0.7293945189361535,
+      -0.654985544877366
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S5",
+    "cdp_metrics": {
+      "total_utterances": 316,
+      "score2_count": 142,
+      "score1_count": 283,
+      "score2_share": 0.44936708860759494,
+      "score1_share": 0.4462025316455696,
+      "entropy": -0.6330360645260266,
+      "gini_coefficient": 0.5367521367521368,
+      "unique_speakers": 15
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-580', 'utterance_count': 51, 'score2_share': 0.45098039215686275, 'entropy': -0.6476422585948007, 'unique_speakers': 14}, {'bin': 1, 'bin_range': '580-1161', 'utterance_count': 11, 'score2_share': 0.6363636363636364, 'entropy': -0.7269235457403971, 'unique_speakers': 6}, {'bin': 2, 'bin_range': '1161-1742', 'utterance_count': 12, 'score2_share': 0.6666666666666666, 'entropy': -0.6933873151680517, 'unique_speakers': 7}, {'bin': 3, 'bin_range': '1742-2323', 'utterance_count': 6, 'score2_share': 0.8333333333333334, 'entropy': -0.828767156056708, 'unique_speakers': 4}, {'bin': 4, 'bin_range': '2323-2904', 'utterance_count': 20, 'score2_share': 0.7, 'entropy': -0.7218423584613518, 'unique_speakers': 7}, {'bin': 5, 'bin_range': '2904-3485', 'utterance_count': 13, 'score2_share': 0.5384615384615384, 'entropy': -0.6549857048292481, 'unique_speakers': 6}, {'bin': 6, 'bin_range': '3485-4066', 'utterance_count': 44, 'score2_share': 0.36363636363636365, 'entropy': -0.5892844239981674, 'unique_speakers': 9}, {'bin': 7, 'bin_range': '4066-4647', 'utterance_count': 38, 'score2_share': 0.3157894736842105, 'entropy': -0.5812087956655267, 'unique_speakers': 7}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Participation Dynamics', 'code_diversity': 7, 'utterance_count': 49}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 10}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 2, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 12}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 9, 'utterance_count': 7}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 18}, {'chunk': 5, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 11, 'utterance_count': 18}, {'chunk': 6, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 11, 'utterance_count': 58}, {'chunk': 7, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 11, 'utterance_count': 42}]",
+    "match_rate": 0.125,
+    "matches": 1,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.45098039215686275,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6363636363636364,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6666666666666666,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8333333333333334,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.7,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "ambiguous",
+        "cdp_score2_share": 0.36363636363636365,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.3157894736842105,
+        "gemini_decision_level": 2
+      }
+    ],
+    "score2_gemini_correlation": -0.30225225739948847,
+    "entropy_mean": -0.6805051948142815,
+    "entropy_variance": 0.006560457633657316,
+    "entropy_sequence": [
+      -0.6476422585948007,
+      -0.7269235457403971,
+      -0.6933873151680517,
+      -0.828767156056708,
+      -0.7218423584613518,
+      -0.6549857048292481,
+      -0.5892844239981674,
+      -0.5812087956655267
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S6",
+    "cdp_metrics": {
+      "total_utterances": 275,
+      "score2_count": 138,
+      "score1_count": 245,
+      "score2_share": 0.5018181818181818,
+      "score1_share": 0.3890909090909091,
+      "entropy": -0.6342189848925439,
+      "gini_coefficient": 0.5556030795551754,
+      "unique_speakers": 14
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-581', 'utterance_count': 7, 'score2_share': 0.2857142857142857, 'entropy': -0.5860072782033323, 'unique_speakers': 5}, {'bin': 1, 'bin_range': '581-1163', 'utterance_count': 26, 'score2_share': 0.5, 'entropy': -0.6312759313698337, 'unique_speakers': 5}, {'bin': 2, 'bin_range': '1163-1745', 'utterance_count': 14, 'score2_share': 0.35714285714285715, 'entropy': -0.6209819955471622, 'unique_speakers': 6}, {'bin': 3, 'bin_range': '1745-2327', 'utterance_count': 10, 'score2_share': 0.6, 'entropy': -0.6606975453981235, 'unique_speakers': 6}, {'bin': 4, 'bin_range': '2327-2909', 'utterance_count': 13, 'score2_share': 0.6153846153846154, 'entropy': -0.65394878840157, 'unique_speakers': 6}, {'bin': 5, 'bin_range': '2909-3491', 'utterance_count': 25, 'score2_share': 0.56, 'entropy': -0.6416541826840907, 'unique_speakers': 9}, {'bin': 6, 'bin_range': '3491-4073', 'utterance_count': 24, 'score2_share': 0.5833333333333334, 'entropy': -0.6472403694756126, 'unique_speakers': 7}, {'bin': 7, 'bin_range': '4073-4655', 'utterance_count': 48, 'score2_share': 0.4583333333333333, 'entropy': -0.6150238351333789, 'unique_speakers': 9}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 4, 'utterance_count': 16}, {'chunk': 1, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': True, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Coordination and Decision Practices', 'code_diversity': 7, 'utterance_count': 36}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 9}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 21}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 8, 'utterance_count': 12}, {'chunk': 5, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 21}, {'chunk': 6, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 21}, {'chunk': 7, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 3, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Relational Climate', 'code_diversity': 8, 'utterance_count': 28}]",
+    "match_rate": 0.125,
+    "matches": 1,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.2857142857142857,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.5,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6153846153846154,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.56,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "ambiguous",
+        "cdp_score2_share": 0.5833333333333334,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "convergent",
+        "cdp_score2_share": 0.4583333333333333,
+        "gemini_decision_level": 3
+      }
+    ],
+    "score2_gemini_correlation": 0.3827110614106972,
+    "entropy_mean": -0.632103740776638,
+    "entropy_variance": 0.0005937322516262362,
+    "entropy_sequence": [
+      -0.5860072782033323,
+      -0.6312759313698337,
+      -0.6209819955471622,
+      -0.6606975453981235,
+      -0.65394878840157,
+      -0.6416541826840907,
+      -0.6472403694756126,
+      -0.6150238351333789
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S7",
+    "cdp_metrics": {
+      "total_utterances": 265,
+      "score2_count": 128,
+      "score1_count": 247,
+      "score2_share": 0.4830188679245283,
+      "score1_share": 0.4490566037735849,
+      "entropy": -0.6543191006680678,
+      "gini_coefficient": 0.41997792494481234,
+      "unique_speakers": 12
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-540', 'utterance_count': 33, 'score2_share': 0.6060606060606061, 'entropy': -0.6791878123707175, 'unique_speakers': 12}, {'bin': 1, 'bin_range': '540-1081', 'utterance_count': 7, 'score2_share': 0.2857142857142857, 'entropy': -0.6386750321046775, 'unique_speakers': 4}, {'bin': 2, 'bin_range': '1081-1621', 'utterance_count': 10, 'score2_share': 0.4, 'entropy': -0.7177402143583604, 'unique_speakers': 5}, {'bin': 3, 'bin_range': '1621-2162', 'utterance_count': 19, 'score2_share': 0.631578947368421, 'entropy': -0.6710770808212763, 'unique_speakers': 8}, {'bin': 4, 'bin_range': '2162-2703', 'utterance_count': 18, 'score2_share': 0.5555555555555556, 'entropy': -0.628529787770252, 'unique_speakers': 6}, {'bin': 5, 'bin_range': '2703-3243', 'utterance_count': 22, 'score2_share': 0.5, 'entropy': -0.7071067811865476, 'unique_speakers': 7}, {'bin': 6, 'bin_range': '3243-3784', 'utterance_count': 24, 'score2_share': 0.5833333333333334, 'entropy': -0.6472403694756126, 'unique_speakers': 9}, {'bin': 7, 'bin_range': '3784-4325', 'utterance_count': 18, 'score2_share': 0.5555555555555556, 'entropy': -0.628529787770252, 'unique_speakers': 7}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 6, 'utterance_count': 18}, {'chunk': 1, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Coordination and Decision Practices', 'code_diversity': 7, 'utterance_count': 35}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 1, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 16}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 11}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 5, 'utterance_count': 8}, {'chunk': 5, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 8, 'utterance_count': 26}, {'chunk': 6, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 17}, {'chunk': 7, 'idea_trajectory': 'convergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 8, 'utterance_count': 37}]",
+    "match_rate": 0.375,
+    "matches": 3,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.6060606060606061,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.2857142857142857,
+        "gemini_decision_level": 1
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.631578947368421,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5555555555555556,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5,
+        "gemini_decision_level": 2
+      }
+    ],
+    "score2_gemini_correlation": 0.5953362902020134,
+    "entropy_mean": -0.664760858232212,
+    "entropy_variance": 0.0012086914035100054,
+    "entropy_sequence": [
+      -0.6791878123707175,
+      -0.6386750321046775,
+      -0.7177402143583604,
+      -0.6710770808212763,
+      -0.628529787770252,
+      -0.7071067811865476,
+      -0.6472403694756126,
+      -0.628529787770252
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S8",
+    "cdp_metrics": {
+      "total_utterances": 295,
+      "score2_count": 164,
+      "score1_count": 265,
+      "score2_share": 0.5559322033898305,
+      "score1_share": 0.3423728813559322,
+      "entropy": -0.6472693864370496,
+      "gini_coefficient": 0.4253371868978806,
+      "unique_speakers": 12
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-564', 'utterance_count': 38, 'score2_share': 0.47368421052631576, 'entropy': -0.6217461366012766, 'unique_speakers': 7}, {'bin': 1, 'bin_range': '564-1128', 'utterance_count': 8, 'score2_share': 0.75, 'entropy': -0.774519052838329, 'unique_speakers': 6}, {'bin': 2, 'bin_range': '1128-1692', 'utterance_count': 20, 'score2_share': 0.65, 'entropy': -0.6715842229325086, 'unique_speakers': 8}, {'bin': 3, 'bin_range': '1692-2256', 'utterance_count': 20, 'score2_share': 0.65, 'entropy': -0.6715842229325086, 'unique_speakers': 9}, {'bin': 4, 'bin_range': '2256-2820', 'utterance_count': 6, 'score2_share': 1.0, 'entropy': -1.0, 'unique_speakers': 2}, {'bin': 5, 'bin_range': '2820-3384', 'utterance_count': 19, 'score2_share': 0.631578947368421, 'entropy': -0.6612651559574394, 'unique_speakers': 6}, {'bin': 6, 'bin_range': '3384-3948', 'utterance_count': 28, 'score2_share': 0.6071428571428571, 'entropy': -0.6608733449542289, 'unique_speakers': 6}, {'bin': 7, 'bin_range': '3948-4512', 'utterance_count': 34, 'score2_share': 0.5294117647058824, 'entropy': -0.6148112881239801, 'unique_speakers': 9}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': True, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Coordination and Decision Practices', 'code_diversity': 8, 'utterance_count': 33}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'Pronoun Framing', 'code_diversity': 7, 'utterance_count': 8}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 15}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 6, 'utterance_count': 15}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 8, 'utterance_count': 22}, {'chunk': 5, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 30}, {'chunk': 6, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 15}, {'chunk': 7, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 2, 'engagement_level': 2, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'None', 'code_diversity': 8, 'utterance_count': 23}]",
+    "match_rate": 0.0,
+    "matches": 0,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.47368421052631576,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.75,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 2,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.65,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 3,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.65,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 1.0,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.631578947368421,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.6071428571428571,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.5294117647058824,
+        "gemini_decision_level": 2
+      }
+    ],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.7095479280425339,
+    "entropy_variance": 0.016121537945053,
+    "entropy_sequence": [
+      -0.6217461366012766,
+      -0.774519052838329,
+      -0.6715842229325086,
+      -0.6715842229325086,
+      -1.0,
+      -0.6612651559574394,
+      -0.6608733449542289,
+      -0.6148112881239801
+    ]
+  },
+  {
+    "session_id": "2021_10_08_CMC_S9",
+    "cdp_metrics": {
+      "total_utterances": 309,
+      "score2_count": 161,
+      "score1_count": 278,
+      "score2_share": 0.5210355987055016,
+      "score1_share": 0.3786407766990291,
+      "entropy": -0.6408665051998856,
+      "gini_coefficient": 0.46739130434782616,
+      "unique_speakers": 11
+    },
+    "cdp_binned": "[{'bin': 0, 'bin_range': '0-555', 'utterance_count': 38, 'score2_share': 0.5263157894736842, 'entropy': -0.652017504452287, 'unique_speakers': 8}, {'bin': 1, 'bin_range': '555-1111', 'utterance_count': 32, 'score2_share': 0.59375, 'entropy': -0.6442783373330174, 'unique_speakers': 8}, {'bin': 2, 'bin_range': '1111-1667', 'utterance_count': 19, 'score2_share': 0.3684210526315789, 'entropy': -0.6396045808574395, 'unique_speakers': 6}, {'bin': 3, 'bin_range': '1667-2223', 'utterance_count': 0, 'score2_share': 0, 'entropy': 0, 'unique_speakers': 0}, {'bin': 4, 'bin_range': '2223-2778', 'utterance_count': 16, 'score2_share': 0.8125, 'entropy': -0.792196776652782, 'unique_speakers': 6}, {'bin': 5, 'bin_range': '2778-3334', 'utterance_count': 28, 'score2_share': 0.5714285714285714, 'entropy': -0.6492630009993501, 'unique_speakers': 9}, {'bin': 6, 'bin_range': '3334-3890', 'utterance_count': 19, 'score2_share': 0.5789473684210527, 'entropy': -0.6382510533868909, 'unique_speakers': 6}, {'bin': 7, 'bin_range': '3890-4446', 'utterance_count': 32, 'score2_share': 0.4375, 'entropy': -0.6100768698724868, 'unique_speakers': 6}]",
+    "gemini_metrics": "[{'chunk': 0, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 4, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'None', 'code_diversity': 11, 'utterance_count': 45}, {'chunk': 1, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': True, 'dominant_code': 'None', 'code_diversity': 8, 'utterance_count': 35}, {'chunk': 2, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Knowledge Sharing', 'code_diversity': 8, 'utterance_count': 36}, {'chunk': 3, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': True, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 8, 'utterance_count': 33}, {'chunk': 4, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 10, 'utterance_count': 25}, {'chunk': 5, 'idea_trajectory': 'divergent', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Pronoun Framing', 'code_diversity': 9, 'utterance_count': 30}, {'chunk': 6, 'idea_trajectory': 'ambiguous', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': True, 'pronoun_shift': False, 'dominant_code': 'Coordination and Decision Practices', 'code_diversity': 10, 'utterance_count': 43}, {'chunk': 7, 'idea_trajectory': 'procedural', 'decision_crystallization_level': 2, 'engagement_level': 3, 'explicit_commitment': False, 'shared_vision': False, 'pronoun_shift': False, 'dominant_code': 'Evaluation Practices', 'code_diversity': 7, 'utterance_count': 23}]",
+    "match_rate": 0.25,
+    "matches": 2,
+    "total_bins": 8,
+    "mismatches": [
+      {
+        "chunk": 0,
+        "cdp_predicted": "ambiguous",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5263157894736842,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 1,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.59375,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 4,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.8125,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 5,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "divergent",
+        "cdp_score2_share": 0.5714285714285714,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 6,
+        "cdp_predicted": "convergent",
+        "gemini_observed": "ambiguous",
+        "cdp_score2_share": 0.5789473684210527,
+        "gemini_decision_level": 2
+      },
+      {
+        "chunk": 7,
+        "cdp_predicted": "divergent",
+        "gemini_observed": "procedural",
+        "cdp_score2_share": 0.4375,
+        "gemini_decision_level": 2
+      }
+    ],
+    "score2_gemini_correlation": 0.0,
+    "entropy_mean": -0.5782110154442817,
+    "entropy_variance": 0.05762399522605345,
+    "entropy_sequence": [
+      -0.652017504452287,
+      -0.6442783373330174,
+      -0.6396045808574395,
+      0,
+      -0.792196776652782,
+      -0.6492630009993501,
+      -0.6382510533868909,
+      -0.6100768698724868
+    ]
+  }
+]
