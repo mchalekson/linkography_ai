@@ -88,8 +88,8 @@ def _unwrap_monotonic(
       - previous time is near the end of the modulus window (e.g., > 0.8 * 3600)
       - current time is near the beginning (e.g., < 0.2 * 3600)
 
-    Otherwise, if we see small/moderate backwards movement (out-of-order rows, jitter),
-    we DO NOT add +3600. We clamp to keep monotonic.
+    Otherwise, if small/moderate backwards movement is seen (out-of-order rows, jitter),
+    do NOT add +3600. Clamp to keep monotonic.
     """
     secs = pd.to_numeric(sec_series, errors="coerce").astype(float).to_numpy()
     out = np.full_like(secs, np.nan, dtype=float)
@@ -218,7 +218,7 @@ def _extract_utterances_scialog(session_json: dict) -> pd.DataFrame:
     df = df.dropna(subset=["start_sec_raw"]).reset_index(drop=True)
 
     # IMPORTANT: Some session JSONs are not strictly ordered.
-    # Sort by raw start time BEFORE unwrapping so we don't interpret out-of-order rows as "resets".
+    # Sort by raw start time BEFORE unwrapping to avoid interpreting out-of-order rows as "resets".
     df = df.sort_values(["start_sec_raw", "end_sec_raw"], kind="mergesort").reset_index(drop=True)
 
     # monotonic unwrap (handles resets)

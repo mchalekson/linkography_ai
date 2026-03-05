@@ -360,8 +360,8 @@ When coding new sessions:
 ## Questions to Ask Evey
 
 1. **Was decision_crystallization_level computed algorithmically or via annotation?**
-   - If algorithmic: What's the formula? Can we harmonize with entropy?
-   - If annotation: Can we compare annotator understanding of "crystallization" with our Score 2 definition?
+   - If algorithmic: What's the formula? Potential harmonization with entropy?
+   - If annotation: Compare annotator understanding of "crystallization" with Score 2 definition?
 
 2. **Are the 37 behavioral codes mutually exclusive within an utterance?**
    - Your system: one utterance → one max score (Score 1 or 2)
@@ -372,7 +372,7 @@ When coding new sessions:
    - Time-based (fixed 10-min windows)?
    - Natural conversation break detection?
    - Human annotation?
-   - If algorithm-based: Can we apply it to our data for better alignment?
+   - If algorithm-based: Application to CDP data for better alignment?
 
 4. **What's your intention for these codes going forward?**
    - Descriptive (document what happened)?

@@ -78,7 +78,7 @@ Your system captures things Gemini can't:
 3. The "What Doesn't Match & Why" section explaining schema vs contradiction
 
 **Propose:**  
-"Let's combine both approaches: your behavioral richness + our temporal dynamics = better outcome prediction"
+"Combining both approaches: Gemini behavioral richness + CDP temporal dynamics = better outcome prediction"
 
 ### For Integration Planning
 
@@ -216,13 +216,13 @@ All 16 NES sessions show 0% match because:
    - Answer: You're measuring different things. Score 2 is what's discussed; decision_crystallization is whether team actually converges.
    - Example: High Score 2 (debating options) but low crystallization (still exploring) is valid.
 
-3. **"Should we drop your CDP system?"**
+3. **"Should the CDP system be dropped?"**
    - Answer: No—entropy and Gini capture temporal dynamics Gemini can't see. Combine them.
    - Proposed: Use both for outcome prediction.
 
 ### About Integration
 
-4. **"How can we use both systems together?"**
+4. **"How can both systems be used together?"**
    - Blended feature extraction per chunk
    - Joint outcome prediction models
    - Unified annotation for new data
@@ -254,10 +254,10 @@ All 16 NES sessions show 0% match because:
 
 ### Immediate (For Your Meeting)
 
-1. ✅ Run `analyze_annotation_differences.py` (already done)
-2. ✅ Generate outputs (CSVs + JSON done)
-3. ✅ Review ANALYSIS_REPORT.md sections 1-2 (what matches, what doesn't)
-4. ✅ Prepare 2-3 specific session examples to discuss
+1. Run `analyze_annotation_differences.py` (already done)
+2. Generate outputs (CSVs + JSON done)
+3. Review ANALYSIS_REPORT.md sections 1-2 (what matches, what doesn't)
+4. Prepare 2-3 specific session examples to discuss
 5. Read CODE_MAPPING.md before the call (10 min)
 
 ### For Follow-Up

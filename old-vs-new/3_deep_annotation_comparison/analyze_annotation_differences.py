@@ -378,32 +378,32 @@ def run_analysis(cdp_root: str, gemini_root: str, output_dir: str):
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
     
-    print("🔍 Finding matched sessions...")
+    print("Finding matched sessions...")
     matched = find_matched_sessions(cdp_root, gemini_root)
-    print(f"✅ Found {len(matched)} matched sessions\n")
+    print(f"Found {len(matched)} matched sessions\n")
     
     # Track results by conference
     results_by_conf = defaultdict(list)
     all_results = []
     
-    print("📊 Analyzing sessions...")
+    print("Analyzing sessions...")
     for i, (session_id, (cdp_path, gemini_dir)) in enumerate(sorted(matched.items()), 1):
         print(f"  [{i}/{len(matched)}] {session_id}...", end=' ', flush=True)
         
         result = AnnotationComparator.compare_session(session_id, cdp_path, gemini_dir)
         
         if 'error' not in result:
-            print(f"✓ (match_rate={result['match_rate']:.2%})")
+            print(f"OK (match_rate={result['match_rate']:.2%})")
             all_results.append(result)
             
             # Extract conference from session ID
             conf = 'CMC' if 'CMC' in session_id else 'NES'
             results_by_conf[conf].append(result)
         else:
-            print(f"✗ {result['error']}")
+            print(f"ERROR {result['error']}")
     
     # Write CSV summary
-    print("\n📝 Writing outputs...")
+    print("\nWriting outputs...")
     csv_path = output_path / 'annotation_comparison_summary.csv'
     with open(csv_path, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=[
@@ -440,7 +440,7 @@ def run_analysis(cdp_root: str, gemini_root: str, output_dir: str):
         json.dump(json_results, f, indent=2, default=str)
     
     # Conference summary
-    print("\n📈 Conference Summary:")
+    print("\nConference Summary:")
     for conf in sorted(results_by_conf.keys()):
         conf_results = results_by_conf[conf]
         match_rates = [r['match_rate'] for r in conf_results]
@@ -453,7 +453,7 @@ def run_analysis(cdp_root: str, gemini_root: str, output_dir: str):
         print(f"    Correlation: mean={statistics.mean(correlations):.3f}, median={statistics.median(correlations):.3f}")
         print(f"    Entropy: mean={statistics.mean(entropies):.3f}, var={statistics.variance(entropies):.3f}")
     
-    print(f"\n✅ Analysis complete. Outputs saved to {output_path}/")
+    print(f"\nAnalysis complete. Outputs saved to {output_path}/")
     
     return all_results, results_by_conf
 

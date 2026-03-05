@@ -229,7 +229,7 @@ You observe: r ≈ -0.025 (slightly negative, essentially uncorrelated)
    - Gemini's decision_crystallization is chunk-level holistic assessment (global signal)
    - They operate at different granularities → weak correlation expected
 
-**Analogy:** If I track "how much people are talking about exercise" (your Score 2), that doesn't strongly correlate with "how fit people actually are" (decision crystallization). Fitness comes from action, not discussion.
+**Analogy:** If tracking "how much people are talking about exercise" (CDP Score 2), that doesn't strongly correlate with "how fit people actually are" (decision crystallization). Fitness comes from action, not discussion.
 
 ---
 
@@ -241,7 +241,7 @@ Your CDP metrics (entropy, Gini, temporal oscillations) and Gemini's codes (beha
 
 ### Optimal Integration
 
-**Stage 1: Gemini's chunk identification** (what 8 chunks should we analyze?)
+**Stage 1: Gemini's chunk identification** (what 8 chunks to analyze?)
 **Stage 2: Your CDP metrics per chunk** (what's the entropy/speaker dynamics?)
 **Stage 3: Enhanced outcome prediction** (entropy + decision_crystallization → outcome prediction)
 
@@ -262,14 +262,14 @@ NES's sparse CDP data makes validation harder, but improving CDP coverage would 
 
 2. **Explain the granularity issue:** "You're capturing chunk-level holistic patterns; we're tracking utterance-level temporal dynamics"
 
-3. **Offer synergy:** "Combining your decision crystallization with our entropy oscillation metrics should improve outcome prediction"
+3. **Offer synergy:** "Combining Gemini decision crystallization with CDP entropy oscillation metrics should improve outcome prediction"
 
 4. **Suggest next steps:**
    - Improve NES CDP coverage (currently 46%, target 70%+)
    - Run joint outcome analysis: Gemini codes + CDP metrics
    - Map Gemini's 37 behavioral codes onto your Score 1/2 framework explicitly
 
-5. **Document the complementarity:**  "You measure *what* decisions teams reach; we measure *how* they oscillate getting there"
+5. **Document the complementarity:**  "Gemini measures *what* decisions teams reach; CDP measures *how* they oscillate getting there"
 
 ---
 

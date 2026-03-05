@@ -1,6 +1,6 @@
 # Predicting Team Success from Coordination Patterns
 
-**TL;DR**: This project analyzes 157 scientific team meetings to predict funding success. We found that **who coordinates** (concentrated leadership) predicts outcomes better than **how much** or **when** coordination happens. Teams with clearer coordination leadership are 27.7% more likely to receive funding.
+**TL;DR**: This project analyzes 157 scientific team meetings to predict funding success. The analysis found that **who coordinates** (concentrated leadership) predicts outcomes better than **how much** or **when** coordination happens. Teams with clearer coordination leadership are 27.7% more likely to receive funding.
 
 ---
 
@@ -161,7 +161,7 @@ linkography_ai/
 | **Q2**: Does entropy predict funding? | Mann-Whitney U | ❌ No - p = 0.193 |
 | **Q3**: Does speaker diversity predict funding? | Gini + effect sizes | ✅ **Yes** - d = 0.591, p = 0.0006 |
 | **Q4**: Do timing patterns predict funding? | Temporal features | ❌ No - robust null across bin sizes |
-| **Q5**: Can we combine features for prediction? | Logistic regression | ✅ **Yes** - 27.7% ROC improvement |
+| **Q5**: Can combined features improve prediction? | Logistic regression | ✅ **Yes** - 27.7% ROC improvement |
 | **Q6**: Do patterns differ by cohort year? | Kruskal-Wallis H | Partial - 2022 more focused mid-meeting |
 | **Q7**: What do transcripts reveal? | Qualitative validation | High-Gini = decisive synthesis |
 
