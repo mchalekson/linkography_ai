@@ -1,4 +1,4 @@
-.PHONY: help validate batch_entropy analyze merge_outcomes test_outcomes batch_convergence compare_binning compare_normalization time_pressure outcome_model cdp_content speaker_cdp fine_grained cohort speaker_role all clean
+.PHONY: help validate batch_entropy analyze merge_outcomes test_outcomes batch_convergence compare_binning compare_normalization time_pressure outcome_model cdp_content speaker_cdp fine_grained cohort speaker_role fuzzy_v2 fuzzy_v2_merge fuzzy_v2_outcomes all clean
 
 PYTHON := .venv/bin/python
 
@@ -27,6 +27,9 @@ help:
 	@echo "  make fine_grained    - Fine-grained CDP entropy (5-10 min bins)"
 	@echo "  make cohort          - Compare CDP patterns across years"
 	@echo "  make speaker_role    - Correlate speaker roles with CDP usage"
+	@echo "  make fuzzy_v2        - Fuzzy linkography on outputs-v2 JSONs"
+	@echo "  make fuzzy_v2_merge  - Merge fuzzy linkography metrics with outcomes"
+	@echo "  make fuzzy_v2_outcomes - First-pass outcome tests for fuzzy features"
 	@echo ""
 	@echo "Integration:"
 	@echo "  make outcome_model   - Outcome modeling beyond entropy"
@@ -111,6 +114,21 @@ cohort:
 speaker_role:
 	@echo "==> Analyzing speaker roles and CDP usage..."
 	$(PYTHON) pipelines/speaker_role_cdp.py
+
+# Fuzzy linkography on v2 JSON outputs
+fuzzy_v2:
+	@echo "==> Computing fuzzy linkography metrics from outputs-v2..."
+	PYTHONPATH=src $(PYTHON) pipelines/fuzzy_linkography_v2.py --conference ALL --threshold 0.35
+
+# Merge fuzzy linkography outputs with outcomes
+fuzzy_v2_merge:
+	@echo "==> Merging fuzzy linkography metrics with outcomes..."
+	$(PYTHON) pipelines/merge_fuzzy_with_outcomes.py
+
+# Test fuzzy linkography features against outcomes
+fuzzy_v2_outcomes:
+	@echo "==> Running fuzzy linkography outcomes tests..."
+	$(PYTHON) pipelines/fuzzy_linkography_outcomes.py
 
 # Speaker diversity outcomes correlation
 speaker_diversity_outcomes:

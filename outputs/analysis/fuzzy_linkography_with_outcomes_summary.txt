@@ -1,0 +1,21 @@
+FUZZY LINKOGRAPHY + OUTCOMES MERGE SUMMARY
+========================================================================
+
+Meeting rows: 130
+Meeting rows matched to outcomes: 102 (78.5%)
+
+Session rows: 102
+Session rows matched to outcomes: 81 (79.4%)
+
+Primary fuzzy features available:
+  - n_moves
+  - weighted_ldi
+  - mean_nonzero_weight
+  - forelink_weight_mean
+  - backlink_weight_mean
+  - cross_speaker_weight_ratio
+  - late_minus_early_backlink
+  - forelink_entropy
+  - backlink_entropy
+  - horizon_entropy
+  - overall_link_entropy
