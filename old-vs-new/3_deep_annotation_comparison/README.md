@@ -1,8 +1,13 @@
-# Deep Annotation Comparison: CDP vs Gemini
+# Deep Annotation Comparison: CDP vs V2 Chunk Annotations
 
 ## Quick Summary
 
-This folder contains a **comprehensive comparison** of your legacy CDP annotation system against Evey's new Gemini chunk-based behavioral coding across **37 matched sessions** (21 CMC + 16 NES).
+This folder contains a comparison of the legacy CDP annotation system in `data/` against the newer chunk-based annotation files now stored in `data-v2/`.
+
+The checked-in benchmark artifacts in this folder currently reflect **37 matched sessions** across the comparison scope used when these outputs were generated:
+
+- 21 `2021CMC` sessions
+- 16 `2020NES` sessions
 
 ### What You Get
 
@@ -31,18 +36,11 @@ This folder contains a **comprehensive comparison** of your legacy CDP annotatio
 
 ## Key Findings at a Glance
 
-### Match Rates
+### What This Comparison Is For
 
-| Conference | Sessions | Match Rate | Interpretation |
-|-----------|----------|-----------|-----------------|
-| **CMC** | 21 | 18.45% mean (12.5% median) | **Meaningful alignment** |
-| **NES** | 16 | 0% mean | Sparse CDP data (46% coverage) |
-
-### What This Means
-
-- **CMC shows consistent pattern alignment** despite schema differences
-- **NES data too sparse** to validate (only 46% of utterances annotated in old system)
-- **Weak correlations** (-0.025, 0.000) indicate **orthogonal measures**, not contradictions
+- checking whether CDP Score 1/2 dynamics line up directionally with chunk-level trajectory labels
+- identifying where the two schemas are complementary rather than contradictory
+- preserving the value of entropy and speaker concentration metrics while adopting richer v2 behavioral coding
 
 ### Unique Value of Your CDP System
 
@@ -127,25 +125,25 @@ Expected synergy: Better prediction than either system alone.
 
 ```bash
 cd /path/to/linkography_ai
-python 3_deep_annotation_comparison/analyze_annotation_differences.py
+python old-vs-new/3_deep_annotation_comparison/analyze_annotation_differences.py
 ```
 
 ### Custom Paths
 
 ```bash
-python 3_deep_annotation_comparison/analyze_annotation_differences.py \
+python old-vs-new/3_deep_annotation_comparison/analyze_annotation_differences.py \
     --cdp-root /path/to/data \
-    --gemini-root /path/to/gemini_outputs \
+    --gemini-root /path/to/data-v2 \
     --output-dir ./my_results
 ```
 
 ### What It Does
 
-1. Finds all matching sessions (both old CDP + Gemini chunks exist)
+1. Finds all matching sessions where both legacy CDP and v2 chunk files exist
 2. Extracts metrics from both systems
 3. Time-bins old CDP data to match chunk count
 4. Maps Score 2 share → predicted trajectory
-5. Compares against Gemini's observed trajectory
+5. Compares against the v2 observed trajectory
 6. Computes correlations, match rates, and aggregates by conference
 7. Writes CSV and JSON outputs
 
@@ -178,29 +176,9 @@ session_id,conference,match_rate,matches,total_bins,cdp_score2_share,entropy_mea
 
 ## Highlights from the Data
 
-### Best-Matching Sessions (CMC)
+### Current outputs
 
-- **2021_10_07_CMC_S3**: 37.5% match (3/8 chunks predicted correctly)
-- **2021_10_08_CMC_S4**: 37.5% match
-- **2021_10_08_CMC_S7**: 37.5% match
-
-*→ These show your system's predictions and Gemini's codes align well*
-
-### Worst-Matching Sessions (CMC)
-
-- **2021_10_08_CMC_S3**: 0% match (0/8 chunks)
-- **2021_10_08_CMC_S8**: 0% match
-
-*→ These represent schema mismatch rather than error*
-
-### Why NES Has 0% Match
-
-All 16 NES sessions show 0% match because:
-1. **Sparse CDP coverage** (~46%, very fragmentary)
-2. **Score 2 shares often undefined** (missing data → can't compute bin share)
-3. **Insufficient signal** to distinguish convergent from divergent
-
-*→ Not a system failure; a data quality issue*
+Use the generated artifacts in `analysis_outputs/` for the current per-session metrics, and the conference-level verification summary in `../2_conf_v2_verification/verification_conference_summary.json` for aggregate alignment numbers.
 
 ---
 
@@ -254,10 +232,10 @@ All 16 NES sessions show 0% match because:
 
 ### Immediate (For Your Meeting)
 
-1. Run `analyze_annotation_differences.py` (already done)
-2. Generate outputs (CSVs + JSON done)
-3. Review ANALYSIS_REPORT.md sections 1-2 (what matches, what doesn't)
-4. Prepare 2-3 specific session examples to discuss
+1. Re-run `analyze_annotation_differences.py` against repo-local `data-v2/` when you want refreshed outputs
+2. Review `ANALYSIS_REPORT.md` and `CODE_MAPPING.md`
+3. Use the verification summary in `old-vs-new/2_conf_v2_verification/`
+4. Prepare 2-3 concrete matched sessions for discussion
 5. Read CODE_MAPPING.md before the call (10 min)
 
 ### For Follow-Up

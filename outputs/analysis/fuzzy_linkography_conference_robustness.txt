@@ -1,0 +1,83 @@
+FUZZY LINKOGRAPHY CONFERENCE ROBUSTNESS
+========================================================================
+
+Input rows with outcomes: 136
+Similarity method: lsa
+
+Conference-level summary for mean_nonzero_weight:
+
+2020NES
+  Sessions: 16 | funded=8 unfunded=8
+  Funded mean:   0.1773
+  Unfunded mean: 0.1814
+  Mean diff:     -0.0041
+  Cohen's d:     -0.1969
+  Spearman(any_funded): -0.0813
+  Spearman(funded_rate): 0.0417
+
+2021ABI
+  Sessions: 18 | funded=10 unfunded=8
+  Funded mean:   0.1862
+  Unfunded mean: 0.1886
+  Mean diff:     -0.0024
+  Cohen's d:     -0.1063
+  Spearman(any_funded): -0.0862
+  Spearman(funded_rate): -0.0404
+
+2021CMC
+  Sessions: 18 | funded=11 unfunded=7
+  Funded mean:   0.1916
+  Unfunded mean: 0.2037
+  Mean diff:     -0.0122
+  Cohen's d:     -0.6472
+  Spearman(any_funded): -0.2526
+  Spearman(funded_rate): -0.3340
+
+2021MND
+  Sessions: 23 | funded=5 unfunded=18
+  Funded mean:   0.1813
+  Unfunded mean: 0.1810
+  Mean diff:     0.0002
+  Cohen's d:     0.0087
+  Spearman(any_funded): 0.2225
+  Spearman(funded_rate): 0.2750
+
+2021MZT
+  Sessions: 15 | funded=8 unfunded=7
+  Funded mean:   0.1714
+  Unfunded mean: 0.1740
+  Mean diff:     -0.0026
+  Cohen's d:     -0.2179
+  Spearman(any_funded): -0.1856
+  Spearman(funded_rate): -0.2156
+
+2021NES
+  Sessions: 15 | funded=10 unfunded=5
+  Funded mean:   0.1987
+  Unfunded mean: 0.1798
+  Mean diff:     0.0189
+  Cohen's d:     0.4763
+  Spearman(any_funded): 0.2619
+  Spearman(funded_rate): 0.4395
+
+2021SLU
+  Sessions: 20 | funded=10 unfunded=10
+  Funded mean:   0.1682
+  Unfunded mean: 0.1759
+  Mean diff:     -0.0077
+  Cohen's d:     -0.7355
+  Spearman(any_funded): -0.3642
+  Spearman(funded_rate): -0.1790
+
+2022MND
+  Sessions: 11 | funded=6 unfunded=5
+  Funded mean:   0.1811
+  Unfunded mean: 0.1750
+  Mean diff:     0.0061
+  Cohen's d:     0.3712
+  Spearman(any_funded): 0.2887
+  Spearman(funded_rate): 0.3476
+
+Interpretation:
+  Look for direction consistency rather than significance alone.
+  If funded < unfunded repeats across conferences, the first-pass signal is directionally robust.

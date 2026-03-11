@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-06  
 **Environment used:** `gem_samp`  
-**Data source:** `outputs-v2/` (updated Gemini/Evey chunk JSON schema)
+**Data source:** `../gemini_data_analysis/outputs/` (canonical Gemini/Evey chunk JSON outputs; repo-local `data-v2/` is a mirror/subset)
 
 ---
 
@@ -15,10 +15,11 @@
 
 This pipeline:
 
-- Recursively reads all `*_chunk*.json` files in `outputs-v2/`
+- Recursively reads all `*_chunk*.json` files in the canonical v2 outputs directory
 - Groups chunk files into meetings
 - Converts each utterance into a move
 - Computes semantic similarity between moves
+- Uses those similarities inside a fuzzy-linkography inference step
 - Converts similarities into fuzzy link strengths
 - Exports chunk-level and meeting-level fuzzy metrics
 
@@ -28,7 +29,7 @@ This pipeline:
 
 This pipeline:
 
-- Joins fuzzy metrics to `entropy_with_outcomes.csv`
+- Joins fuzzy metrics to session outcomes, preferring `chunk-registry/chunk_registry_v1.csv` when available and falling back to `entropy_with_outcomes.csv`
 - Produces meeting-level merged table
 - Produces session-level aggregated table (weighted by move count)
 
@@ -53,9 +54,10 @@ For each meeting, utterances are treated as sequential design moves.
 - Prefer `transcript` / `text` / `utterance` if present
 - Otherwise use concatenated `codes[].evidence` snippets from updated schema
 
-### Semantic link inference
+### Fuzzy-linkography inference
 
-- Similarity model: TF-IDF cosine similarity over move text
+- Overall methodology: fuzzy linkography
+- Current similarity model in this repo: Latent Semantic Analysis (LSA) cosine similarity over move text
 - Threshold: $t = 0.35$
 - Fuzzy link weight:
 
@@ -63,7 +65,9 @@ $$
 w_{ij} = \max\left(0, \frac{s_{ij} - t}{1 - t}\right), \quad i<j
 $$
 
-where $s_{ij}$ is cosine similarity and $w_{ij}\in[0,1]$.
+where $s_{ij}$ is the semantic similarity score and $w_{ij}\in[0,1]$.
+
+In other words: the repo uses the fuzzy-linkography framework to infer weighted links between utterances, and LSA is the current computational model used for the semantic-similarity step inside that framework.
 
 ### Fuzzy metrics exported
 
@@ -105,31 +109,30 @@ where $s_{ij}$ is cosine similarity and $w_{ij}\in[0,1]$.
 
 ### Coverage
 
-- Meetings analyzed from `outputs-v2`: **130**
-- Chunks analyzed: **788**
-- Meeting rows matched to outcomes: **102 / 130 (78.5%)**
-- Session rows matched to outcomes: **81 / 102 (79.4%)**
+- Meetings analyzed from the canonical v2 outputs: **179**
+- Chunks analyzed: **1219**
+- Meeting rows matched to outcomes: **154 / 179 (86.0%)**
+- Session rows matched to outcomes: **136 / 158 (86.1%)**
 
 ### Descriptive means (meeting-level)
 
-- `weighted_ldi`: **0.0216**
-- `mean_nonzero_weight`: **0.1573**
-- `cross_speaker_weight_ratio`: **0.5280**
-- `late_minus_early_backlink`: **0.0201**
-- `overall_link_entropy`: **1.1196**
+- `weighted_ldi`: **1.0663**
+- `mean_nonzero_weight`: **0.1823**
+- `cross_speaker_weight_ratio`: **0.7440**
+- `late_minus_early_backlink`: **1.4239**
+- `overall_link_entropy`: **44.6974**
 
-### First inferential signal (session-level)
+### Current interpretation (session-level)
 
-From [outputs/analysis/fuzzy_linkography_outcomes_summary.txt](outputs/analysis/fuzzy_linkography_outcomes_summary.txt):
+From [outputs/analysis/fuzzy_linkography_outcomes_summary.txt](outputs/analysis/fuzzy_linkography_outcomes_summary.txt) and [outputs/analysis/fuzzy_linkography_model_increment.txt](outputs/analysis/fuzzy_linkography_model_increment.txt):
 
-- `mean_nonzero_weight` shows a significant difference between funded and unfunded sessions
-  - Funded mean: **0.1603**
-  - Unfunded mean: **0.1945**
-  - Mann-Whitney $p=0.0215$
-  - Spearman with `any_funded`: $r=-0.2576$, $p=0.0203$
-  - Spearman with `funded_rate`: $r=-0.2724$, $p=0.0139$
+- No single trajectory-derived fuzzy metric is a strong standalone direct-effect result in the current LSA rerun.
+- The stronger result is additive:
+  - existing baseline model AUC: **0.7300**
+  - baseline + fuzzy-linkography trajectory layer AUC: **0.8095**
+  - improvement: **+0.0795**
 
-Most other fuzzy metrics were not significant in this first-pass test.
+So the current value of this layer is as a complementary meeting-trajectory signal rather than a single dominant predictor.
 
 ---
 

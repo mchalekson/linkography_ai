@@ -27,7 +27,7 @@ help:
 	@echo "  make fine_grained    - Fine-grained CDP entropy (5-10 min bins)"
 	@echo "  make cohort          - Compare CDP patterns across years"
 	@echo "  make speaker_role    - Correlate speaker roles with CDP usage"
-	@echo "  make fuzzy_v2        - Fuzzy linkography on outputs-v2 JSONs"
+	@echo "  make fuzzy_v2        - Fuzzy linkography on data-v2 JSONs"
 	@echo "  make fuzzy_v2_merge  - Merge fuzzy linkography metrics with outcomes"
 	@echo "  make fuzzy_v2_outcomes - First-pass outcome tests for fuzzy features"
 	@echo ""
@@ -115,9 +115,9 @@ speaker_role:
 	@echo "==> Analyzing speaker roles and CDP usage..."
 	$(PYTHON) pipelines/speaker_role_cdp.py
 
-# Fuzzy linkography on v2 JSON outputs
+# Fuzzy linkography on repo-local v2 JSON annotations
 fuzzy_v2:
-	@echo "==> Computing fuzzy linkography metrics from outputs-v2..."
+	@echo "==> Computing fuzzy linkography metrics from data-v2..."
 	PYTHONPATH=src $(PYTHON) pipelines/fuzzy_linkography_v2.py --conference ALL --threshold 0.35
 
 # Merge fuzzy linkography outputs with outcomes

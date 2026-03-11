@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Deep Annotation Comparison: CDP vs Gemini Chunks
-================================================
+Deep Annotation Comparison: CDP vs V2 Chunks
+============================================
 
-Compares your legacy CDP annotation system (Score 1/2, entropy, Gini) 
-against Evey's new Gemini chunk-based coding across 37 sessions.
+Compares your legacy CDP annotation system (Score 1/2, entropy, Gini)
+against the newer chunk-based behavioral coding stored in `data-v2/`.
 
 Generates:
 1. Per-session detailed comparison (what matches, what doesn't, why)
@@ -15,7 +15,7 @@ Generates:
 Usage:
     python analyze_annotation_differences.py \
         --cdp-root /path/to/data \
-        --gemini-root /path/to/gemini_data_analysis/outputs \
+        --gemini-root /path/to/data-v2 \
         --output-dir ./analysis_outputs
 """
 
@@ -179,7 +179,7 @@ class CDPSessionAnalyzer:
 
 
 class GeminiChunkAnalyzer:
-    """Extracts and analyzes Gemini chunk annotations."""
+    """Extracts and analyzes v2 chunk annotations."""
     
     def __init__(self, chunk_dir: str):
         """Load all chunk JSONs for a session."""
@@ -459,12 +459,15 @@ def run_analysis(cdp_root: str, gemini_root: str, output_dir: str):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Deep annotation comparison: CDP vs Gemini')
-    parser.add_argument('--cdp-root', default='/Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/data',
+    here = Path(__file__).resolve().parent
+    repo_root = here.parent.parent
+
+    parser = argparse.ArgumentParser(description='Deep annotation comparison: CDP vs v2 chunks')
+    parser.add_argument('--cdp-root', default=str(repo_root / 'data'),
                         help='Path to CDP data root')
-    parser.add_argument('--gemini-root', default='/Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/gemini_data_analysis/outputs',
-                        help='Path to Gemini outputs root')
-    parser.add_argument('--output-dir', default='./3_deep_annotation_comparison/analysis_outputs',
+    parser.add_argument('--gemini-root', default=str(repo_root / 'data-v2'),
+                        help='Path to v2 chunk annotation root')
+    parser.add_argument('--output-dir', default=str(here / 'analysis_outputs'),
                         help='Output directory for results')
     
     args = parser.parse_args()

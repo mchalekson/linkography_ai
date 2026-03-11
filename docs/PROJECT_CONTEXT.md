@@ -1,14 +1,18 @@
 # CDP Analysis of SCIALOG Team Discussions — Project Context
 
-**Last updated**: March 1, 2026
+**Last updated**: March 11, 2026
 
 ---
 
 ## Overview
 
-This document is a **complete reproducibility guide** for someone (human or AI) who knows **nothing about this research** and wants to recreate it from scratch.
+This document is a reproducibility guide for the current repository state. It explains both:
 
-**What this project does**: Analyzes how scientific teams coordinate during collaborative meetings to predict which teams will receive funding.
+- the legacy CDP-based pipeline that drives the main reported results
+- the newer v2 chunk-based annotation corpus, with the active source of truth in `../gemini_data_analysis/outputs`
+- the active fuzzy-linkography layer built on top of those canonical v2 outputs
+
+**What this project does**: Analyzes how scientific teams coordinate during collaborative meetings to predict which teams will receive funding, while also using a newer chunk-based annotation format plus fuzzy linkography to model semantic-relational trajectories over time.
 
 **Target audience**: Researchers, data scientists, or AI agents with no prior knowledge of linkography, SCIALOG, or team coordination analysis.
 
@@ -18,34 +22,106 @@ This document is a **complete reproducibility guide** for someone (human or AI) 
 3. Code paths and commands are provided to reproduce every result
 4. No prior domain knowledge required — all concepts defined inline
 
-**Project structure**: This document follows the complete research pipeline from raw data → analysis → results → interpretation → overall findings.
+**Project structure**: This document follows the research pipeline from raw data → analysis → results → interpretation, with an added note on how the canonical v2 outputs fit into the repo.
+
+### Repository State
+
+As of March 11, 2026, the repo contains two distinct annotation layers:
+
+| Path | What it contains | Current role |
+|------|------------------|--------------|
+| `data/` | 157 utterance-level session JSONs across 8 conferences | Primary source for all outcome analyses in `pipelines/` |
+| `data-v2/` | Repo-local mirror/subset of the v2 corpus | Local convenience copy for inspection and comparison |
+| `../gemini_data_analysis/outputs` | 162 session directories / 1325 JSON files across 8 conferences (`2020NES`, `2021ABI`, `2021CMC`, `2021MND`, `2021MZT`, `2021NES`, `2021SLU`, `2022MND`) | Canonical v2 chunk-based behavioral annotation source for active fuzzy linkography |
+| `old-vs-new/` | Verification scripts, mapping notes, and comparison reports | Bridge between legacy CDP and v2 annotations |
+
+Important distinction:
+
+- The main statistical findings in this project were generated from `data/`.
+- Repo-local `data-v2/` remains useful for inspection and comparison, but the active v2 source of truth is `../gemini_data_analysis/outputs`.
+- The active path logic is portable across clones: code defaults to repo-relative `data/` and `outputs/`, and for v2 annotations it prefers the canonical sibling path `../gemini_data_analysis/outputs` when present before falling back to repo-local `data-v2/`. You can still override any of these with `LINKOGRAPHY_AI_DATA_ROOT`, `LINKOGRAPHY_AI_DATA_V2_ROOT`, and `LINKOGRAPHY_AI_OUTPUTS_ROOT`.
+
+### Active v2 analysis layer
+
+The current v2 methodology adds a semantic-trajectory layer on top of chunk annotations:
+
+- `pipelines/fuzzy_linkography_v2.py` converts utterances into sequential moves and computes weighted semantic links
+- `pipelines/merge_fuzzy_with_outcomes.py` joins meeting/session fuzzy metrics to funding outcomes
+- `pipelines/fuzzy_linkography_outcomes.py` runs first-pass inferential tests on those features
+
+Terminology note:
+
+- the overall methodology is fuzzy linkography
+- the current repo implementation uses Latent Semantic Analysis (LSA) as the semantic-similarity model inside that methodology
+
+Conceptually, this layer is meant to measure not just whether a team is convergent or divergent in a chunk, but how strongly ideas and utterances remain semantically connected across the meeting.
 
 ---
 
 ## STEP 1: What Was the Data?
 
-**Context**: This analysis uses real transcripts from scientific team meetings. Think of it like analyzing a recording of a brainstorming session, but with human-annotated labels for specific behaviors.
+**Context**: This repository now contains two versions of the same broader research program. The legacy analyses use utterance-level CDP coding; the newer corpus stores chunk-level behavioral coding.
 
 ### Data Source
-**SCIALOG Collaborative Meetings**: Transcribed team discussions from 8 SCIALOG conferences held between 2020-2022. SCIALOG (Science + Dialog) brings together early-career researchers to form collaborative teams around interdisciplinary science challenges.
+**SCIALOG Collaborative Meetings**: Transcribed team discussions from SCIALOG conferences held between 2020-2022. SCIALOG (Science + Dialog) brings together early-career researchers to form collaborative teams around interdisciplinary science challenges.
+
+There are now two data sources in the repo:
+
+1. **Legacy CDP corpus (`data/`)**
+   - 8 conferences
+   - 157 utterance-level session JSONs
+   - used by the current entropy, Gini, timing, and funding-outcome pipelines
+2. **New chunk-based corpus (`../gemini_data_analysis/outputs`)**
+   - 8 conferences currently available in the canonical outputs directory
+   - 162 session directories and 1325 JSON files
+   - used for active fuzzy linkography, annotation-integration work, and registry-backed session linkage
 
 ### Raw Data Structure
-```
+
+#### Legacy corpus: `data/`
+
+```text
 data/
-├── 2020NES/  (Neural Engineering for Sustainability)
-├── 2021ABI/  (Antibiotics Innovations)
-├── 2021CMC/  (Chemical Machinery of the Cell)
-├── 2021MND/  (Microbiome in the Nexus of Diet)
-├── 2021MZT/  (Molecules to Marketplace: Zinc Transition)
-├── 2021NES/  (Neural Engineering for Sustainability)
-├── 2021SLU/  (Sustainable Landscapes)
-└── 2022MND/  (Microbiome in the Nexus of Diet)
+├── 2020NES/
+├── 2021ABI/
+├── 2021CMC/
+├── 2021MND/
+├── 2021MZT/
+├── 2021NES/
+├── 2021SLU/
+└── 2022MND/
 ```
 
-Each conference contains:
-- **Session transcripts** (`session_data/*.json`): Timestamped utterances with human-annotated behavioral codes
-- **Outcome data** (`*_session_outcomes.json`): Team formation and funding status
-- **Person-to-team mappings** (`*_person_to_team.json`): Team membership (not used in current analysis)
+Each conference can contain:
+
+- **Session transcripts** (`session_data/*.json`): timestamped utterances with CDP annotations
+- **Outcome data** (`*_session_outcomes.json` or `*_outcome.json`): team formation and funding status
+- **Person-to-team mappings** (`*_person_to_team.json`): team membership
+
+#### New corpus: `../gemini_data_analysis/outputs`
+
+```text
+gemini_data_analysis/outputs/
+├── 2020NES/
+├── 2021ABI/
+├── 2021CMC/
+├── 2021MND/
+└── 2021NES/
+```
+
+Each conference contains session directories of the form:
+
+```text
+gemini_data_analysis/outputs/<conference>/output_<session_id>/
+```
+
+Inside each session directory are chunk files such as:
+
+- `<meeting_name>_chunk1.json`
+- `<meeting_name>_chunk2.json`
+- `ATTN_<meeting_name>_chunk4.json` (may be sidecar/invalid and should be filtered)
+
+In practice, v2 scripts should only keep files that parse successfully and include `chunk_summary`.
 
 ### Session Transcript Format
 Each session JSON contains:
@@ -80,6 +156,57 @@ Each session JSON contains:
   - `score`: 1 (basic coordination) or 2 (advanced coordination)
   - `when`: Temporal segment (beginning/middle/end)
 - `speaker`, `timestamp`, `transcript`: Speaker identity, timing, and utterance text
+
+### V2 Chunk Format
+
+A typical v2 chunk JSON contains:
+
+```json
+{
+  "chunk_summary": {
+    "idea_trajectory": "convergent",
+    "collective_engagement_level": 3,
+    "decision_crystallization_level": 2,
+    "explicit_commitment_signal": "No",
+    "shared_vision_indicator": "No",
+    "pronoun_shift_flag": "No"
+  },
+  "utterance_annotations": [
+    {
+      "speaker": "Speaker A",
+      "timestamp": "00:00-00:14",
+      "codes": [{"code_name": "Cross-Disciplinary Bridging"}]
+    }
+  ],
+  "session_state": {
+    "idea_trajectory_sequence": ["procedural", "divergent", "convergent"]
+  }
+}
+```
+
+**Key fields in v2**:
+
+- `chunk_summary.idea_trajectory`: overall direction of idea motion in the chunk
+- `chunk_summary.decision_crystallization_level`: how close the team is to a decision
+- `chunk_summary.collective_engagement_level`: overall engagement rating
+- `utterance_annotations[*].codes`: utterance-level behavioral labels inside the chunk
+- `session_state`: cumulative, cross-chunk meeting state
+
+### Fuzzy Linkography Layer on V2
+
+For the current v2 workflow, utterances from `utterance_annotations` are treated as sequential design moves. The repo then:
+
+1. builds move text from transcript text or code evidence
+2. computes pairwise semantic similarity across moves
+3. converts similarity into fuzzy forward links
+4. summarizes the meeting with metrics such as:
+   - `weighted_ldi`
+   - `mean_nonzero_weight`
+   - `cross_speaker_weight_ratio`
+   - `late_minus_early_backlink`
+   - `overall_link_entropy`
+
+This is the repo's current mechanism for extracting a stronger temporal-semantic trajectory signal from the canonical v2 outputs.
 
 ### Outcome Data Format
 ```json
@@ -132,6 +259,8 @@ Each session JSON contains:
 ---
 
 ## STEP 2: Summary Statistics of Data Attributes
+
+Unless stated otherwise, the statistics below refer to the legacy CDP corpus in `data/`, because that is still the dataset used by the main published outcome analyses. Fuzzy-linkography outputs derived from the canonical v2 outputs are tracked separately in `docs/FUZZY_LINKOGRAPHY_V2_SUMMARY.md` and `outputs/analysis/fuzzy_linkography_v2_summary.txt`.
 
 ### Dataset Coverage
 | Attribute | Value |

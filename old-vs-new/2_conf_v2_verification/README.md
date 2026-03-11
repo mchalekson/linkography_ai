@@ -1,6 +1,6 @@
 # 2_conf_v2_verification
 
-Cross-check old CDP session JSONs against newer Gemini chunk JSONs for conference-level alignment.
+Cross-check legacy CDP session JSONs in `data/` against repo-local v2 chunk JSONs in `data-v2/`.
 
 ## Script
 
@@ -9,12 +9,14 @@ Cross-check old CDP session JSONs against newer Gemini chunk JSONs for conferenc
 ## Default behavior
 
 Runs on:
+
 - `2021CMC`
 - `2020NES`
 
 Using:
-- old JSONs: `linkography_ai/data/<conference>/session_data/*.json`
-- new JSONs: `gemini_data_analysis/outputs/<conference>/output_<session_id>/...chunk*.json`
+
+- old JSONs: `data/<conference>/session_data/*.json`
+- new JSONs: `data-v2/<conference>/output_<session_id>/...chunk*.json`
 
 ## Outputs
 
@@ -27,14 +29,26 @@ Written in this folder:
 From repo root:
 
 ```bash
-"/Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/.venv/bin/python" 2_conf_v2_verification/verify_v2_vs_old_json.py
+python old-vs-new/2_conf_v2_verification/verify_v2_vs_old_json.py
 ```
 
 Optional custom paths:
 
 ```bash
-"/Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/linkography_ai/.venv/bin/python" 2_conf_v2_verification/verify_v2_vs_old_json.py \
+python old-vs-new/2_conf_v2_verification/verify_v2_vs_old_json.py \
   --old-root "/path/to/linkography_ai/data" \
-  --gem-root "/path/to/gemini_data_analysis/outputs" \
+  --gem-root "/path/to/linkography_ai/data-v2" \
   --conferences 2021CMC 2020NES
 ```
+
+## Current benchmark outputs
+
+The checked-in summary files in this folder currently report:
+
+- `2021CMC`: 21 matched sessions, mean CDP coverage `0.764`, mean heuristic match rate `0.348`
+- `2020NES`: 16 matched sessions, mean CDP coverage `0.460`, mean heuristic match rate `0.219`
+
+See:
+
+- `verification_session_metrics.csv`
+- `verification_conference_summary.json`

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Cross-check old CDP session JSONs against new Gemini chunk JSONs.
+"""Cross-check old CDP session JSONs against new v2 chunk JSONs.
 
 Default scope replicates the verification run:
 - Conferences: 2021CMC, 2020NES
 - Old JSON root: linkography_ai/data/<conference>/session_data/*.json
-- New JSON root: gemini_data_analysis/outputs/<conference>/output_<session_id>/...chunk*.json
+- New JSON root: linkography_ai/data-v2/<conference>/output_<session_id>/...chunk*.json
 
 Outputs are written into this folder:
 - verification_session_metrics.csv
@@ -228,18 +228,18 @@ def run(old_root: Path, gem_root: Path, conferences: list[str]) -> tuple[list[di
 def main() -> None:
     here = Path(__file__).resolve().parent
 
-    parser = argparse.ArgumentParser(description="Cross-check old CDP JSON vs new Gemini chunk JSON")
+    parser = argparse.ArgumentParser(description="Cross-check old CDP JSON vs new v2 chunk JSON")
     parser.add_argument(
         "--old-root",
         type=Path,
-        default=here.parent / "data",
-        help="Path to old repo data root (default: ../data)",
+        default=here.parent.parent / "data",
+        help="Path to old repo data root (default: ../../data)",
     )
     parser.add_argument(
         "--gem-root",
         type=Path,
-        default=here.parent.parent / "gemini_data_analysis" / "outputs",
-        help="Path to Gemini outputs root",
+        default=here.parent.parent / "data-v2",
+        help="Path to v2 chunk annotation root",
     )
     parser.add_argument(
         "--conferences",

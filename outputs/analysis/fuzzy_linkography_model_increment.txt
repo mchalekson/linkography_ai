@@ -1,0 +1,25 @@
+FUZZY LINKOGRAPHY MODEL INCREMENT TEST
+========================================================================
+
+5-fold stratified CV logistic regression implemented in pure numpy.
+
+baseline_full
+  n=111 features=12
+  CV AUC: 0.7300 ± 0.1207
+
+baseline_full_plus_fuzzy
+  n=111 features=17
+  CV AUC: 0.7083 ± 0.1087
+
+fuzzy_only
+  n=123 features=5
+  CV AUC: 0.5212 ± 0.0523
+
+baseline_entropy
+  n=111 features=3
+  CV AUC: 0.5056 ± 0.0706
+
+Increment over existing feature model:
+  baseline_full AUC: 0.7300
+  baseline_full_plus_fuzzy AUC: 0.7083
+  delta: -0.0217

@@ -1,73 +1,73 @@
 FUZZY LINKOGRAPHY OUTCOMES ANALYSIS
 ========================================================================
 
-Sessions with outcomes: 81
-Funded sessions: 44
-Unfunded sessions: 37
+Sessions with outcomes: 136
+Funded sessions: 68
+Unfunded sessions: 68
 
 Feature tests (sorted by Mann-Whitney p):
 
-mean_nonzero_weight
-  Funded mean:   0.1603
-  Unfunded mean: 0.1945
-  Mann-Whitney p: 0.0215
-  Cohen's d: -0.4483
-  Spearman(any_funded): r=-0.2576, p=0.0203
-  Spearman(funded_rate): r=-0.2724, p=0.0139
-
-backlink_entropy
-  Funded mean:   0.5253
-  Unfunded mean: 0.4849
-  Mann-Whitney p: 0.6870
-  Cohen's d: 0.0926
-  Spearman(any_funded): r=0.0456, p=0.6862
-  Spearman(funded_rate): r=0.0363, p=0.7478
+weighted_ldi
+  Funded mean:   1.2490
+  Unfunded mean: 1.0953
+  Mann-Whitney p: 0.1766
+  Cohen's d: 0.2828
+  Spearman(any_funded): r=0.1165, p=0.1768
+  Spearman(funded_rate): r=0.0277, p=0.7611
 
 late_minus_early_backlink
-  Funded mean:   0.0286
-  Unfunded mean: 0.0227
-  Mann-Whitney p: 0.7080
-  Cohen's d: 0.1316
-  Spearman(any_funded): r=-0.0424, p=0.7070
-  Spearman(funded_rate): r=0.0219, p=0.8463
+  Funded mean:   1.6663
+  Unfunded mean: 1.4612
+  Mann-Whitney p: 0.1822
+  Cohen's d: 0.2734
+  Spearman(any_funded): r=0.1150, p=0.1825
+  Spearman(funded_rate): r=0.0478, p=0.5992
+
+backlink_entropy
+  Funded mean:   17.2612
+  Unfunded mean: 15.3196
+  Mann-Whitney p: 0.1939
+  Cohen's d: 0.2678
+  Spearman(any_funded): r=0.1120, p=0.1942
+  Spearman(funded_rate): r=0.0155, p=0.8652
 
 horizon_entropy
-  Funded mean:   0.4306
-  Unfunded mean: 0.3627
-  Mann-Whitney p: 0.7293
-  Cohen's d: 0.1896
-  Spearman(any_funded): r=0.0392, p=0.7281
-  Spearman(funded_rate): r=0.0579, p=0.6078
-
-forelink_entropy
-  Funded mean:   0.5380
-  Unfunded mean: 0.5091
-  Mann-Whitney p: 0.7364
-  Cohen's d: 0.0674
-  Spearman(any_funded): r=-0.0382, p=0.7352
-  Spearman(funded_rate): r=-0.0271, p=0.8102
-
-weighted_ldi
-  Funded mean:   0.0285
-  Unfunded mean: 0.0258
-  Mann-Whitney p: 0.8237
-  Cohen's d: 0.1112
-  Spearman(any_funded): r=-0.0254, p=0.8216
-  Spearman(funded_rate): r=-0.0054, p=0.9617
+  Funded mean:   17.1044
+  Unfunded mean: 14.9853
+  Mann-Whitney p: 0.1969
+  Cohen's d: 0.2884
+  Spearman(any_funded): r=0.1113, p=0.1972
+  Spearman(funded_rate): r=0.0139, p=0.8786
 
 overall_link_entropy
-  Funded mean:   1.4939
-  Unfunded mean: 1.3567
-  Mann-Whitney p: 0.9433
-  Cohen's d: 0.1178
-  Spearman(any_funded): r=0.0085, p=0.9401
-  Spearman(funded_rate): r=0.0142, p=0.8998
+  Funded mean:   51.9946
+  Unfunded mean: 46.1807
+  Mann-Whitney p: 0.2222
+  Cohen's d: 0.2661
+  Spearman(any_funded): r=0.1053, p=0.2226
+  Spearman(funded_rate): r=0.0147, p=0.8717
+
+forelink_entropy
+  Funded mean:   17.6290
+  Unfunded mean: 15.8759
+  Mann-Whitney p: 0.2737
+  Cohen's d: 0.2385
+  Spearman(any_funded): r=0.0944, p=0.2743
+  Spearman(funded_rate): r=0.0031, p=0.9730
 
 cross_speaker_weight_ratio
-  Funded mean:   0.6057
-  Unfunded mean: 0.6030
-  Mann-Whitney p: 0.9773
-  Cohen's d: 0.0119
-  Spearman(any_funded): r=0.0037, p=0.9738
-  Spearman(funded_rate): r=-0.0067, p=0.9524
+  Funded mean:   0.7610
+  Unfunded mean: 0.7678
+  Mann-Whitney p: 0.4372
+  Cohen's d: -0.0956
+  Spearman(any_funded): r=-0.0671, p=0.4380
+  Spearman(funded_rate): r=-0.1033, p=0.2556
+
+mean_nonzero_weight
+  Funded mean:   0.1827
+  Unfunded mean: 0.1823
+  Mann-Whitney p: 0.8875
+  Cohen's d: 0.0154
+  Spearman(any_funded): r=0.0124, p=0.8864
+  Spearman(funded_rate): r=0.0410, p=0.6527
 

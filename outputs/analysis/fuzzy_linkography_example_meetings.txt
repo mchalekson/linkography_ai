@@ -1,0 +1,149 @@
+FUZZY LINKOGRAPHY EXAMPLE MEETINGS
+========================================================================
+
+Highest mean_nonzero_weight meetings:
+
+output_2020_11_05_NES_S1__1_DAC_Simulations_Zoom_Meeting_2020_11_05_12_09_10
+  conference=2020NES session=2020_11_05_NES_S1
+  n_moves=25 n_chunks=2
+  mean_nonzero_weight=0.4349
+  weighted_ldi=0.0348 cross_speaker_ratio=0.2053
+  any_funded=0 funded_rate=0.000
+
+output_2021_04_23_MND_S1__Bot_5_Zoom_Meeting_4_23_2021_12_10_03_PM
+  conference=2021MND session=2021_04_23_MND_S1
+  n_moves=27 n_chunks=2
+  mean_nonzero_weight=0.3807
+  weighted_ldi=0.0423 cross_speaker_ratio=0.9805
+  any_funded=0 funded_rate=0.000
+
+output_2021_04_22_MND_S8__Zoom_Meeting_Room_6_2021_04_22_13_00_55
+  conference=2021MND session=2021_04_22_MND_S8
+  n_moves=25 n_chunks=1
+  mean_nonzero_weight=0.3623
+  weighted_ldi=0.0580 cross_speaker_ratio=1.0000
+  any_funded=0 funded_rate=0.000
+
+output_2021_11_04_NES_S6__B6_2021_11_04_12_32_03
+  conference=2021NES session=2021_11_04_NES_S6
+  n_moves=94 n_chunks=4
+  mean_nonzero_weight=0.3249
+  weighted_ldi=0.8054 cross_speaker_ratio=0.5362
+  any_funded=1 funded_rate=1.000
+
+output_2020_11_06_NES_S10__4_frontiers_in_echem_Zoom_Meeting_2020_11_06_12_23_32
+  conference=2020NES session=2020_11_06_NES_S10
+  n_moves=39 n_chunks=3
+  mean_nonzero_weight=0.3091
+  weighted_ldi=0.0634 cross_speaker_ratio=0.2954
+  any_funded=0 funded_rate=nan
+
+output_2021_04_22_MND_S6__Breakout_Room_4_Part_1_2021_04_22_12_58_44
+  conference=2021MND session=2021_04_22_MND_S6
+  n_moves=27 n_chunks=2
+  mean_nonzero_weight=0.2820
+  weighted_ldi=0.0313 cross_speaker_ratio=1.0000
+  any_funded=0 funded_rate=nan
+
+output_2021_04_23_MND_S8__Zoom_Meeting_Room_6_2021_04_23_12_09_42
+  conference=2021MND session=2021_04_23_MND_S8
+  n_moves=33 n_chunks=1
+  mean_nonzero_weight=0.2533
+  weighted_ldi=0.0230 cross_speaker_ratio=0.1545
+  any_funded=0 funded_rate=nan
+
+output_2020_11_06_NES_S1__1_CO2_DAC_2_Zoom_Meeting_2020_11_06_10_48_29
+  conference=2020NES session=2020_11_06_NES_S1
+  n_moves=46 n_chunks=3
+  mean_nonzero_weight=0.2510
+  weighted_ldi=0.1473 cross_speaker_ratio=0.5987
+  any_funded=1 funded_rate=0.500
+
+output_2020_11_05_NES_S4__4_Beyond_CO2_Zoom_Meeting_2020_11_05_11_59_04
+  conference=2020NES session=2020_11_05_NES_S4
+  n_moves=32 n_chunks=2
+  mean_nonzero_weight=0.2475
+  weighted_ldi=0.0309 cross_speaker_ratio=0.7956
+  any_funded=1 funded_rate=1.000
+
+output_2021_10_08_CMC_S9__B1_Zoom_Meeting_Room_1_2021_10_08_13_01_59
+  conference=2021CMC session=2021_10_08_CMC_S9
+  n_moves=270 n_chunks=8
+  mean_nonzero_weight=0.2471
+  weighted_ldi=1.9838 cross_speaker_ratio=0.7789
+  any_funded=0 funded_rate=0.000
+
+Lowest mean_nonzero_weight meetings:
+
+output_2020_11_05_NES_S6__6_Theory_and_Expt_Zoom_Meeting_2020_11_05_10_09_14
+  conference=2020NES session=2020_11_05_NES_S6
+  n_moves=17 n_chunks=2
+  mean_nonzero_weight=0.0000
+  weighted_ldi=0.0000 cross_speaker_ratio=0.0000
+  any_funded=0 funded_rate=0.000
+
+output_2021_04_22_MND_S7__Room_5_Zoom_Meeting_4_22_2021_1_01_43_PM
+  conference=2021MND session=2021_04_22_MND_S7
+  n_moves=28 n_chunks=2
+  mean_nonzero_weight=0.0297
+  weighted_ldi=0.0021 cross_speaker_ratio=1.0000
+  any_funded=0 funded_rate=0.000
+
+output_2020_11_05_NES_S5__5_Decarbonizing_the_Economy_Zoom_Meeting_11_5_2020_11_58_06_AM
+  conference=2020NES session=2020_11_05_NES_S5
+  n_moves=24 n_chunks=2
+  mean_nonzero_weight=0.0972
+  weighted_ldi=0.0040 cross_speaker_ratio=1.0000
+  any_funded=1 funded_rate=1.000
+
+output_2020_11_06_NES_S1__Zoom_Meeting_2020_11_06_10_17_47
+  conference=2020NES session=2020_11_06_NES_S1
+  n_moves=47 n_chunks=4
+  mean_nonzero_weight=0.1159
+  weighted_ldi=0.1035 cross_speaker_ratio=0.6899
+  any_funded=1 funded_rate=0.500
+
+output_2020_11_05_NES_S6__6_Theory_and_Expt_Zoom_Meeting_2020_11_05_10_48_43
+  conference=2020NES session=2020_11_05_NES_S6
+  n_moves=51 n_chunks=3
+  mean_nonzero_weight=0.1376
+  weighted_ldi=0.1268 cross_speaker_ratio=0.5943
+  any_funded=0 funded_rate=0.000
+
+output_2021_04_23_MND_S4__bot3_Room_3_Zoom_Meeting_2021_04_23_12_09_57
+  conference=2021MND session=2021_04_23_MND_S4
+  n_moves=43 n_chunks=2
+  mean_nonzero_weight=0.1399
+  weighted_ldi=0.0748 cross_speaker_ratio=0.8097
+  any_funded=0 funded_rate=nan
+
+output_2021_04_23_MND_S8__Zoom_Meeting_Room_6_2021_04_23_11_22_11
+  conference=2021MND session=2021_04_23_MND_S8
+  n_moves=67 n_chunks=5
+  mean_nonzero_weight=0.1419
+  weighted_ldi=0.3728 cross_speaker_ratio=0.6499
+  any_funded=0 funded_rate=nan
+
+output_2021_04_22_MND_S3__Bot3_Zoom_Meeting_2021_04_22_13_05_56_v2
+  conference=2021MND session=2021_04_22_MND_S3
+  n_moves=131 n_chunks=8
+  mean_nonzero_weight=0.1521
+  weighted_ldi=1.0634 cross_speaker_ratio=0.7813
+  any_funded=0 funded_rate=0.000
+
+output_2020_11_06_NES_S10__4_frontiers_in_echem_Zoom_Meeting_2020_11_06_12_52_00
+  conference=2020NES session=2020_11_06_NES_S10
+  n_moves=91 n_chunks=3
+  mean_nonzero_weight=0.1545
+  weighted_ldi=0.5229 cross_speaker_ratio=0.6702
+  any_funded=0 funded_rate=nan
+
+output_2021_04_23_MND_S4__bot3_Zoom_Meeting_2021_04_23_11_16_26
+  conference=2021MND session=2021_04_23_MND_S4
+  n_moves=111 n_chunks=6
+  mean_nonzero_weight=0.1545
+  weighted_ldi=0.5458 cross_speaker_ratio=0.6427
+  any_funded=0 funded_rate=nan
+
+Suggested manual follow-up:
+  Open the corresponding data-v2 session folders and compare the high vs low meetings qualitatively.

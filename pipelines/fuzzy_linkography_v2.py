@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Fuzzy Linkography on outputs-v2 JSON annotations.
+"""Fuzzy Linkography on data-v2 JSON annotations.
 
 Builds weighted semantic links between utterances and exports chunk/session-level
 fuzzy linkography metrics for downstream modeling.
@@ -18,19 +18,26 @@ from linkography_ai.fuzzy_linkography import (
     group_v2_chunk_files,
     load_chunk_moves,
 )
+from linkography_ai.paths import data_v2_root, display_path, outputs_root
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_INPUT_ROOT = REPO_ROOT / "outputs-v2"
-OUT_DIR = REPO_ROOT / "outputs"
+DEFAULT_INPUT_ROOT = data_v2_root()
+OUT_DIR = outputs_root()
 TABLES_DIR = OUT_DIR / "tables"
 ANALYSIS_DIR = OUT_DIR / "analysis"
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Compute fuzzy linkography metrics for outputs-v2")
+    parser = argparse.ArgumentParser(description="Compute fuzzy linkography metrics for data-v2")
     parser.add_argument("--input-root", type=Path, default=DEFAULT_INPUT_ROOT, help="Root folder for v2 chunk JSONs")
     parser.add_argument("--conference", type=str, default="ALL", help="Conference code or ALL")
     parser.add_argument("--threshold", type=float, default=0.35, help="Similarity threshold for fuzzy links")
+    parser.add_argument(
+        "--similarity-method",
+        type=str,
+        default="lsa",
+        choices=["tfidf", "lsa", "hybrid"],
+        help="Semantic similarity method for fuzzy links",
+    )
     args = parser.parse_args()
 
     TABLES_DIR.mkdir(parents=True, exist_ok=True)
@@ -58,19 +65,27 @@ def main() -> None:
             chunk_moves = load_chunk_moves(chunk_fp, chunk_index=chunk_index)
             all_moves.extend(chunk_moves)
 
-            metrics = compute_fuzzy_metrics(chunk_moves, threshold=args.threshold)
+            metrics = compute_fuzzy_metrics(
+                chunk_moves,
+                threshold=args.threshold,
+                similarity_method=args.similarity_method,
+            )
             row = {
                 "conference": conference,
                 "session_id": session_id,
                 "meeting_id": meeting_id,
                 "chunk_index": int(chunk_index),
-                "chunk_file": str(chunk_fp.relative_to(REPO_ROOT)),
+                "chunk_file": display_path(chunk_fp, base=args.input_root),
             }
             row.update(metrics)
             chunk_rows.append(row)
 
         all_moves.sort(key=lambda m: (m.start_sec, m.chunk_index, m.utterance_index))
-        meeting_metrics = compute_fuzzy_metrics(all_moves, threshold=args.threshold)
+        meeting_metrics = compute_fuzzy_metrics(
+            all_moves,
+            threshold=args.threshold,
+            similarity_method=args.similarity_method,
+        )
         meeting_row = {
             "conference": conference,
             "session_id": session_id,
@@ -96,9 +111,10 @@ def main() -> None:
     with open(report_out, "w") as f:
         f.write("FUZZY LINKOGRAPHY (V2 JSON) SUMMARY\n")
         f.write("=" * 72 + "\n\n")
-        f.write(f"Input root: {args.input_root}\n")
+        f.write(f"Input root: {display_path(args.input_root)}\n")
         f.write(f"Conference filter: {args.conference}\n")
         f.write(f"Similarity threshold: {args.threshold:.3f}\n\n")
+        f.write(f"Similarity method: {args.similarity_method}\n\n")
         f.write(f"Meetings analyzed: {len(meeting_df)}\n")
         f.write(f"Chunks analyzed: {len(chunk_df)}\n\n")
 

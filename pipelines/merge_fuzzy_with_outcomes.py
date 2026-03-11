@@ -21,11 +21,47 @@ import pandas as pd
 REPO_ROOT = Path(__file__).resolve().parents[1]
 TABLES_DIR = REPO_ROOT / "outputs" / "tables"
 ANALYSIS_DIR = REPO_ROOT / "outputs" / "analysis"
+EXTERNAL_CHUNK_REGISTRY_PATH = REPO_ROOT.parent / "gemini_data_analysis" / "analysis_v2" / "data" / "chunk_registry_v1.csv"
+LOCAL_CHUNK_REGISTRY_PATH = REPO_ROOT / "chunk-registry" / "chunk_registry_v1.csv"
+CHUNK_REGISTRY_PATH = EXTERNAL_CHUNK_REGISTRY_PATH if EXTERNAL_CHUNK_REGISTRY_PATH.exists() else LOCAL_CHUNK_REGISTRY_PATH
 
 
 def _normalize_session_id(s: object) -> str:
     txt = str(s or "")
     return txt[len("output_") :] if txt.startswith("output_") else txt
+
+
+def _meeting_base(meeting_id: object) -> str:
+    txt = str(meeting_id or "")
+    return txt.split("__", 1)[1] if "__" in txt else txt
+
+
+def _load_registry_session_summary(path: Path) -> pd.DataFrame:
+    registry = pd.read_csv(path)
+    registry["conference"] = registry["conference_id"].astype(str)
+    registry["session_id_norm"] = registry["session_group"].astype(str)
+
+    grouped = (
+        registry.groupby(["conference", "session_id_norm"], dropna=False)
+        .agg(
+            registry_rows=("chunk_id", "count"),
+            registry_num_teams=("num_teams", "max"),
+            registry_num_funded_teams=("num_funded_teams", "max"),
+            registry_any_funded=("outcome_has_funded_teams", "max"),
+            registry_has_teams=("has_teams", "max"),
+        )
+        .reset_index()
+    )
+
+    grouped["registry_any_funded"] = grouped["registry_any_funded"].map(
+        lambda x: np.nan if pd.isna(x) else int(bool(x))
+    )
+    grouped["registry_funded_rate"] = np.where(
+        grouped["registry_num_teams"].fillna(0) > 0,
+        grouped["registry_num_funded_teams"] / grouped["registry_num_teams"],
+        np.nan,
+    )
+    return grouped
 
 
 def main() -> None:
@@ -43,8 +79,11 @@ def main() -> None:
 
     fuzzy = pd.read_csv(fuzzy_path)
     outcomes = pd.read_csv(outcomes_path)
+    registry = _load_registry_session_summary(CHUNK_REGISTRY_PATH) if CHUNK_REGISTRY_PATH.exists() else pd.DataFrame()
 
     fuzzy["session_id_norm"] = fuzzy["session_id"].map(_normalize_session_id)
+    fuzzy["meeting_base"] = fuzzy["meeting_id"].map(_meeting_base)
+    fuzzy["registry_session_key"] = fuzzy["session_id_norm"] + "/" + fuzzy["meeting_base"]
     outcomes["session_id_norm"] = outcomes["session_id"].astype(str)
 
     outcome_cols = [
@@ -61,6 +100,31 @@ def main() -> None:
         on=["conference", "session_id_norm"],
         how="left",
     )
+    if not registry.empty:
+        merged_meeting = merged_meeting.merge(
+            registry,
+            on=["conference", "session_id_norm"],
+            how="left",
+        )
+        merged_meeting["funded_rate_entropy"] = merged_meeting["funded_rate"]
+        merged_meeting["any_funded_entropy"] = merged_meeting["any_funded"]
+        merged_meeting["n_teams_entropy"] = merged_meeting["n_teams"]
+
+        merged_meeting["funded_rate"] = merged_meeting["registry_funded_rate"].combine_first(merged_meeting["funded_rate"])
+        merged_meeting["any_funded"] = merged_meeting["registry_any_funded"].combine_first(merged_meeting["any_funded"])
+        merged_meeting["n_teams"] = merged_meeting["registry_num_teams"].combine_first(merged_meeting["n_teams"])
+        merged_meeting["num_funded_teams"] = merged_meeting["registry_num_funded_teams"]
+        merged_meeting["outcome_source"] = np.where(
+            merged_meeting["registry_any_funded"].notna(),
+            "chunk_registry_v1",
+            np.where(merged_meeting["any_funded_entropy"].notna(), "entropy_with_outcomes", "unmatched"),
+        )
+    else:
+        merged_meeting["outcome_source"] = np.where(
+            merged_meeting["any_funded"].notna(),
+            "entropy_with_outcomes",
+            "unmatched",
+        )
 
     feature_cols = [
         "n_moves",
@@ -93,11 +157,14 @@ def main() -> None:
             "conference": conf,
             "session_id": sid,
             "n_meetings": int(len(g)),
+            "similarity_method": g["similarity_method"].dropna().iloc[0] if "similarity_method" in g.columns and g["similarity_method"].notna().any() else "",
             "n_chunks_sum": float(g["n_chunks"].fillna(0).sum()),
             "n_moves_sum": float(g["n_moves"].fillna(0).sum()),
             "funded_rate": g["funded_rate"].dropna().iloc[0] if g["funded_rate"].notna().any() else np.nan,
             "any_funded": g["any_funded"].dropna().iloc[0] if g["any_funded"].notna().any() else np.nan,
             "n_teams": g["n_teams"].dropna().iloc[0] if g["n_teams"].notna().any() else np.nan,
+            "num_funded_teams": g["num_funded_teams"].dropna().iloc[0] if "num_funded_teams" in g.columns and g["num_funded_teams"].notna().any() else np.nan,
+            "outcome_source": g["outcome_source"].dropna().iloc[0] if "outcome_source" in g.columns and g["outcome_source"].notna().any() else "",
         }
         for col in feature_cols:
             row[col] = _weighted_mean(g[col], g["n_moves"])
@@ -117,6 +184,7 @@ def main() -> None:
     n_meeting_matched = int(merged_meeting["any_funded"].notna().sum())
     n_session_total = len(merged_session)
     n_session_matched = int(merged_session["any_funded"].notna().sum())
+    source_counts = merged_session["outcome_source"].fillna("unmatched").value_counts().to_dict() if "outcome_source" in merged_session.columns else {}
 
     report = ANALYSIS_DIR / "fuzzy_linkography_with_outcomes_summary.txt"
     with open(report, "w") as f:
@@ -126,6 +194,16 @@ def main() -> None:
         f.write(f"Meeting rows matched to outcomes: {n_meeting_matched} ({100*n_meeting_matched/max(1,n_meeting_total):.1f}%)\n\n")
         f.write(f"Session rows: {n_session_total}\n")
         f.write(f"Session rows matched to outcomes: {n_session_matched} ({100*n_session_matched/max(1,n_session_total):.1f}%)\n\n")
+        if CHUNK_REGISTRY_PATH.exists():
+            f.write(f"Chunk registry used: {CHUNK_REGISTRY_PATH}\n\n")
+        if source_counts:
+            f.write("Outcome source counts:\n")
+            for key, value in source_counts.items():
+                f.write(f"  - {key}: {value}\n")
+            f.write("\n")
+        if "similarity_method" in merged_meeting.columns and merged_meeting["similarity_method"].notna().any():
+            method = merged_meeting["similarity_method"].dropna().iloc[0]
+            f.write(f"Similarity method: {method}\n\n")
         f.write("Primary fuzzy features available:\n")
         for col in feature_cols:
             f.write(f"  - {col}\n")

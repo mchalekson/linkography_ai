@@ -1,11 +1,20 @@
 FUZZY LINKOGRAPHY + OUTCOMES MERGE SUMMARY
 ========================================================================
 
-Meeting rows: 130
-Meeting rows matched to outcomes: 102 (78.5%)
+Meeting rows: 179
+Meeting rows matched to outcomes: 154 (86.0%)
 
-Session rows: 102
-Session rows matched to outcomes: 81 (79.4%)
+Session rows: 158
+Session rows matched to outcomes: 136 (86.1%)
+
+Chunk registry used: /Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/gemini_data_analysis/analysis_v2/data/chunk_registry_v1.csv
+
+Outcome source counts:
+  - chunk_registry_v1: 74
+  - entropy_with_outcomes: 62
+  - unmatched: 22
+
+Similarity method: lsa
 
 Primary fuzzy features available:
   - n_moves

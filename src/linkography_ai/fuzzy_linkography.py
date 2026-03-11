@@ -131,6 +131,8 @@ def load_chunk_moves(chunk_path: Path, chunk_index: int) -> List[Move]:
 def group_v2_chunk_files(outputs_v2_root: Path) -> Dict[str, Dict[str, Any]]:
     grouped: Dict[str, Dict[str, Any]] = {}
     for chunk_fp in outputs_v2_root.rglob("*_chunk*.json"):
+        if chunk_fp.stem.startswith("ATTN_"):
+            continue
         rel = chunk_fp.relative_to(outputs_v2_root)
         if len(rel.parts) < 2:
             continue
@@ -158,12 +160,10 @@ def _tokenize(text: str) -> List[str]:
     return _TOKEN_PAT.findall(text.lower())
 
 
-def tfidf_cosine_similarity(texts: List[str]) -> np.ndarray:
+def _tfidf_matrix(texts: List[str]) -> np.ndarray:
     n = len(texts)
     if n == 0:
         return np.zeros((0, 0), dtype=float)
-    if n == 1:
-        return np.eye(1, dtype=float)
 
     tokenized = [_tokenize(t) for t in texts]
     vocab: Dict[str, int] = {}
@@ -173,7 +173,7 @@ def tfidf_cosine_similarity(texts: List[str]) -> np.ndarray:
                 vocab[tok] = len(vocab)
 
     if not vocab:
-        return np.eye(n, dtype=float)
+        return np.zeros((n, 0), dtype=float)
 
     vsize = len(vocab)
     tf = np.zeros((n, vsize), dtype=float)
@@ -193,14 +193,81 @@ def tfidf_cosine_similarity(texts: List[str]) -> np.ndarray:
             df[j] += 1.0
 
     idf = np.log((1.0 + n) / (1.0 + df)) + 1.0
-    x = tf * idf
+    return tf * idf
 
+
+def _row_normalize(x: np.ndarray) -> np.ndarray:
+    if x.size == 0:
+        return x.copy()
     norms = np.linalg.norm(x, axis=1, keepdims=True)
     norms[norms == 0] = 1.0
-    x = x / norms
+    return x / norms
+
+
+def tfidf_cosine_similarity(texts: List[str]) -> np.ndarray:
+    n = len(texts)
+    if n == 0:
+        return np.zeros((0, 0), dtype=float)
+    if n == 1:
+        return np.eye(1, dtype=float)
+
+    x = _tfidf_matrix(texts)
+    if x.shape[1] == 0:
+        return np.eye(n, dtype=float)
+
+    x = _row_normalize(x)
     sim = x @ x.T
     np.fill_diagonal(sim, 1.0)
     return sim
+
+
+def lsa_cosine_similarity(texts: List[str], max_components: int = 32) -> np.ndarray:
+    n = len(texts)
+    if n == 0:
+        return np.zeros((0, 0), dtype=float)
+    if n == 1:
+        return np.eye(1, dtype=float)
+
+    x = _tfidf_matrix(texts)
+    n_docs, vocab_size = x.shape
+    if vocab_size == 0:
+        return np.eye(n, dtype=float)
+
+    x = _row_normalize(x)
+    max_rank = min(n_docs - 1, vocab_size - 1)
+    if max_rank <= 1:
+        sim = x @ x.T
+        np.fill_diagonal(sim, 1.0)
+        return sim
+
+    k = max(2, min(max_components, max_rank))
+    try:
+        u, s, _ = np.linalg.svd(x, full_matrices=False)
+    except np.linalg.LinAlgError:
+        sim = x @ x.T
+        np.fill_diagonal(sim, 1.0)
+        return sim
+
+    doc_repr = u[:, :k] * s[:k]
+    doc_repr = _row_normalize(doc_repr)
+    sim = doc_repr @ doc_repr.T
+    np.fill_diagonal(sim, 1.0)
+    return sim
+
+
+def semantic_similarity(texts: List[str], method: str = "tfidf") -> np.ndarray:
+    method_norm = str(method or "tfidf").strip().lower()
+    if method_norm == "tfidf":
+        return tfidf_cosine_similarity(texts)
+    if method_norm == "lsa":
+        return lsa_cosine_similarity(texts)
+    if method_norm == "hybrid":
+        tfidf = tfidf_cosine_similarity(texts)
+        lsa = lsa_cosine_similarity(texts)
+        sim = 0.5 * (tfidf + lsa)
+        np.fill_diagonal(sim, 1.0)
+        return sim
+    raise ValueError(f"Unknown similarity method: {method}")
 
 
 def fuzzy_weight_matrix(sim: np.ndarray, threshold: float = 0.35) -> np.ndarray:
@@ -219,11 +286,16 @@ def _binary_entropy(p: float) -> float:
     return -(p * math.log2(p) + (1.0 - p) * math.log2(1.0 - p))
 
 
-def compute_fuzzy_metrics(moves: List[Move], threshold: float = 0.35) -> Dict[str, float]:
+def compute_fuzzy_metrics(
+    moves: List[Move],
+    threshold: float = 0.35,
+    similarity_method: str = "tfidf",
+) -> Dict[str, float]:
     n = len(moves)
     out: Dict[str, float] = {
         "n_moves": float(n),
         "threshold": float(threshold),
+        "similarity_method": str(similarity_method),
     }
     if n <= 1:
         out.update(
@@ -246,7 +318,7 @@ def compute_fuzzy_metrics(moves: List[Move], threshold: float = 0.35) -> Dict[st
         return out
 
     texts = [m.text for m in moves]
-    sim = tfidf_cosine_similarity(texts)
+    sim = semantic_similarity(texts, method=similarity_method)
     w = fuzzy_weight_matrix(sim, threshold=threshold)
 
     upper = np.triu(w, k=1)

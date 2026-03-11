@@ -1,274 +1,153 @@
 # Predicting Team Success from Coordination Patterns
 
-**TL;DR**: This project analyzes 157 scientific team meetings to predict funding success. The analysis found that **who coordinates** (concentrated leadership) predicts outcomes better than **how much** or **when** coordination happens. Teams with clearer coordination leadership are 27.7% more likely to receive funding.
+This repository analyzes SCIALOG team discussions using two annotation regimes:
 
----
+- `data/`: legacy utterance-level CDP annotations used by the main funding-outcome analyses
+- canonical v2 outputs in `../gemini_data_analysis/outputs/`: newer chunk-based behavioral annotations used for the active fuzzy-linkography workflow
 
-## What This Project Does
+The main finding from the current outcome pipeline is unchanged: concentrated coordination leadership predicts funding better than overall coordination diversity.
 
-**Problem**: How do you know if a collaborative team meeting will lead to successful outcomes?
+## Repository State
 
-**Approach**: Analyze behavioral patterns in transcribed team discussions using coordination metrics (entropy, Gini coefficient, speaker diversity).
-
-**Key Finding**: Teams with **concentrated coordination leadership** (1-2 speakers driving decision-making) have significantly higher funding rates than teams with distributed coordination.
-
-**Impact**: Facilitators can identify at-risk sessions early and intervene to improve outcomes.
-
----
+| Dataset | Scope | Status in this repo | Primary use |
+|---|---|---|---|
+| `data/` | 157 session JSONs across 8 conferences (2020-2022) | Complete legacy corpus | Main entropy/Gini/outcome analyses |
+| `data-v2/` | Repo-local mirror/subset of the v2 chunk corpus | Local convenience copy | Old-vs-new comparison, local inspection |
+| `../gemini_data_analysis/outputs` | 162 session directories and 1325 JSON files across 8 conferences | Canonical v2 annotation source | Active fuzzy linkography, v2 feature development, registry-backed analysis |
+| `old-vs-new/` | Verification and comparison docs/scripts | Active bridge layer | Mapping CDP to v2 behavioral coding |
 
 ## Quick Start
 
-### Installation
 ```bash
-# Clone and install
-git clone https://github.com/mchalekson/linkography_ai.git
-cd linkography_ai
 pip install -e .
-
-# Run full analysis pipeline
 make all
 ```
 
-**Outputs**: 
-- Analysis results in `outputs/analysis/`
-- Figures in `figures/final/`
-- Complete project documentation in `docs/PROJECT_CONTEXT.md`
+Key outputs:
 
-### See Key Results
-```bash
-# Main finding: Speaker diversity predicts funding
-cat outputs/analysis/speaker_diversity_effect_sizes.txt
+- Main analysis reports: `outputs/analysis/`
+- Tables: `outputs/tables/`
+- Figures: `figures/final/`
+- Full project narrative: `docs/PROJECT_CONTEXT.md`
 
-# Visualization: Gini coefficient by funding status
-open figures/final/gini_by_funding.png
+## Working With The Two Data Formats
 
-# Full statistical report
-cat outputs/analysis/speaker_diversity_outcomes_summary.txt
-```
+### Legacy CDP data
 
----
+`data/<conference>/session_data/*.json` contains utterance-level transcripts with:
+
+- speaker identity
+- timestamps
+- transcript text
+- `annotations["Coordination and Decision Practices"]`
+- optional `when` labels (`beginning`, `middle`, `end`)
+
+This is the dataset used by the current pipelines in `pipelines/` and the core loaders in `src/linkography_ai/`.
+
+### New v2 data
+
+The canonical v2 annotation source is `../gemini_data_analysis/outputs/<conference>/output_<session_id>/...json`. Repo-local `data-v2/` uses the same schema and can still be inspected directly.
+
+These chunk-based behavioral annotations contain three main sections:
+
+- `chunk_summary`
+- `utterance_annotations`
+- `session_state`
+
+Representative `chunk_summary` fields include:
+
+- `idea_trajectory`
+- `decision_crystallization_level`
+- `collective_engagement_level`
+- `explicit_commitment_signal`
+- `shared_vision_indicator`
+- `pronoun_shift_flag`
+
+Some session folders also contain `ATTN_*.json` sidecar files or malformed files, so v2 tooling should only treat files as chunks when they parse successfully and include `chunk_summary`.
+
+### Active v2 methodology
+
+The current v2 workflow is centered on fuzzy linkography:
+
+- utterances are treated as sequential moves
+- semantic similarity is computed across moves
+- similarities are converted into fuzzy link weights
+- meeting-level metrics summarize semantic continuity, cross-speaker linkage, and temporal backlink structure
+
+Current implementation note:
+
+- methodology: fuzzy linkography
+- current similarity model: Latent Semantic Analysis (LSA)
+
+Entry points:
+
+- `pipelines/fuzzy_linkography_v2.py`
+- `pipelines/merge_fuzzy_with_outcomes.py`
+- `pipelines/fuzzy_linkography_outcomes.py`
+- `docs/FUZZY_LINKOGRAPHY_V2_SUMMARY.md`
+
+Path portability:
+
+- Active pipelines default to repo-relative `data/` and `outputs/`. For v2 annotations, they prefer the canonical sibling path `../gemini_data_analysis/outputs` when it exists, and otherwise fall back to repo-local `data-v2/`.
+- If one machine keeps those folders outside the repo, set:
+  - `LINKOGRAPHY_AI_DATA_ROOT`
+  - `LINKOGRAPHY_AI_DATA_V2_ROOT`
+  - `LINKOGRAPHY_AI_OUTPUTS_ROOT`
+- Example:
+  `LINKOGRAPHY_AI_DATA_V2_ROOT="/Users/maxchalekson/Projects/NICO-Research/gemini_data_analysis/outputs" PYTHONPATH=src .venv/bin/python pipelines/fuzzy_linkography_v2.py`
 
 ## Project Structure
 
-```
+```text
 linkography_ai/
 ├── docs/
-│   └── PROJECT_CONTEXT.md          ⭐ START HERE - Complete reproducibility guide
-├── data/                            📊 157 meeting transcripts (8 conferences, 2020-2022)
-├── pipelines/                       🔬 14 analysis pipelines
-│   ├── speaker_diversity_outcomes.py  (KEY: Q3 - predicts funding)
-│   ├── timing_patterns_outcomes.py    (Q4 - timing doesn't predict)
-│   ├── meeting_profile_classifier.py  (Q5 - 27.7% ROC improvement)
-│   └── ... (11 other analyses)
+│   └── PROJECT_CONTEXT.md
+├── data/
+├── data-v2/
+├── old-vs-new/
+│   ├── 2_conf_v2_verification/
+│   └── 3_deep_annotation_comparison/
+├── pipelines/
+├── src/linkography_ai/
 ├── outputs/
-│   ├── analysis/                    📈 Statistical reports
-│   ├── tables/                      📋 Session-level data
-│   └── figures/                     📊 Visualizations
-├── src/linkography_ai/              💻 Core code (entropy, Gini, I/O)
-└── Makefile                         ⚙️  Run everything with `make all`
+└── figures/
 ```
 
-**If you only read one file**: `docs/PROJECT_CONTEXT.md` — complete STEP 1-5 reproducibility guide
+## Main Analysis Pipeline
 
----
+The published analysis flow still runs on `data/`:
 
-## Key Findings
-
-### ✅ What Predicts Funding Success
-
-| Finding | Effect Size | p-value |
-|---------|-------------|---------|
-| **Concentrated coordination leadership** (high Gini) | Cohen's d = 0.591 | p = 0.0006 |
-| Advanced coordination concentration | Diff = 0.088 [95% CI: 0.034, 0.138] | Very strong |
-| Combined speaker + timing features | +27.7% ROC-AUC improvement | ROC = 0.688 |
-
-**Interpretation**: Teams where 1-2 speakers drive decision-making (high Gini score-2) are significantly more likely to get funded.
-
-### ❌ What Doesn't Predict Funding
-
-- **Coordination diversity** (entropy): No difference between funded vs unfunded (p = 0.193)
-- **Timing patterns**: No difference in phase rhythm, transitions, or convergence (all p > 0.14)
-- **Speaker participation rate**: No difference (p = 0.493)
-
----
-
-## How to Use This Repo
-
-### For Researchers
-1. **Read the full story**: `docs/PROJECT_CONTEXT.md` (STEP 1-5 structure)
-2. **Reproduce key findings**: `make all` (runs all 14 analyses)
-3. **Check specific results**: See pipeline outputs in `outputs/analysis/`
-
-### For Data Scientists
-1. **Explore the data**: `data/*/session_data/*.json` (timestamped transcripts with behavioral codes)
-2. **Run individual analyses**: 
-   ```bash
-   python pipelines/speaker_diversity_outcomes.py
-   python pipelines/meeting_profile_classifier.py
-   ```
-3. **Modify pipelines**: Core code in `src/linkography_ai/`
-
-### For Facilitators
-1. **See the practical implications**: Section "STEP 5: Overall Story" in `docs/PROJECT_CONTEXT.md`
-2. **Monitor Gini in real-time**: Use `pipelines/speaker_level_cdp.py` on live data
-3. **Identify at-risk sessions**: Sessions with Gini < 0.25 may need intervention
-
----
-
-## Data Overview
-
-| Metric | Value |
-|--------|-------|
-| **Total sessions** | 157 |
-| **Conferences** | 8 (2020-2022) |
-| **Sessions with funding outcomes** | 123 (78.3%) |
-| **Funded sessions** | 68 |
-| **Mean utterances/session** | 66.5 |
-| **Mean speakers/session** | 13.3 |
-
-**What's in the data**: Timestamped meeting transcripts with human-annotated "Coordination and Decision Practices" (CDP) codes. Each utterance labeled with:
-- **Score 1**: Basic coordination (structuring, turn-taking)
-- **Score 2**: Advanced coordination (decision-making, synthesis)
-
----
-
-## Key Metrics Explained
-
-### Shannon Entropy (0-1)
-**What it measures**: Diversity of coordination strategies (Score 1 vs Score 2 mix)
-- 0.0 = All utterances same score (uniform)
-- 1.0 = Perfect 50/50 mix
-- ~0.73 = Observed average (70% Score 1, 30% Score 2)
-
-**Finding**: Entropy is **stable** across meeting phases (doesn't predict outcomes)
-
-### Gini Coefficient (0-1)
-**What it measures**: Concentration of coordination across speakers
-- 0.0 = Perfect equality (all speakers contribute equally)
-- 1.0 = Perfect inequality (one speaker dominates)
-- 0.33 = Funded session average
-- 0.24 = Unfunded session average
-
-**Finding**: Higher Gini (concentrated leadership) **strongly predicts funding** (p = 0.0006)
-
----
-
-## Research Questions Answered
-
-| Question | Method | Result |
-|----------|--------|--------|
-| **Q1**: Do teams converge to focused coordination? | Entropy trajectory analysis | ❌ No - stable across phases |
-| **Q2**: Does entropy predict funding? | Mann-Whitney U | ❌ No - p = 0.193 |
-| **Q3**: Does speaker diversity predict funding? | Gini + effect sizes | ✅ **Yes** - d = 0.591, p = 0.0006 |
-| **Q4**: Do timing patterns predict funding? | Temporal features | ❌ No - robust null across bin sizes |
-| **Q5**: Can combined features improve prediction? | Logistic regression | ✅ **Yes** - 27.7% ROC improvement |
-| **Q6**: Do patterns differ by cohort year? | Kruskal-Wallis H | Partial - 2022 more focused mid-meeting |
-| **Q7**: What do transcripts reveal? | Qualitative validation | High-Gini = decisive synthesis |
-
----
-
-## Running Analyses
-
-### Full Pipeline
 ```bash
-make all  # Runs all 14 analyses sequentially
-```
-
-### Key Individual Pipelines
-```bash
-# Q3: Speaker diversity vs outcomes (KEY FINDING)
+make all
 python pipelines/speaker_diversity_outcomes.py
-python pipelines/posthoc_analyses.py  # Effect sizes + visualization
-
-# Q5: Meeting profile classifier
 python pipelines/meeting_profile_classifier.py
-
-# Q6: Cohort analysis
-python pipelines/cdp_by_cohort_pairwise.py
-
-# Q7: Transcript validation
-python pipelines/cdp_transcript_validation.py
 ```
 
-### Outputs
-- **Statistical reports**: `outputs/analysis/*.txt`
-- **Data tables**: `outputs/tables/*.csv`
-- **Visualizations**: `figures/final/*.png`
+Core modules:
 
----
+- `src/linkography_ai/io_sessions.py`
+- `src/linkography_ai/entropy.py`
+- `src/linkography_ai/segmentation.py`
+- `src/linkography_ai/discovery.py`
 
-## Code Organization
+## Old vs New Annotation Work
 
-### Core Modules (`src/linkography_ai/`)
-- `entropy.py` - Shannon entropy computation
-- `io_sessions.py` - JSON loading + CDP extraction
-- `segmentation.py` - Temporal segmentation (thirds, bins)
-- `discovery.py` - Conference/session discovery
+Use the `old-vs-new/` folder when you want to compare legacy CDP against the new annotation style mirrored in repo-local `data-v2/`.
 
-### Key Pipelines (`pipelines/`)
-- `run_cdp_entropy_all.py` - Batch entropy computation (foundation)
-- `speaker_diversity_outcomes.py` - **Main result** (Q3)
-- `meeting_profile_classifier.py` - Predictive model (Q5)
-- `posthoc_analyses.py` - Effect sizes + visualization
-- `timing_patterns_outcomes_bins.py` - Robustness checks (Q4)
+Useful entry points:
 
----
+- `old-vs-new/2_conf_v2_verification/README.md`
+- `old-vs-new/3_deep_annotation_comparison/README.md`
 
-## Dependencies
+Current bridge work includes:
 
-**Required**:
-- Python ≥ 3.10
-- pandas, numpy, matplotlib, scipy, scikit-learn
+- conference-level alignment checks between `data/` and repo-local `data-v2/`
+- per-session trajectory comparisons
+- code-mapping notes between CDP scores and v2 behavioral labels
+- fuzzy-linkography feature extraction on the canonical v2 outputs
 
-**Install**:
-```bash
-pip install -e .
-```
+## Where To Start
 
-**Test**:
-```bash
-pip install -r requirements-dev.txt
-pytest
-```
-
----
-
-## Documentation
-
-| File | Purpose | When to Read |
-|------|---------|--------------|
-| **`docs/PROJECT_CONTEXT.md`** | Complete reproducibility guide (STEP 1-5) | **START HERE** |
-| `README.md` (this file) | Quick overview + navigation
-| `codebook/codebook.md` | CDP annotation definitions | Understanding behavioral codes |
-| `Makefile` | Pipeline orchestration | Running batch analyses |
-
----
-
-## Citation
-
-If you use this code or findings:
-
-```
-Huang, E., Chalekson, M. (2026). Predicting Team Success from Coordination Patterns: 
-Analysis of SCIALOG Collaborative Meetings. Northwestern University.
-```
-
----
-
-## Contact
-
-**Max Chalekson**  
-Northwestern University  
-NICO (Northwestern Institute on Complex Systems)
-
-**Questions?** See `docs/PROJECT_CONTEXT.md` for detailed documentation or open an issue.
-
----
-
-## Quick Links
-
-- 📖 **Full documentation**: [docs/PROJECT_CONTEXT.md](docs/PROJECT_CONTEXT.md)
-- 📊 **Key finding**: [outputs/analysis/speaker_diversity_effect_sizes.txt](outputs/analysis/speaker_diversity_effect_sizes.txt)
-- 📈 **Visualization**: [figures/final/gini_by_funding.png](figures/final/gini_by_funding.png)
-- 🔬 **All pipelines**: [pipelines/](pipelines/)
-- 💻 **Core code**: [src/linkography_ai/](src/linkography_ai/)
+- Read `docs/PROJECT_CONTEXT.md` for the full research and reproducibility context.
+- Read `old-vs-new/3_deep_annotation_comparison/README.md` if you are working on the new annotation scheme.
+- Use `data/` for the existing outcome models and the canonical v2 outputs for fuzzy linkography and new-style annotation development.

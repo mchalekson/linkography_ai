@@ -1,17 +1,19 @@
 FUZZY LINKOGRAPHY (V2 JSON) SUMMARY
 ========================================================================
 
-Input root: /Users/maxchalekson/Projects/NICO-Research/linkography_ai/outputs-v2
+Input root: /Users/maxchalekson/Northwestern University/Summer-2025/NICO/NICO Research/gemini_data_analysis/outputs
 Conference filter: ALL
 Similarity threshold: 0.350
 
-Meetings analyzed: 130
-Chunks analyzed: 788
+Similarity method: lsa
+
+Meetings analyzed: 179
+Chunks analyzed: 1219
 
 Meeting-level metric means:
-  - n_moves: 123.9846
-  - weighted_ldi: 0.0216
-  - mean_nonzero_weight: 0.1573
-  - cross_speaker_weight_ratio: 0.5280
-  - late_minus_early_backlink: 0.0201
-  - overall_link_entropy: 1.1196
+  - n_moves: 141.7877
+  - weighted_ldi: 1.0663
+  - mean_nonzero_weight: 0.1823
+  - cross_speaker_weight_ratio: 0.7440
+  - late_minus_early_backlink: 1.4239
+  - overall_link_entropy: 44.6974
